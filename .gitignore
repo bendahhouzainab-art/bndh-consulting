@@ -55,6 +55,7 @@ blob-report/
 .codeyam/preview-env.json
 .codeyam/preview-capture.png
 .codeyam/preview-capture.*.png
+.codeyam/scenarios/screenshots/*.css-matches.json
 .codeyam/preview-html/
 .codeyam/results-shown.json
 .codeyam/handoff-context.md
@@ -93,6 +94,7 @@ blob-report/
 .codeyam/state/pre-commit-sync-orphan-bail.json
 .codeyam/state/step-highwater.json
 .codeyam/state/finalize-phase-fingerprints.json
+.codeyam/state/static-check-fingerprints.json
 .codeyam/state/merge-drivers-version
 .codeyam/state/command-output/
 .codeyam/state/needs-login.json

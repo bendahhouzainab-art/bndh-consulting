@@ -3048,7 +3048,8 @@ def line_budget_refusal(rel_path, limit, current, projected):
         f"`{cli_command()} editor new-step-fragment <name> --slug <slug>`: it writes "
         f"crates/codeyam-editor/src/commands/editor/steps/library/fragments/<name>_block.txt, "
         f"adds the `include_str!` substitution for `{{<name>_block}}` in "
-        f"crates/codeyam-editor/src/commands/editor/step.rs, inserts the placeholder into "
+        f"crates/codeyam-editor/src/commands/editor/step_render_substitutions.rs, inserts the "
+        f"placeholder into "
         f"each named slug's .txt, and prints the placeholder-leak test to add. Then put "
         f"this guidance in that fragment. To check any file's remaining headroom first: "
         f"`{cli_command()} editor classify-constrained-files {rel_path}`.",
