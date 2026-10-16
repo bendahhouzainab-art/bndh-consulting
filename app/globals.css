@@ -1,0 +1,42 @@
+@import "tailwindcss" source(none);
+
+/* source(none) keeps Tailwind v4's auto-walker out of .codeyam/, which holds
+   codeyam editor state rather than app source. The isolation-props line is
+   the one deliberate exception: render sidecars there
+   (.codeyam/isolation-props/<Name>.render.tsx) render inside scenario
+   captures, so their class names must be generated like app code. */
+@source "../app/**/*.{ts,tsx,js,jsx,mdx}";
+@source "../components/**/*.{ts,tsx,js,jsx,mdx}";
+@source "../.codeyam/isolation-props/**/*.{ts,tsx,js,jsx}";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* System font stacks — no network fetch at dev-server start. A project
+     that wants a specific web font adds it deliberately (e.g. a <link>),
+     keeping the scaffold default zero-dependency and offline-instant. */
+  --font-geist-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-geist-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

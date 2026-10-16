@@ -1,0 +1,72 @@
+{
+  "answers": {
+    "avoid": [
+      "Flashy recruiting-service ads",
+      "Stiff corporate consulting firm",
+      "A dense university admissions site"
+    ],
+    "count": [
+      "6"
+    ],
+    "extra": "Name BNDH Consulting \nlogo and color: https://angelakerek.com/makeithappenworkbook/ want this yellow color specifically with non obivious tennis ball shape, name in the middle with a not so dark midnight blue as the secondary color that is more all over the page, \nlanguage: arabic, french, english, spanish, german",
+    "look": {
+      "sliders": {
+        "Airy|Packed with information": 39,
+        "Calm|Energetic and sporty": 63,
+        "Classic|Modern": 49,
+        "Understated|Bold": 59,
+        "Warm and personal|Official and institutional": 64
+      },
+      "text": "Like a trusted coach or sports expert they can always come to for any information needed ",
+      "words": [
+        "Clear",
+        "Welcoming",
+        "Expert",
+        "International"
+      ]
+    },
+    "page": [
+      "Home page",
+      "Book a session + intake form"
+    ],
+    "photos": [
+      "A photo of the expert"
+    ]
+  },
+  "own": {
+    "avoid": "recruiting agency",
+    "photos": "illustration of most popular usa college sports and some school stuff as well"
+  },
+  "summary": [
+    {
+      "answer": "Home page, Book a session + intake form",
+      "id": "page",
+      "title": "Which page should I design first?"
+    },
+    {
+      "answer": "official and institutional, energetic and sporty, airy, bold, clear, welcoming, expert, international, “Like a trusted coach or sports expert they can always come to for any information needed”",
+      "id": "look",
+      "title": "What should it feel like when a parent or athlete lands on it?"
+    },
+    {
+      "answer": "Flashy recruiting-service ads, Stiff corporate consulting firm, A dense university admissions site, recruiting agency",
+      "id": "avoid",
+      "title": "What should it definitely NOT look like?"
+    },
+    {
+      "answer": "A photo of the expert, illustration of most popular usa college sports and some school stuff as well",
+      "id": "photos",
+      "title": "Should the pages show real photos?"
+    },
+    {
+      "answer": "6",
+      "id": "count",
+      "title": "How many designs should I make?"
+    },
+    {
+      "answer": "Name BNDH Consulting \nlogo and color: https://angelakerek.com/makeithappenworkbook/ want this yellow color specifically with non obivious tennis ball shape, name in the middle with a not so dark midnight blue as the secondary color that is more all over the page, \nlanguage: arabic, french, english, spanish, german",
+      "id": "extra",
+      "title": "Anything already decided?"
+    }
+  ]
+}

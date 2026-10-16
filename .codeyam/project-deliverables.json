@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "derivedFromHash": "eec57ec77e977b37621d651bca8dbc0d13ddd6b48f9a9bdc7839054b707c53d2",
+  "derivedAt": "2026-10-16T21:19:31.784585382+00:00",
+  "deliverables": [
+    {
+      "id": "landing-page-explaining-the-sports-abroad",
+      "text": "Landing page explaining the sports-abroad consulting service, who it is for (international athletes, parents/guardians, coaches), with a clear call to book a consultation",
+      "status": "open",
+      "resolvedAt": null,
+      "resolvedInFeature": null,
+      "planSlug": null,
+      "note": null,
+      "decidedBy": null
+    },
+    {
+      "id": "us-college-guide-how-playing-college-sports-in",
+      "text": "US college guide: how playing college sports in the USA works for international athletes and how to maximize scholarship percentage",
+      "status": "open",
+      "resolvedAt": null,
+      "resolvedInFeature": null,
+      "planSlug": null,
+      "note": null,
+      "decidedBy": null
+    },
+    {
+      "id": "tennis-academy-guide-academies-for-turning-pro",
+      "text": "Tennis academy guide: academies for turning pro during high school or after college, including costs",
+      "status": "open",
+      "resolvedAt": null,
+      "resolvedInFeature": null,
+      "planSlug": null,
+      "note": null,
+      "decidedBy": null
+    },
+    {
+      "id": "book-a-consultation-virtual-option-with-the",
+      "text": "Book a consultation (virtual option) with the sports-abroad expert — booking mechanism decision deferred by the user",
+      "status": "open",
+      "resolvedAt": null,
+      "resolvedInFeature": null,
+      "planSlug": null,
+      "note": null,
+      "decidedBy": null
+    },
+    {
+      "id": "pre-meeting-questionnaire-so-the-expert-knows",
+      "text": "Pre-meeting questionnaire so the expert knows about the athlete before the meeting",
+      "status": "open",
+      "resolvedAt": null,
+      "resolvedInFeature": null,
+      "planSlug": null,
+      "note": null,
+      "decidedBy": null
+    },
+    {
+      "id": "multilingual-support-english-at-launch-with-a",
+      "text": "Multilingual support: English at launch, with a language switcher and structure ready for more languages",
+      "status": "open",
+      "resolvedAt": null,
+      "resolvedInFeature": null,
+      "planSlug": null,
+      "note": null,
+      "decidedBy": null
+    }
+  ]
+}

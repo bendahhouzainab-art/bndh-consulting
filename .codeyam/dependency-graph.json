@@ -1,0 +1,147 @@
+{
+  "files": {
+    "app/api/codeyam-revalidate/route.ts": {
+      "imports": [],
+      "importedBy": []
+    },
+    "app/codeyam-isolate/layout.tsx": {
+      "imports": [],
+      "importedBy": []
+    },
+    "app/globals.css": {
+      "imports": [],
+      "importedBy": [
+        "app/layout.tsx"
+      ]
+    },
+    "app/layout.test.ts": {
+      "imports": [
+        "app/layout.tsx"
+      ],
+      "importedBy": []
+    },
+    "app/layout.tsx": {
+      "imports": [
+        "app/globals.css"
+      ],
+      "importedBy": [
+        "app/layout.test.ts"
+      ]
+    },
+    "app/lib/loadEnv.ts": {
+      "imports": [],
+      "importedBy": [
+        "prisma.config.ts",
+        "prisma/seed.ts",
+        "vitest.config.ts"
+      ]
+    },
+    "app/lib/prisma.ts": {
+      "imports": [],
+      "importedBy": []
+    },
+    "app/page.tsx": {
+      "imports": [],
+      "importedBy": []
+    },
+    "app/scenario/[slug]/page.tsx": {
+      "imports": [],
+      "importedBy": []
+    },
+    "eslint.config.mjs": {
+      "imports": [],
+      "importedBy": []
+    },
+    "next.config.ts": {
+      "imports": [],
+      "importedBy": []
+    },
+    "postcss.config.mjs": {
+      "imports": [],
+      "importedBy": []
+    },
+    "prisma.config.ts": {
+      "imports": [
+        "app/lib/loadEnv.ts"
+      ],
+      "importedBy": []
+    },
+    "prisma/seed.ts": {
+      "imports": [
+        "app/lib/loadEnv.ts"
+      ],
+      "importedBy": []
+    },
+    "scripts/build-app.mjs": {
+      "imports": [],
+      "importedBy": []
+    },
+    "vitest.config.ts": {
+      "imports": [
+        "app/lib/loadEnv.ts"
+      ],
+      "importedBy": []
+    }
+  },
+  "entities": {
+    "app/globals.css::__file_root__": {
+      "filePath": "app/globals.css",
+      "name": "__file_root__",
+      "imports": [],
+      "importedBy": [
+        "app/layout.tsx::__file_root__"
+      ]
+    },
+    "app/layout.test.ts::__file_root__": {
+      "filePath": "app/layout.test.ts",
+      "name": "__file_root__",
+      "imports": [
+        "app/layout.tsx::__file_root__"
+      ],
+      "importedBy": []
+    },
+    "app/layout.tsx::__file_root__": {
+      "filePath": "app/layout.tsx",
+      "name": "__file_root__",
+      "imports": [
+        "app/globals.css::__file_root__"
+      ],
+      "importedBy": []
+    },
+    "app/lib/loadEnv.ts::__file_root__": {
+      "filePath": "app/lib/loadEnv.ts",
+      "name": "__file_root__",
+      "imports": [],
+      "importedBy": [
+        "prisma.config.ts::__file_root__",
+        "prisma/seed.ts::__file_root__",
+        "vitest.config.ts::__file_root__"
+      ]
+    },
+    "prisma.config.ts::__file_root__": {
+      "filePath": "prisma.config.ts",
+      "name": "__file_root__",
+      "imports": [
+        "app/lib/loadEnv.ts::__file_root__"
+      ],
+      "importedBy": []
+    },
+    "prisma/seed.ts::__file_root__": {
+      "filePath": "prisma/seed.ts",
+      "name": "__file_root__",
+      "imports": [
+        "app/lib/loadEnv.ts::__file_root__"
+      ],
+      "importedBy": []
+    },
+    "vitest.config.ts::__file_root__": {
+      "filePath": "vitest.config.ts",
+      "name": "__file_root__",
+      "imports": [
+        "app/lib/loadEnv.ts::__file_root__"
+      ],
+      "importedBy": []
+    }
+  },
+  "lastUpdated": "2026-10-16T21:33:09Z"
+}

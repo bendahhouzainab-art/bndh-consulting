@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="codeyam-viewport" content="desktop">
+<title>Calm journey, big illustrations</title>
+<style>
+:root{
+  --sky:#EAF0FA;
+  --page:#F7F9FD;
+  --hill:#D6E0F2;
+  --hill-2:#C5D3EC;
+  --mid:#26386E;
+  --ink:#1D2B57;
+  --text:#4B5578;
+  --muted:#6F7898;
+  --rule:#D5DCEB;
+  --ball:#EDFF00;
+  --seam:#C7D800;
+  --on-ball:#1D2B57;
+  --font:'Helvetica Neue','Segoe UI',Arial,'Liberation Sans',sans-serif;
+  --r:28px;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --sky:#151C38;
+  --page:#11172F;
+  --hill:#1F2950;
+  --hill-2:#27335F;
+  --ink:#F0F3FB;
+  --text:#C6CDE3;
+  --muted:#929BBB;
+  --rule:#2B3660;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+figure{margin:0}
+body{background:var(--page);color:var(--text);font:300 18px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+h1,h2,h3{color:var(--ink);margin:0;font-weight:400;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+.wrap{max-width:1160px;margin:0 auto;padding:0 40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:16px 28px;border-radius:999px;font:500 16px var(--font);white-space:nowrap;border:0;cursor:pointer}
+.btn-mid{background:var(--mid);color:#fff}
+.btn-ball{background:var(--ball);color:var(--on-ball)}
+:root[data-theme="dark"] .btn-mid{background:var(--ball);color:var(--on-ball)}
+.btn:active{transform:translateY(1px)}
+
+.top{background:var(--sky)}
+header .wrap{display:flex;align-items:center;gap:32px;height:84px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:500;color:var(--ink);font-size:18px}
+nav{display:flex;gap:30px;margin-left:auto;font-weight:400;color:var(--ink);font-size:16px}
+nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.lang{color:var(--muted);font-size:15px}
+
+.hero{text-align:center;padding-top:64px}
+.hero h1{font-size:68px;max-width:15em;margin:0 auto}
+.hero p{max-width:31em;margin:22px auto 0;font-size:20px}
+.hero .ctas{display:flex;gap:12px;justify-content:center;margin-top:32px}
+.scene{display:block;width:100%;height:auto;margin-top:40px}
+
+.services{padding-top:120px}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;margin-bottom:112px}
+.svc:nth-child(even) .art{order:2}
+.art{background:var(--sky);border-radius:var(--r);aspect-ratio:4/3;display:grid;place-items:center}
+.art svg{width:58%;height:auto}
+.svc h2{font-size:46px}
+.svc p{margin:18px 0 0;max-width:24em}
+.svc a{display:inline-block;margin-top:22px;color:var(--ink);font-weight:500;border-bottom:3px solid var(--ball);padding-bottom:2px}
+
+.expert{display:grid;grid-template-columns:320px 1fr;gap:72px;align-items:center;padding:24px 0 120px}
+.photo{aspect-ratio:1;border-radius:50%}
+.photo{background-image:url('https://loremflickr.com/600/720/coach,woman,portrait?lock=102'),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzIwIj4KPGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJsIiBjeD0iMzUlIiBjeT0iMjUlIiByPSI4MCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIuNTUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0M5OEU2QiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0E4NkY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjcyMCIgZmlsbD0iI0VBRjBGQSIvPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2wpIi8+CjxjaXJjbGUgY3g9IjQ3MCIgY3k9IjE1MCIgcj0iNTQiIGZpbGw9IiNFREZGMDAiIG9wYWNpdHk9Ii45Ii8+CjxwYXRoIGQ9Ik0xMjAgNzIwYzgtMTIwIDcwLTE5MCAxODAtMjAwIDExMCAxMCAxNzIgODAgMTgwIDIwMHoiIGZpbGw9IiMyNjM4NkUiLz4KPHBhdGggZD0iTTI1NSA1MjBsNDUgNzAgNDUtNzB6IiBmaWxsPSIjRjRGNEYyIi8+CjxyZWN0IHg9IjI2MiIgeT0iNDAwIiB3aWR0aD0iNzYiIGhlaWdodD0iMTEwIiByeD0iMzAiIGZpbGw9InVybCgjcykiLz4KPHBhdGggZD0iTTE5MCAzMDBjLTYtMTEwIDUwLTE4MCAxMTYtMTgwIDcyIDAgMTIyIDYyIDExMiAxNzYtNiA3MC0zMCAxNTAtNTAgMTkwIDQwLTEyMC00LTIwMC02Mi0yMDAtNjAgMC0xMDQgNzAtNjIgMjAwLTMwLTQwLTUwLTExMC01NC0xODZ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIzMDAiIGN5PSIzMTUiIHJ4PSI4OCIgcnk9IjExMiIgZmlsbD0idXJsKCNzKSIvPgo8cGF0aCBkPSJNMjE0IDI4MGMxOC04NCA3MC0xMTggMTI2LTEwOCA0NCA4IDcwIDUwIDcwIDk2LTQwLTM2LTEwNC01Ni0xOTYgMTJ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIyNjgiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPjxlbGxpcHNlIGN4PSIzMzQiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPgo8cGF0aCBkPSJNMjc2IDM3MmMxNCAxMiAzNiAxMiA1MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3QTNFMkMiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==');background-size:cover;background-position:center 30%;}
+.expert h2{font-size:38px}
+.expert p{margin:16px 0 0;max-width:32em}
+
+.book{background:var(--sky);padding:96px 0 112px}
+.book h2{font-size:52px;text-align:center}
+.book .lead{text-align:center;margin:12px 0 0}
+form{max-width:640px;margin:44px auto 0;display:grid;gap:22px}
+.lab,label{display:block;font-weight:500;font-size:15px;color:var(--ink);margin-bottom:10px}
+.types{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.type{border:0;border-radius:20px;background:var(--page);padding:18px 12px;font:400 15px var(--font);color:var(--ink);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:inset 0 0 0 1px var(--rule)}
+.type svg{width:64px;height:64px}
+.type[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+input,select,textarea{width:100%;font:400 17px var(--font);color:var(--ink);background:var(--page);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+textarea{min-height:96px;resize:vertical}
+.help{font-size:14px;color:var(--muted);margin:8px 0 0}
+.submit{text-align:center}
+.submit .help{margin-top:12px}
+
+footer .wrap{display:flex;align-items:center;gap:12px;padding-top:28px;padding-bottom:40px;color:var(--muted);font-size:14px}
+footer .end{margin-left:auto;display:flex;gap:24px}
+.ar{font-family:'Geeza Pro',Tahoma,sans-serif}
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  nav{display:none}
+  .hero h1{font-size:42px}
+  .svc,.expert,.two{grid-template-columns:1fr;gap:32px}
+  .svc:nth-child(even) .art{order:0}
+  .types{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-basketball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6c2.6 2.4 2.6 10.4 0 12.8M18.4 5.6c-2.6 2.4-2.6 10.4 0 12.8"/></g></symbol>
+<symbol id="i-football" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4.5 19.5c-1.6-4.8 0-10 3.6-13.4C11.5 3 16.6 2.8 19.5 4.5c1.6 4.8 0 10-3.6 13.4C12.5 21 7.4 21.2 4.5 19.5z"/><path d="M9 15l6-6M10.6 10.2l1.4 1.4M12.2 8.6l1.4 1.4M9 11.8l1.4 1.4"/></g></symbol>
+<symbol id="i-baseball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6.2 5.2c2.4 3.6 2.4 10 0 13.6M17.8 5.2c-2.4 3.6-2.4 10 0 13.6"/><path d="M7.2 8.2l1.6-.6M7.8 11.2h1.7M7.6 14.4l1.6.5M16.8 8.2l-1.6-.6M16.2 11.2h-1.7M16.4 14.4l-1.6.5"/></g></symbol>
+<symbol id="i-soccer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.6l3.6 2.6-1.4 4.2H9.8l-1.4-4.2z"/><path d="M12 7.6V3.2M15.6 10.2l4.3-1.4M14.2 14.4l2.6 3.8M9.8 14.4l-2.6 3.8M8.4 10.2L4.1 8.8"/></g></symbol>
+<symbol id="i-tennis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><ellipse cx="9.5" cy="9" rx="5.6" ry="6.4" transform="rotate(-40 9.5 9)"/><path d="M6.6 6.2l5.8 5.8M5.2 9.4l4 4M8.6 4.8l4.2 4.2"/><path d="M13.3 13.6l6.2 6.2"/><circle cx="19" cy="6" r="2.2"/></g></symbol>
+<symbol id="i-volleyball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c-1.5 3.6-1 7.2 0 9M12 12c3.8.6 7 2.6 8.2 4.4M12 12c-2.4 3-5.6 4.6-8.8 4.4"/></g></symbol>
+<symbol id="i-track" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M10 3h4M12 3v3M18 7.5l1.4-1.4"/></g></symbol>
+<symbol id="i-swim" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 17c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><path d="M2.5 20.5c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><circle cx="16.5" cy="7" r="2.2"/><path d="M5 13l4.5-4.2 3.2 2.4 3-1.6"/></g></symbol>
+<symbol id="i-golf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20V3l8 3.2L9 9.4"/><ellipse cx="11" cy="20" rx="7" ry="1.6"/></g></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5L12 5l10 4.5-10 4.5z"/><path d="M6 11.4V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.6"/><path d="M21 10v5.5"/></g></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5v13c3.5-.4 6.5 0 8.5 1.5 2-1.5 5-1.9 8.5-1.5V5C17 4.6 14 5 12 6.5z"/><path d="M12 6.5v13"/></g></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20l1-4.6L16 4.4a2 2 0 012.8 0l.8.8a2 2 0 010 2.8L8.6 19z"/><path d="M14 6.4l3.6 3.6"/></g></symbol>
+<symbol id="i-campus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 9l9-5 9 5z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20.5h18"/></g></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="6.5" width="12.5" height="11" rx="2"/><path d="M15.5 10.5l5.5-3v9l-5.5-3z"/></g></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0113 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></g></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 9.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</defs></svg>
+<div class="top">
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#"><svg class="logo-mark" width="46" height="46" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1D2B57">BNDH</text></svg> BNDH Consulting</a>
+      <nav aria-label="Main"><a href="#consulting">Consulting</a><a href="#mentoring">Athlete mentoring</a><a href="#">About</a></nav>
+      <span class="lang">EN FR ES DE <span class="ar" lang="ar">ع</span></span>
+    </div>
+  </header>
+  <div class="wrap hero">
+    <h1>Sports consulting for athletes who want to play and study abroad.</h1>
+    <p>Talk it through with an expert before you choose a US college or a tennis academy.</p>
+    <div class="ctas"><a class="btn btn-mid" href="#book">Book a session</a></div>
+  </div>
+  <svg class="scene" viewBox="0 0 1440 420" aria-hidden="true">
+    <path d="M0 300c220-60 420-40 620 0s440 50 820-20v140H0z" fill="var(--hill)"/>
+    <path d="M0 350c260-40 520-20 760 10s460 20 680-10v70H0z" fill="var(--hill-2)"/>
+    <path d="M300 170C520 20 900 20 1120 170" fill="none" stroke="#26386E" stroke-width="3" stroke-dasharray="8 10" stroke-linecap="round"/>
+    <svg x="110" y="110" width="240" height="240" class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><circle cx="92" cy="112" r="62" fill="#4F86DA"/><path d="M48 88c14-10 26 0 36-6s8-20 24-18 22 18 14 28-24 4-28 18 8 22-6 30-26-6-30-20-18-18-10-32z" fill="#5BAA5E"/><path d="M30 112h124M92 50c20 18 20 106 0 124M92 50c-20 18-20 106 0 124" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="2" fill="none"/><path d="M40 52c40-40 110-40 140 0" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 7" fill="none"/><path d="M168 40l12 10-20 4-10 14-6-2 4-14-12-6 2-4 14 2 10-12z" fill="#EDFF00"/></svg>
+    <svg x="430" y="60" width="110" height="110" class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#2F4682"/><g transform="rotate(-32 92 92)"><ellipse cx="92" cy="70" rx="38" ry="48" fill="#FFFFFF" fill-opacity=".14" stroke="#22305E" stroke-width="9"/><path d="M72 30v80" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M82 30v80" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M92 30v80" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M102 30v80" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M112 30v80" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M58 48h68" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M58 60h68" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M58 72h68" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M58 84h68" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M58 96h68" stroke="#FFFFFF" stroke-opacity=".8" stroke-width="2"/><path d="M80 114l12 20 12-20" fill="none" stroke="#22305E" stroke-width="7" stroke-linejoin="round"/><rect x="85" y="130" width="14" height="50" rx="5" fill="#22305E"/></g><circle cx="148" cy="146" r="20" fill="#EDFF00"/><path d="M133.0 132.5c10.5 9.0 10.5 18.0 0 27.0" fill="none" stroke="#C7D800" stroke-width="2.4" stroke-linecap="round"/><path d="M163.0 132.5c-10.5 9.0 -10.5 18.0 0 27.0" fill="none" stroke="#C7D800" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <svg x="565" y="10" width="110" height="110" class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M30 140V54h140v86" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/><path d="M46 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M62 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M78 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M94 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M110 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M126 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M142 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M158 58v80" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M34 72h132" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M34 88h132" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M34 104h132" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M34 120h132" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><path d="M34 136h132" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="1.5"/><circle cx="112" cy="146" r="32" fill="#FFFFFF" stroke="#22305E" stroke-width="3"/><path d="M112 132l13 9-5 15h-16l-5-15z" fill="#22305E"/><path d="M112 132v-14M125 141l13-5M120 156l8 12M104 156l-8 12M99 141l-13-5" stroke="#22305E" stroke-width="3"/></svg>
+    <svg x="700" y="4" width="110" height="110" class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#2F4682"/><rect x="56" y="26" width="88" height="56" rx="4" fill="#FFFFFF" stroke="#22305E" stroke-width="5"/><rect x="86" y="48" width="28" height="22" fill="none" stroke="#D9443A" stroke-width="4"/><ellipse cx="100" cy="86" rx="26" ry="6" fill="none" stroke="#D9443A" stroke-width="5"/><path d="M76 88l8 26M88 90l4 24M100 92v22M112 90l-4 24M124 88l-8 26M82 102h36" stroke="#FFFFFF" stroke-width="2.5" fill="none"/><circle cx="104" cy="148" r="32" fill="#E8833A"/><path d="M72 148h64M104 116v64M82 126c10 12 10 32 0 44M126 126c-10 12-10 32 0 44" fill="none" stroke="#22305E" stroke-width="3"/></svg>
+    <svg x="835" y="30" width="110" height="110" class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M100 186V112M54 112h92M54 112V30M146 112V30" fill="none" stroke="#EDFF00" stroke-width="9" stroke-linecap="round"/><g transform="rotate(-30 100 138)"><ellipse cx="100" cy="138" rx="50" ry="29" fill="#8A4B2A"/><path d="M58 128c8-4 8 24 0 20M142 128c-8-4-8 24 0 20" stroke="#FFFFFF" stroke-width="3" fill="none"/><path d="M80 138h40M86 132v12M94 132v12M102 132v12M110 132v12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></g></svg>
+    <svg x="1090" y="110" width="240" height="240" class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M24 176h152" stroke="#FFFFFF" stroke-width="5"/><rect x="40" y="96" width="120" height="80" fill="#FFFFFF" fill-opacity=".2"/><path d="M30 96l70-40 70 40z" fill="#FFFFFF"/><path d="M56 104v66M78 104v66M122 104v66M144 104v66" stroke="#FFFFFF" stroke-width="8"/><path d="M90 176v-36h20v36z" fill="#EDFF00"/><rect x="88" y="24" width="24" height="32" fill="#FFFFFF"/><circle cx="100" cy="38" r="7" fill="#EDFF00"/></svg>
+    <g transform="translate(720 300)"><circle r="38" fill="#EDFF00"/><path d="M-28 -24c12 12 12 36 0 48M28 -24c-12 12-12 36 0 48" fill="none" stroke="#C7D800" stroke-width="3" stroke-linecap="round"/></g>
+  </svg>
+</div>
+
+<main>
+  <div class="wrap services">
+    <section class="svc" id="consulting">
+      <div class="art"><svg class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><circle cx="92" cy="112" r="62" fill="#4F86DA"/><path d="M48 88c14-10 26 0 36-6s8-20 24-18 22 18 14 28-24 4-28 18 8 22-6 30-26-6-30-20-18-18-10-32z" fill="#5BAA5E"/><path d="M30 112h124M92 50c20 18 20 106 0 124M92 50c-20 18-20 106 0 124" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="2" fill="none"/><path d="M40 52c40-40 110-40 140 0" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 7" fill="none"/><path d="M168 40l12 10-20 4-10 14-6-2 4-14-12-6 2-4 14 2 10-12z" fill="#EDFF00"/></svg></div>
+      <div><h2>Sports consulting</h2><p>College teams in the US or a tennis academy on the way to the pros. One clear plan, with the costs worked out for your family.</p><a href="#book">Book a consultation</a></div>
+    </section>
+    <section class="svc" id="mentoring">
+      <div class="art"><svg class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M24 46a16 16 0 0116-16h84a16 16 0 0116 16v44a16 16 0 01-16 16H66l-26 22v-22a16 16 0 01-16-16z" fill="#FFFFFF"/><path d="M82 60c-6-8-20-6-20 6 0 12 20 22 20 22s20-10 20-22c0-12-14-14-20-6z" fill="#D9443A"/><path d="M64 108a16 16 0 0116-16h84a16 16 0 0116 16v36a16 16 0 01-16 16h-4v22l-26-22H80a16 16 0 01-16-16z" fill="#EDFF00"/><circle cx="98" cy="126" r="6" fill="#22305E"/><circle cx="122" cy="126" r="6" fill="#22305E"/><circle cx="146" cy="126" r="6" fill="#22305E"/></svg></div>
+      <div><h2>Athlete mentoring</h2><p>Calls with a mentor who moved abroad to play. Someone to ask about training, teammates and life far from home.</p><a href="#book">Book a mentor</a></div>
+    </section>
+    <section class="svc">
+      <div class="art"><svg class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M70 176v-30c-20-10-30-30-28-54 4-36 34-60 68-56 34 4 56 32 52 64-2 14-8 22-12 28l10 18-14 6v14c0 6-4 10-10 10h-18v0" fill="#FFFFFF"/><path d="M104 120c0-22 14-36 34-38-2 22-14 36-34 38z" fill="#5BAA5E"/><path d="M104 120c0-18-10-30-26-32 2 18 10 30 26 32z" fill="#7CC27E"/><path d="M104 120v18" stroke="#3E8A42" stroke-width="4"/><circle cx="150" cy="44" r="16" fill="#EDFF00"/></svg></div>
+      <div><h2>Mental health support</h2><p>Confidential sessions with a licensed professional who works with athletes, for pressure, injury and confidence.</p><a href="#book">Book a call</a></div>
+    </section>
+  </div>
+
+  <div class="wrap expert">
+    <div class="photo" role="img" aria-label="Portrait of your BNDH expert"></div>
+    <div><h2>Advice from someone who made the move.</h2><p>Your expert grew up abroad and played college tennis in the US. Sessions in English, French, Spanish, German and Arabic.</p></div>
+  </div>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>Book a session</h2>
+      <p class="lead">60 minutes, by video call or in person.</p>
+      <form action="#">
+        <div><span class="lab">Who would you like to talk to?</span>
+          <div class="types">
+            <button class="type" type="button" aria-pressed="true"><svg class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><circle cx="92" cy="112" r="62" fill="#4F86DA"/><path d="M48 88c14-10 26 0 36-6s8-20 24-18 22 18 14 28-24 4-28 18 8 22-6 30-26-6-30-20-18-18-10-32z" fill="#5BAA5E"/><path d="M30 112h124M92 50c20 18 20 106 0 124M92 50c-20 18-20 106 0 124" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="2" fill="none"/><path d="M40 52c40-40 110-40 140 0" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 7" fill="none"/><path d="M168 40l12 10-20 4-10 14-6-2 4-14-12-6 2-4 14 2 10-12z" fill="#EDFF00"/></svg>Sports expert</button>
+            <button class="type" type="button" aria-pressed="false"><svg class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M24 46a16 16 0 0116-16h84a16 16 0 0116 16v44a16 16 0 01-16 16H66l-26 22v-22a16 16 0 01-16-16z" fill="#FFFFFF"/><path d="M82 60c-6-8-20-6-20 6 0 12 20 22 20 22s20-10 20-22c0-12-14-14-20-6z" fill="#D9443A"/><path d="M64 108a16 16 0 0116-16h84a16 16 0 0116 16v36a16 16 0 01-16 16h-4v22l-26-22H80a16 16 0 01-16-16z" fill="#EDFF00"/><circle cx="98" cy="126" r="6" fill="#22305E"/><circle cx="122" cy="126" r="6" fill="#22305E"/><circle cx="146" cy="126" r="6" fill="#22305E"/></svg>Athlete mentor</button>
+            <button class="type" type="button" aria-pressed="false"><svg class="spot" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="#26386E"/><path d="M70 176v-30c-20-10-30-30-28-54 4-36 34-60 68-56 34 4 56 32 52 64-2 14-8 22-12 28l10 18-14 6v14c0 6-4 10-10 10h-18v0" fill="#FFFFFF"/><path d="M104 120c0-22 14-36 34-38-2 22-14 36-34 38z" fill="#5BAA5E"/><path d="M104 120c0-18-10-30-26-32 2 18 10 30 26 32z" fill="#7CC27E"/><path d="M104 120v18" stroke="#3E8A42" stroke-width="4"/><circle cx="150" cy="44" r="16" fill="#EDFF00"/></svg>Mental health professional</button>
+          </div>
+        </div>
+        <div class="two">
+          <div><label for="d">Day</label><select id="d"><option>Tuesday 13 October</option></select></div>
+          <div><label for="t">Time</label><select id="t"><option>15:00 Central European Time</option></select></div>
+        </div>
+        <div class="two">
+          <div><label for="a">Athlete's name</label><input id="a" value="Karim Haddad"></div>
+          <div><label for="s">Sport and country</label><input id="s" value="Tennis, Morocco"></div>
+        </div>
+        <div><label for="q">What would you like to talk about?</label><textarea id="q">Which path fits him best, and what it will cost.</textarea><p class="help">Your expert reads this before you meet.</p></div>
+        <div class="submit"><button class="btn btn-ball" type="submit">Book my session</button><p class="help">Confirmed by email within one working day.</p></div>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><svg class="logo-mark" width="26" height="26" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1D2B57">BNDH</text></svg>BNDH Consulting<span class="end"><a href="#">Privacy</a><a href="#">Contact</a></span></div></footer>
+</body>
+</html>

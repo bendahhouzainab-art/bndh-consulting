@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="codeyam-viewport" content="desktop">
+<title>Campus at night, illustrated</title>
+<style>
+:root{
+  --night:#1E2A55;
+  --night-2:#24336A;
+  --night-3:#2D3F7E;
+  --dusk:#3A5099;
+  --edge:rgba(220,228,255,.14);
+  --text:#E4E9F8;
+  --soft:#A9B5DB;
+  --ball:#EDFF00;
+  --seam:#C7D800;
+  --on-ball:#1E2A55;
+  --glow:rgba(237,255,0,.16);
+  --font:Futura,'Century Gothic','Avenir Next','Trebuchet MS',sans-serif;
+  --body:'Avenir Next','Segoe UI',system-ui,sans-serif;
+  --r:20px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+figure{margin:0}
+body{background:var(--night);color:var(--text);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ball);outline-offset:3px}
+h1,h2,h3{font-family:var(--font);font-weight:500;margin:0;color:#fff;text-wrap:balance;letter-spacing:-.01em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:999px;font:500 15.5px var(--font);white-space:nowrap;border:0;cursor:pointer}
+.btn-ball{background:var(--ball);color:var(--on-ball)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;box-shadow:inset 0 0 0 1px var(--edge)}
+.btn:hover{filter:brightness(1.05)}
+.btn:active{transform:translateY(1px)}
+
+/* hero */
+.hero{position:relative;height:760px;overflow:hidden}
+.scene{position:absolute;inset:0;width:100%;height:100%}
+header{position:relative;z-index:2}
+header .wrap{display:flex;align-items:center;gap:28px;height:84px}
+.brand{display:flex;align-items:center;gap:12px;font:500 18px var(--font);color:#fff}
+nav{display:flex;gap:28px;margin-left:auto;color:var(--soft);font-size:15px}
+nav a:hover{color:#fff}
+.lang{display:flex;align-items:center;gap:6px;color:#fff;font-size:15px;padding:8px 14px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--edge)}
+.lang svg{width:16px;height:16px}
+.hero .copy{position:relative;z-index:2;padding-top:72px;max-width:620px}
+.hero h1{font-size:54px;line-height:1.06}
+.hero p{font-size:19px;color:var(--text);margin:22px 0 0;max-width:30em}
+.hero .ctas{display:flex;gap:12px;margin-top:34px}
+
+/* paths: cascading deck */
+.paths{display:grid;grid-template-columns:5fr 7fr;gap:72px;padding:120px 0 40px;align-items:center}
+.paths h2{font-size:44px;line-height:1.1}
+.paths .intro p{color:var(--soft);margin:18px 0 0}
+.deck{position:relative;height:430px}
+.deck article{position:absolute;width:440px;border-radius:var(--r);padding:34px 36px;box-shadow:0 24px 48px rgba(10,16,40,.45)}
+.deck .c1{left:0;top:0;background:var(--night-3);transform:rotate(-3deg)}
+.deck .c2{right:0;top:120px;background:var(--ball);color:var(--on-ball);transform:rotate(2deg)}
+.deck h3{font-size:28px}
+.deck .c2 h3{color:var(--on-ball)}
+.deck p{margin:10px 0 0;font-size:16px}
+.deck .c1 p{color:var(--text)}
+.deck .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.deck .tags span{font-size:13px;padding:4px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--edge);color:var(--text)}
+.deck .c2 .tags span{box-shadow:inset 0 0 0 1px rgba(30,42,85,.35);color:var(--on-ball)}
+
+/* masonry gallery of sports */
+.gallery-head{display:flex;align-items:end;justify-content:space-between;padding-top:80px}
+.gallery-head h2{font-size:40px}
+.gallery-head p{color:var(--soft);max-width:36ch;margin:0}
+.masonry{columns:4 220px;column-gap:16px;margin-top:36px}
+.tile{break-inside:avoid;margin-bottom:16px;border-radius:var(--r);padding:26px 24px;background:var(--night-2);box-shadow:inset 0 0 0 1px var(--edge)}
+.tile svg{width:56px;height:56px;color:var(--ball);display:block}
+.tile h3{font-size:21px;margin-top:22px}
+.tile p{color:var(--soft);font-size:15px;margin:6px 0 0}
+.tile.tall{padding-bottom:56px;background:linear-gradient(180deg,var(--night-3),var(--night-2))}
+.tile.tall svg{width:88px;height:88px}
+.tile.lit{background:var(--dusk)}
+.tile.school{background:transparent;box-shadow:inset 0 0 0 1px var(--edge)}
+.tile.school svg{color:#fff}
+
+/* expert with layered crop */
+.expert{display:grid;grid-template-columns:5fr 6fr;gap:96px;align-items:center;padding:140px 0 40px}
+.frame{position:relative;max-width:420px}
+.frame::before{content:"";position:absolute;inset:28px -28px -28px 28px;border-radius:var(--r);background:var(--ball)}
+.frame .photo{position:relative;aspect-ratio:4/5;border-radius:var(--r)}
+.photo{background-image:url('https://loremflickr.com/600/720/coach,woman,portrait?lock=63'),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzIwIj4KPGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJsIiBjeD0iMzUlIiBjeT0iMjUlIiByPSI4MCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIuNTUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0M5OEU2QiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0E4NkY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjcyMCIgZmlsbD0iIzNBNTA5OSIvPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2wpIi8+CjxjaXJjbGUgY3g9IjQ3MCIgY3k9IjE1MCIgcj0iNTQiIGZpbGw9IiNFREZGMDAiIG9wYWNpdHk9Ii45Ii8+CjxwYXRoIGQ9Ik0xMjAgNzIwYzgtMTIwIDcwLTE5MCAxODAtMjAwIDExMCAxMCAxNzIgODAgMTgwIDIwMHoiIGZpbGw9IiMxRTJBNTUiLz4KPHBhdGggZD0iTTI1NSA1MjBsNDUgNzAgNDUtNzB6IiBmaWxsPSIjRjRGNEYyIi8+CjxyZWN0IHg9IjI2MiIgeT0iNDAwIiB3aWR0aD0iNzYiIGhlaWdodD0iMTEwIiByeD0iMzAiIGZpbGw9InVybCgjcykiLz4KPHBhdGggZD0iTTE5MCAzMDBjLTYtMTEwIDUwLTE4MCAxMTYtMTgwIDcyIDAgMTIyIDYyIDExMiAxNzYtNiA3MC0zMCAxNTAtNTAgMTkwIDQwLTEyMC00LTIwMC02Mi0yMDAtNjAgMC0xMDQgNzAtNjIgMjAwLTMwLTQwLTUwLTExMC01NC0xODZ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIzMDAiIGN5PSIzMTUiIHJ4PSI4OCIgcnk9IjExMiIgZmlsbD0idXJsKCNzKSIvPgo8cGF0aCBkPSJNMjE0IDI4MGMxOC04NCA3MC0xMTggMTI2LTEwOCA0NCA4IDcwIDUwIDcwIDk2LTQwLTM2LTEwNC01Ni0xOTYgMTJ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIyNjgiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPjxlbGxpcHNlIGN4PSIzMzQiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPgo8cGF0aCBkPSJNMjc2IDM3MmMxNCAxMiAzNiAxMiA1MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3QTNFMkMiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==');background-size:cover;background-position:center 30%;}
+.frame .small{position:absolute;left:-36px;bottom:40px;width:150px;aspect-ratio:1;border-radius:16px;background:var(--night-3);display:grid;place-items:center;box-shadow:0 12px 30px rgba(10,16,40,.5)}
+.frame .small svg{width:72px;height:72px;color:#fff}
+.expert h2{font-size:44px;line-height:1.1}
+.expert .bio{color:var(--text);margin:20px 0 0;max-width:46ch}
+.steps{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--glow);color:var(--ball);font:500 18px var(--font)}
+.steps b{display:block;color:#fff;font-weight:600}
+.steps span span{color:var(--soft);font-size:15.5px}
+.money{margin-top:40px;display:flex;gap:28px;align-items:baseline;padding:22px 26px;border-radius:var(--r);background:var(--night-2);box-shadow:inset 0 0 0 1px var(--edge);font-variant-numeric:tabular-nums}
+.money b{font:500 40px/1 var(--font);color:var(--ball)}
+.money span{color:var(--soft);font-size:15px}
+
+/* booking */
+.book{margin-top:140px;padding:72px 0 96px;background:linear-gradient(180deg,var(--night-2),var(--night))}
+.book h2{font-size:52px;text-align:left}
+.book .lead{color:var(--soft);margin:12px 0 0}
+.book-grid{display:grid;grid-template-columns:400px 1fr;gap:28px;margin-top:44px;align-items:start}
+.panel{border-radius:var(--r);background:var(--night-3);padding:32px}
+.panel h3{font-size:20px}
+.modes{display:grid;gap:10px;margin-top:18px}
+.mode{display:flex;gap:14px;align-items:center;padding:16px;border-radius:14px;background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px var(--edge);color:#fff;font:inherit;text-align:left;border:0;cursor:pointer}
+.mode svg{width:24px;height:24px;color:var(--ball);flex:none}
+.mode small{display:block;color:var(--soft);font-size:13.5px}
+.mode[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ball)}
+.days{display:flex;gap:8px;margin-top:26px}
+.days button{flex:1;border:0;border-radius:14px;padding:10px 0;background:rgba(255,255,255,.04);color:var(--soft);font:13px var(--body);cursor:pointer}
+.days b{display:block;font:500 22px var(--font);color:#fff;font-variant-numeric:tabular-nums}
+.days button[aria-pressed="true"]{background:var(--ball);color:var(--on-ball)}
+.days button[aria-pressed="true"] b{color:var(--on-ball)}
+.times{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.times button{border:0;border-radius:999px;padding:9px 0;background:transparent;box-shadow:inset 0 0 0 1px var(--edge);color:#fff;font:14px var(--body);font-variant-numeric:tabular-nums;cursor:pointer}
+.times button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--ball);color:var(--ball)}
+.tz{color:var(--soft);font-size:13.5px;margin:12px 0 0}
+form.panel{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px;background:var(--night-2);box-shadow:inset 0 0 0 1px var(--edge)}
+.full{grid-column:1/-1}
+label,.lab{display:block;font-size:14px;color:var(--text);margin-bottom:8px;font-weight:500}
+input,select,textarea{width:100%;font:16px var(--body);color:#fff;background:var(--night);border:1px solid var(--edge);border-radius:12px;padding:12px 14px}
+option{color:#1E2A55}
+textarea{min-height:92px;resize:vertical}
+.who{display:flex;gap:8px}
+.who button{border:0;border-radius:999px;padding:10px 16px;background:rgba(255,255,255,.06);color:#fff;font:15px var(--body);cursor:pointer}
+.who button[aria-pressed="true"]{background:#fff;color:var(--on-ball)}
+.help{color:var(--soft);font-size:13px;margin:6px 0 0}
+.send{display:flex;justify-content:space-between;align-items:center}
+.langs-row{display:flex;gap:18px;color:var(--soft);font-size:14.5px;margin-top:6px}
+.ar{font-family:'Geeza Pro',Tahoma,sans-serif}
+
+footer .wrap{display:flex;align-items:center;gap:12px;padding-top:28px;padding-bottom:40px;border-top:1px solid var(--edge);color:var(--soft);font-size:14px}
+footer .end{margin-left:auto;display:flex;gap:24px}
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  nav{display:none}
+  .paths,.expert,.book-grid,form.panel{grid-template-columns:1fr}
+  .deck{height:auto}.deck article{position:relative;width:auto;transform:none;margin-bottom:16px;top:0}
+  .hero h1{font-size:42px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-basketball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6c2.6 2.4 2.6 10.4 0 12.8M18.4 5.6c-2.6 2.4-2.6 10.4 0 12.8"/></g></symbol>
+<symbol id="i-football" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4.5 19.5c-1.6-4.8 0-10 3.6-13.4C11.5 3 16.6 2.8 19.5 4.5c1.6 4.8 0 10-3.6 13.4C12.5 21 7.4 21.2 4.5 19.5z"/><path d="M9 15l6-6M10.6 10.2l1.4 1.4M12.2 8.6l1.4 1.4M9 11.8l1.4 1.4"/></g></symbol>
+<symbol id="i-baseball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6.2 5.2c2.4 3.6 2.4 10 0 13.6M17.8 5.2c-2.4 3.6-2.4 10 0 13.6"/><path d="M7.2 8.2l1.6-.6M7.8 11.2h1.7M7.6 14.4l1.6.5M16.8 8.2l-1.6-.6M16.2 11.2h-1.7M16.4 14.4l-1.6.5"/></g></symbol>
+<symbol id="i-soccer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.6l3.6 2.6-1.4 4.2H9.8l-1.4-4.2z"/><path d="M12 7.6V3.2M15.6 10.2l4.3-1.4M14.2 14.4l2.6 3.8M9.8 14.4l-2.6 3.8M8.4 10.2L4.1 8.8"/></g></symbol>
+<symbol id="i-tennis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><ellipse cx="9.5" cy="9" rx="5.6" ry="6.4" transform="rotate(-40 9.5 9)"/><path d="M6.6 6.2l5.8 5.8M5.2 9.4l4 4M8.6 4.8l4.2 4.2"/><path d="M13.3 13.6l6.2 6.2"/><circle cx="19" cy="6" r="2.2"/></g></symbol>
+<symbol id="i-volleyball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c-1.5 3.6-1 7.2 0 9M12 12c3.8.6 7 2.6 8.2 4.4M12 12c-2.4 3-5.6 4.6-8.8 4.4"/></g></symbol>
+<symbol id="i-track" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M10 3h4M12 3v3M18 7.5l1.4-1.4"/></g></symbol>
+<symbol id="i-swim" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 17c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><path d="M2.5 20.5c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><circle cx="16.5" cy="7" r="2.2"/><path d="M5 13l4.5-4.2 3.2 2.4 3-1.6"/></g></symbol>
+<symbol id="i-golf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20V3l8 3.2L9 9.4"/><ellipse cx="11" cy="20" rx="7" ry="1.6"/></g></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5L12 5l10 4.5-10 4.5z"/><path d="M6 11.4V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.6"/><path d="M21 10v5.5"/></g></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5v13c3.5-.4 6.5 0 8.5 1.5 2-1.5 5-1.9 8.5-1.5V5C17 4.6 14 5 12 6.5z"/><path d="M12 6.5v13"/></g></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20l1-4.6L16 4.4a2 2 0 012.8 0l.8.8a2 2 0 010 2.8L8.6 19z"/><path d="M14 6.4l3.6 3.6"/></g></symbol>
+<symbol id="i-campus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 9l9-5 9 5z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20.5h18"/></g></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="6.5" width="12.5" height="11" rx="2"/><path d="M15.5 10.5l5.5-3v9l-5.5-3z"/></g></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0113 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></g></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 9.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</defs></svg>
+<div class="hero">
+  <svg class="scene" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1E2A55"/><stop offset=".7" stop-color="#2D3F7E"/><stop offset="1" stop-color="#3A5099"/></linearGradient>
+      <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EDFF00" stop-opacity=".22"/><stop offset="1" stop-color="#EDFF00" stop-opacity="0"/></linearGradient>
+      <linearGradient id="turf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B3C78"/><stop offset="1" stop-color="#1E2A55"/></linearGradient>
+    </defs>
+    <rect width="1440" height="760" fill="url(#sky)"/>
+    <g fill="#fff" opacity=".55"><circle cx="760" cy="80" r="1.4"/><circle cx="905" cy="140" r="1"/><circle cx="1050" cy="60" r="1.3"/><circle cx="1190" cy="120" r="1"/><circle cx="1320" cy="70" r="1.4"/><circle cx="980" cy="210" r="1"/></g>
+    <!-- floodlight cones -->
+    <path d="M840 150 L640 640 L1000 640 Z" fill="url(#cone)"/>
+    <path d="M1300 150 L1060 640 L1440 640 Z" fill="url(#cone)"/>
+    <!-- campus building with clock tower -->
+    <g fill="#24336A">
+      <rect x="1000" y="330" width="300" height="200"/>
+      <polygon points="990,330 1150,262 1310,330"/>
+      <rect x="1125" y="190" width="50" height="90"/>
+      <polygon points="1118,190 1150,150 1182,190"/>
+    </g>
+    <circle cx="1150" cy="228" r="14" fill="#EDFF00" opacity=".85"/>
+    <g fill="#2D3F7E"><rect x="1020" y="350" width="14" height="170"/><rect x="1060" y="350" width="14" height="170"/><rect x="1100" y="350" width="14" height="170"/><rect x="1186" y="350" width="14" height="170"/><rect x="1226" y="350" width="14" height="170"/><rect x="1266" y="350" width="14" height="170"/></g>
+    <g fill="#EDFF00" opacity=".6"><rect x="1140" y="380" width="20" height="30" rx="10"/><rect x="1140" y="440" width="20" height="30" rx="10"/></g>
+    <!-- light towers -->
+    <g fill="#16214A"><rect x="836" y="150" width="8" height="420"/><rect x="1296" y="150" width="8" height="420"/></g>
+    <g><rect x="806" y="128" width="68" height="26" rx="4" fill="#16214A"/><g fill="#EDFF00"><circle cx="818" cy="141" r="6"/><circle cx="834" cy="141" r="6"/><circle cx="850" cy="141" r="6"/><circle cx="866" cy="141" r="6"/></g></g>
+    <g><rect x="1266" y="128" width="68" height="26" rx="4" fill="#16214A"/><g fill="#EDFF00"><circle cx="1278" cy="141" r="6"/><circle cx="1294" cy="141" r="6"/><circle cx="1310" cy="141" r="6"/><circle cx="1326" cy="141" r="6"/></g></g>
+    <!-- stadium stands -->
+    <path d="M560 560 C700 470 1240 450 1440 500 L1440 600 L560 600 Z" fill="#24336A"/>
+    <path d="M560 560 C700 470 1240 450 1440 500" fill="none" stroke="#3A5099" stroke-width="3"/>
+    <!-- field with court lines in perspective -->
+    <path d="M0 600 L1440 600 L1440 760 L0 760 Z" fill="url(#turf)"/>
+    <g fill="none" stroke="#DCE4FF" stroke-opacity=".35" stroke-width="2">
+      <path d="M680 760 L800 610 L1260 610 L1400 760"/>
+      <path d="M740 690 L1330 690"/>
+      <path d="M1030 610 L1035 760"/>
+    </g>
+    <path d="M760 650 L1300 650" stroke="#fff" stroke-opacity=".7" stroke-width="3"/>
+    <!-- goal posts -->
+    <g fill="none" stroke="#EDFF00" stroke-width="5" stroke-linecap="round"><path d="M620 600 V520 M580 520 H660 M580 520 V450 M660 520 V450"/></g>
+    <!-- basketball hoop -->
+    <g><rect x="1370" y="420" width="6" height="190" fill="#16214A"/><rect x="1320" y="400" width="86" height="58" rx="4" fill="#fff" opacity=".9"/><rect x="1350" y="420" width="26" height="20" fill="none" stroke="#1E2A55" stroke-width="3"/><path d="M1344 458 h38 l-6 26 h-26 z" fill="none" stroke="#fff" stroke-width="2"/></g>
+    <!-- balls -->
+    <g><circle cx="960" cy="700" r="20" fill="#EDFF00"/><path d="M945 687c7 7 7 19 0 26M975 687c-7 7-7 19 0 26" fill="none" stroke="#C7D800" stroke-width="2"/></g>
+    <g><circle cx="1180" cy="720" r="26" fill="#E8833A"/><path d="M1154 720h52M1180 694v52M1162 702c8 8 8 28 0 36M1198 702c-8 8-8 28 0 36" fill="none" stroke="#1E2A55" stroke-width="2"/></g>
+    <g transform="translate(860 724) rotate(-25)"><ellipse rx="30" ry="18" fill="#8A4B2A"/><path d="M-10 0h20M-6 -4v8M0 -4v8M6 -4v8" stroke="#fff" stroke-width="2"/></g>
+    <!-- graduation cap, thrown -->
+    <g transform="translate(980 300) rotate(-14)"><polygon points="-46,0 0,-20 46,0 0,20" fill="#fff"/><path d="M-26 9 v20 c0 8 52 8 52 0 v-20" fill="#E4E9F8"/><path d="M32 4 v30" stroke="#EDFF00" stroke-width="3"/><circle cx="32" cy="36" r="4" fill="#EDFF00"/></g>
+  </svg>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#"><svg class="logo-mark" width="44" height="44" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1E2A55">BNDH</text></svg> BNDH Consulting</a>
+      <nav aria-label="Main"><a href="#">College</a><a href="#">Academies</a><a href="#">About</a><a href="#">Questions</a></nav>
+      <span class="lang"><svg><use href="#i-globe"/></svg>English<svg><use href="#i-chev"/></svg></span>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="copy">
+      <h1>Your path to sports in the US starts here.</h1>
+      <p>Scholarships, academies and real costs, explained by an expert for athletes, parents and coaches.</p>
+      <div class="ctas"><a class="btn btn-ball" href="#book">Book a session</a><a class="btn btn-ghost" href="#paths">Explore the paths</a></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap paths" id="paths">
+    <div class="intro">
+      <h2>Two ways to play at the next level.</h2>
+      <p>Most families consider both. Your session compares them with your real numbers.</p>
+    </div>
+    <div class="deck">
+      <article class="c1"><h3>College on a scholarship</h3><p>Play for a US university while you earn a degree. Athletic and academic aid can be combined.</p><div class="tags"><span>NCAA D-I</span><span>D-II</span><span>D-III</span><span>NAIA</span><span>Junior college</span></div></article>
+      <article class="c2"><h3>Tennis academies</h3><p>Full-time training on a pro pathway, during high school or after college.</p><div class="tags"><span>From age 14</span><span>Post-college</span><span>Boarding options</span></div></article>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="gallery-head"><h2>The sports US colleges recruit most</h2><p>And the school side that comes with them: grades, tests and admissions.</p></div>
+    <div class="masonry">
+      <div class="tile tall"><svg><use href="#i-football"/></svg><h3>Football</h3><p>The biggest rosters and the largest scholarship pools.</p></div>
+      <div class="tile"><svg><use href="#i-soccer"/></svg><h3>Soccer</h3><p>Popular with international players at every level.</p></div>
+      <div class="tile lit"><svg><use href="#i-tennis"/></svg><h3>Tennis</h3><p>Rosters are small and very international.</p></div>
+      <div class="tile school"><svg><use href="#i-cap"/></svg><h3>Admissions</h3><p>SAT, English tests and transcripts, step by step.</p></div>
+      <div class="tile"><svg><use href="#i-basketball"/></svg><h3>Basketball</h3><p>Fast recruiting, early contact with coaches.</p></div>
+      <div class="tile tall"><svg><use href="#i-track"/></svg><h3>Track and field</h3><p>Your times and marks speak for themselves.</p></div>
+      <div class="tile"><svg><use href="#i-volleyball"/></svg><h3>Volleyball</h3><p>Strong demand in the women's game.</p></div>
+      <div class="tile school"><svg><use href="#i-book"/></svg><h3>Academic aid</h3><p>Grades can unlock money on top of athletics.</p></div>
+      <div class="tile lit"><svg><use href="#i-baseball"/></svg><h3>Baseball</h3><p>Partial scholarships that add up with aid.</p></div>
+      <div class="tile"><svg><use href="#i-swim"/></svg><h3>Swimming</h3><p>Clear time standards at every division.</p></div>
+    </div>
+  </div>
+
+  <div class="wrap expert">
+    <div class="frame">
+      <div class="photo" role="img" aria-label="Portrait of your BNDH expert"></div>
+      <div class="small" aria-hidden="true"><svg><use href="#i-campus"/></svg></div>
+    </div>
+    <div>
+      <h2>A coach in your corner, not a sales pitch.</h2>
+      <p class="bio">Your expert grew up abroad and played college tennis in the US on a scholarship. Ask anything, as often as you need.</p>
+      <ol class="steps">
+        <li><span><b>Tell us about the athlete</b><span>A short form on sport, level, grades and budget.</span></span></li>
+        <li><span><b>Pick a time</b><span>Video call or in person, in your language.</span></span></li>
+        <li><span><b>Ask everything</b><span>Leave with a written plan and real numbers.</span></span></li>
+      </ol>
+      <div class="money"><b>$16,250</b><span>Example: what a family paid per year after a $34,200 athletic scholarship and an $18,000 academic award.</span></div>
+    </div>
+  </div>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <h2>Book a session</h2>
+      <p class="lead">60 minutes, one to one.</p>
+      <div class="langs-row"><span>English</span><span>Français</span><span>Español</span><span>Deutsch</span><span class="ar" lang="ar" dir="rtl">العربية</span></div>
+      <div class="book-grid">
+        <div class="panel">
+          <h3>How and when</h3>
+          <div class="modes">
+            <button class="mode" type="button" aria-pressed="true"><svg><use href="#i-video"/></svg><span>Video call<small>From anywhere in the world</small></span></button>
+            <button class="mode" type="button" aria-pressed="false"><svg><use href="#i-pin"/></svg><span>In person<small>By appointment</small></span></button>
+          </div>
+          <div class="days"><button type="button" aria-pressed="false">Mon<b>12</b></button><button type="button" aria-pressed="true">Tue<b>13</b></button><button type="button" aria-pressed="false">Wed<b>14</b></button><button type="button" aria-pressed="false">Thu<b>15</b></button><button type="button" aria-pressed="false">Fri<b>16</b></button></div>
+          <div class="times"><button type="button" aria-pressed="false">09:00</button><button type="button" aria-pressed="false">11:30</button><button type="button" aria-pressed="true">15:00</button><button type="button" aria-pressed="false">18:30</button></div>
+          <p class="tz">Times shown in Central European Time.</p>
+        </div>
+        <form class="panel" action="#">
+          <div class="full"><span class="lab">I am the</span><div class="who"><button type="button" aria-pressed="false">Athlete</button><button type="button" aria-pressed="true">Parent or guardian</button><button type="button" aria-pressed="false">Coach</button></div></div>
+          <div><label for="a">Athlete's name</label><input id="a" value="Karim Haddad"></div>
+          <div><label for="b">Country</label><input id="b" value="Morocco"></div>
+          <div><label for="c">Sport</label><select id="c"><option>Tennis</option></select></div>
+          <div><label for="d">Graduates high school</label><select id="d"><option>2027</option></select></div>
+          <div><label for="e">Current level</label><input id="e" value="UTR 10.2, national U18 top 20"></div>
+          <div><label for="f">Yearly budget</label><select id="f"><option>$10,000 to $20,000</option></select></div>
+          <div class="full"><label for="g">What do you most want to know?</label><textarea id="g">Can a Division I scholarship and academic aid together cover most of the cost?</textarea><p class="help">Your expert reads this before you meet.</p></div>
+          <div class="full send"><span class="help">Confirmed by email within one working day.</span><button class="btn btn-ball" type="submit">Book my session</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><svg class="logo-mark" width="26" height="26" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1E2A55">BNDH</text></svg>BNDH Consulting<span class="end"><a href="#">Privacy</a><a href="#">Contact</a></span></div></footer>
+</body>
+</html>

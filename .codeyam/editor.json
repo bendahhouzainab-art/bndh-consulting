@@ -1,0 +1,243 @@
+{
+  "$comment": "Per-developer settings (port, provider, proxy ports, startCommand, etc.) belong in editor.local.json. That file is gitignored and is deep-merged on top of this one at load time. Changing `provider` after scaffold does NOT install that agent's surface — re-run `codeyam-editor editor install-hooks` (or `codeyam-editor init --provider <name>`) to install it. See CLAUDE.md or run `codeyam-editor editor config-show` to inspect the effective config.",
+  "apps": [
+    {
+      "dir": ".",
+      "name": "BNDH Consulting",
+      "port": 3000,
+      "startCommand": "npm run dev",
+      "type": "web"
+    }
+  ],
+  "audit": {
+    "allowedDocumentationOnlySlugs": [
+      "post-merge-drift-sweep"
+    ],
+    "branchBaseRef": "main",
+    "coverageBootstrap": {
+      "enabled": true
+    },
+    "itemShape": {
+      "changeWithoutVerify": "note",
+      "compound": "warning",
+      "vague": "warning"
+    },
+    "scenarioFreshnessDays": 14,
+    "stepBudget": {
+      "maxChecklistItems": 6,
+      "maxLines": 80,
+      "severity": "warning"
+    },
+    "testNamingConventions": {}
+  },
+  "catalogAutoAdd": {
+    "allow": [],
+    "deny": []
+  },
+  "cleanup": {
+    "completedPlanMinAgeDays": 90,
+    "completedPlanRetention": 500,
+    "logCompress": true,
+    "logDeleteDays": 30,
+    "logRotateDays": 7,
+    "screenshotPruneOrphans": true,
+    "tmpDeleteHours": 24
+  },
+  "coverageThresholds": {
+    "global": {
+      "minLinePercent": 90.0
+    }
+  },
+  "database": null,
+  "defaultScreenSize": "Desktop",
+  "deviceScaleFactor": 2.0,
+  "env": {},
+  "files": {
+    "eventLogMaxBytes": null,
+    "journalShardEntries": null,
+    "logKeepRotated": null,
+    "textLogMaxBytes": null
+  },
+  "formatters": [],
+  "git": {
+    "commitQueue": {
+      "enabled": true,
+      "headAutoReclaimEnabled": true,
+      "heartbeatIntervalSec": 15,
+      "machineAliveHookTimeoutMs": 5000,
+      "maxHookPrunePerSweep": 10,
+      "maxProgressStallSec": 900,
+      "pollIntervalMs": 2000,
+      "serverHeartbeatIntervalSec": 60,
+      "waitTimeoutSec": 300
+    },
+    "planClaims": {
+      "enabled": true,
+      "fetchIntervalSec": 3
+    }
+  },
+  "hooks": {},
+  "port": 3000,
+  "projectDescription": "I want to build a website that facilitates comprhension of how sports fucntion abroad , because my main audience would be people international athletes from all over the world but can be in the USA as well, parents, guadians and coaches to have access to information about the  ressoucess available to either play college in the USA with scholarships and how to get the biggest percentage of scholarships or join acadmeies to play tennis professinally either in high school or post coellge. This would be a consulting spots website, ince they book their appointment, which can be virtual, they can meet with the sports abroad expert and ask all the questions they need answers for to make the right decision, finanacially especially. they will fill out a form with question so that the perosn they are meeting with can know a bit about them before hand. ",
+  "projectTitle": "BNDH Consulting",
+  "proxy": {
+    "controlPort": 14303,
+    "dbPort": 14205,
+    "httpPort": 14204,
+    "httpsPassthrough": [
+      "crates.io",
+      "static.crates.io",
+      "index.crates.io",
+      "registry.npmjs.org",
+      "pypi.org",
+      "files.pythonhosted.org",
+      "proxy.golang.org",
+      "sum.golang.org",
+      "storage.googleapis.com",
+      "cdn.playwright.dev",
+      "rubygems.org",
+      "github.com",
+      "codeload.github.com",
+      "objects.githubusercontent.com"
+    ],
+    "httpsPreview": false
+  },
+  "runnerTimeout": {
+    "changedFanoutMaxExtraSeconds": 1800,
+    "changedFanoutPerUnitSeconds": 180,
+    "changedFanoutThreshold": 2,
+    "floorSeconds": 900,
+    "headroomSeconds": 90,
+    "mode": "auto"
+  },
+  "scenarios": {
+    "dir": ".codeyam/scenarios"
+  },
+  "screenSizes": {
+    "Desktop": {
+      "height": 900,
+      "width": 1440
+    },
+    "Laptop": {
+      "height": 800,
+      "width": 1280
+    },
+    "Mobile": {
+      "height": 844,
+      "width": 390
+    },
+    "Tablet": {
+      "height": 1024,
+      "width": 768
+    }
+  },
+  "server": {
+    "access": {
+      "mode": "loopback"
+    },
+    "autoRestartOnStaleBinary": true,
+    "devServerMaxRssMb": null,
+    "environment": "local",
+    "maxRssMb": 6144
+  },
+  "setupBrowserEnabled": false,
+  "silenceHookStderr": false,
+  "startCommand": "npm run dev",
+  "staticChecks": [
+    {
+      "command": "npx tsc --noEmit",
+      "description": "TypeScript strict type-check",
+      "excludePatterns": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/build/**"
+      ],
+      "filePatterns": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "name": "tsc"
+    },
+    {
+      "command": "codeyam-editor editor check-lockfile-sync",
+      "description": "package-lock.json passes `npm ci` under the project's pinned npm — the npm CI uses",
+      "excludePatterns": [
+        "**/node_modules/**"
+      ],
+      "filePatterns": [
+        "**/package.json",
+        "**/package-lock.json"
+      ],
+      "name": "lockfile-sync"
+    }
+  ],
+  "testCacheIgnorePatterns": [
+    ".gitattributes",
+    ".gitignore",
+    ".claude/**",
+    "**/.claude/**",
+    ".codex/**",
+    "**/.codex/**",
+    ".gemini/**",
+    "**/.gemini/**",
+    ".opencode/**",
+    "**/.opencode/**",
+    "*.md",
+    ".nvmrc",
+    "app/globals.css",
+    "postcss.config.mjs",
+    "eslint.config.mjs",
+    "scripts/build-app.mjs"
+  ],
+  "testParallelism": {
+    "loadGuard": true
+  },
+  "testPartitions": [],
+  "testRunners": [
+    {
+      "changedCommand": "npx vitest run --changed --reporter=json",
+      "command": "npx vitest run --reporter=json",
+      "excludePatterns": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/build/**"
+      ],
+      "name": "tests",
+      "outputFormat": "vitest-json",
+      "sourceFilePatterns": [
+        "**/*.{ts,tsx,js,jsx}",
+        ".env",
+        "package.json",
+        "package-lock.json",
+        "tsconfig.json",
+        "prisma/schema.prisma"
+      ],
+      "targetedCommand": "npx vitest run -t \"{test_names}\" --reporter=json",
+      "testFilePatterns": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ]
+    }
+  ],
+  "toolchainPaths": [],
+  "workflow": {
+    "audience": null,
+    "checkIns": {
+      "hardeningCompleted": {
+        "autoAction": "commit",
+        "pause": true
+      },
+      "planAccepted": {
+        "pause": true
+      },
+      "prototypeCompleted": {
+        "pause": true
+      },
+      "push": {
+        "pause": true
+      }
+    }
+  }
+}

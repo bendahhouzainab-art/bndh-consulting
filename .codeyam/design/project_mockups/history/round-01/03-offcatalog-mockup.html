@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="codeyam-viewport" content="desktop">
+<title>Court lines, calm and clear</title>
+<style>
+:root{
+  --page:#FFFFFF;
+  --court:#EEF2FA;
+  --line:#2A3B70;
+  --line-faint:#C9D2E8;
+  --ink:#1F2E60;
+  --text:#3B4467;
+  --muted:#6A7395;
+  --ball:#EDFF00;
+  --seam:#C7D800;
+  --on-ball:#1F2E60;
+  --font:'Helvetica Neue','Neue Haas Grotesk Text','Arial Nova',Arial,'Liberation Sans',sans-serif;
+  --r:2px;
+  --gap:24px;
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --page:#121933;
+  --court:#1A2448;
+  --line:#AFC0EE;
+  --line-faint:#2E3B66;
+  --ink:#F1F4FC;
+  --text:#C9D0E6;
+  --muted:#8E98BA;
+  --on-ball:#1F2E60;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+figure{margin:0}
+body{background:var(--page);color:var(--text);font:17px/1.6 var(--font);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+h1,h2,h3{color:var(--ink);margin:0;font-weight:500;letter-spacing:-.025em;text-wrap:balance}
+.grid{max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gap)}
+
+/* nav */
+header{border-bottom:1px solid var(--line-faint)}
+header .grid{height:72px;align-items:center}
+.brand{grid-column:1/4;display:flex;align-items:center;gap:12px;color:var(--ink);font-weight:600}
+nav{grid-column:5/10;display:flex;gap:28px;font-size:15px;color:var(--text)}
+nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.right{grid-column:10/13;display:flex;justify-content:flex-end;align-items:center;gap:18px;font-size:15px}
+.lang{color:var(--muted)}
+.lang b{color:var(--ink);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:var(--r);font:500 15px var(--font);white-space:nowrap;border:0;cursor:pointer}
+.btn-ink{background:var(--ink);color:var(--page)}
+.btn-ball{background:var(--ball);color:var(--on-ball)}
+.btn-line{border:1px solid var(--ink);color:var(--ink);background:transparent}
+.btn:active{transform:translateY(1px)}
+
+/* hero: a court seen from above */
+.hero{position:relative;background:var(--court);overflow:hidden}
+.court{position:absolute;inset:40px 40px 40px 40px;max-width:1200px;margin:0 auto;pointer-events:none}
+.court span{position:absolute;background:var(--line);opacity:.22}
+.court .base-l{left:0;top:0;bottom:0;width:2px}
+.court .base-r{right:0;top:0;bottom:0;width:2px}
+.court .side-t{left:0;right:0;top:0;height:2px}
+.court .side-b{left:0;right:0;bottom:0;height:2px}
+.court .single-t{left:0;right:0;top:12%;height:1px}
+.court .single-b{left:0;right:0;bottom:12%;height:1px}
+.court .net{left:50%;top:-20px;bottom:-20px;width:3px;opacity:.5}
+.court .svc-l{left:23%;top:12%;bottom:12%;width:1px}
+.court .svc-r{right:23%;top:12%;bottom:12%;width:1px}
+.court .center{left:23%;right:23%;top:50%;height:1px}
+.hero .grid{position:relative;min-height:600px;align-content:center;padding-top:72px;padding-bottom:72px}
+.hero h1{grid-column:2/7;font-size:64px;line-height:1.02}
+.hero .lede{grid-column:2/6;font-size:19px;margin:28px 0 0;color:var(--text)}
+.hero .ctas{grid-column:2/7;display:flex;gap:12px;margin-top:36px}
+.ballmark{grid-column:8/12;grid-row:1/4;align-self:center;justify-self:center;width:280px;height:280px;position:relative}
+.ballmark svg{width:100%;height:100%}
+.ballmark .tag{position:absolute;left:50%;top:100%;transform:translateX(-50%);margin-top:18px;width:240px;text-align:center;font-size:14px;color:var(--ink);line-height:1.4}
+
+
+/* sections */
+section{padding:112px 0 0}
+.side-note{grid-column:1/3;font-size:14px;color:var(--muted);padding-top:10px;border-top:2px solid var(--ink)}
+.side-note b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px}
+.head{grid-column:3/10}
+.head h2{font-size:44px;line-height:1.08}
+.head p{margin:18px 0 0;max-width:56ch}
+
+.paths{grid-column:3/13;display:grid;grid-template-columns:7fr 5fr;gap:var(--gap);margin-top:56px}
+.p-col{border-top:1px solid var(--line-faint);padding-top:28px}
+.p-col h3{font-size:28px}
+.p-col p{margin:12px 0 0;max-width:48ch}
+.sport-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:32px;border-left:1px solid var(--line-faint)}
+.sport-row div{border-right:1px solid var(--line-faint);border-bottom:1px solid var(--line-faint);padding:18px 14px;font-size:14px;color:var(--ink);display:flex;align-items:center;gap:10px}
+.sport-row div:nth-child(-n+4){border-top:1px solid var(--line-faint)}
+.sport-row svg{width:22px;height:22px;flex:none}
+.when{margin-top:32px}
+.when div{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line-faint)}
+.when b{color:var(--ink);font-weight:600}
+.when span{color:var(--muted);font-size:15px}
+
+/* money: one wide figure */
+.money{grid-column:3/13;display:grid;grid-template-columns:5fr 7fr;gap:var(--gap);margin-top:56px;align-items:end}
+.money .figure{font-size:148px;line-height:.85;letter-spacing:-.05em;color:var(--ink);font-variant-numeric:tabular-nums;font-weight:400}
+.money .figure small{display:block;font-size:17px;letter-spacing:0;color:var(--muted);margin-top:18px}
+.bar{display:flex;height:56px;border-radius:var(--r);overflow:hidden;font-size:13px;font-variant-numeric:tabular-nums}
+.bar span{display:flex;align-items:flex-end;padding:8px 10px;color:var(--page)}
+.bar .ath{flex:34200;background:var(--ink)}
+.bar .aca{flex:18000;background:#5C6FA8}
+.bar .fam{flex:16250;background:var(--ball);color:var(--on-ball)}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);margin-top:16px;font-size:14.5px;font-variant-numeric:tabular-nums}
+.legend b{display:block;color:var(--ink);font-size:20px;font-weight:500}
+
+/* expert */
+.expert{grid-column:3/13;display:grid;grid-template-columns:4fr 6fr;gap:calc(var(--gap)*2);margin-top:56px;align-items:start}
+.photo{aspect-ratio:4/5;border-radius:var(--r)}
+.photo{background-image:url('https://loremflickr.com/600/720/coach,woman,portrait?lock=52'),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzIwIj4KPGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJsIiBjeD0iMzUlIiBjeT0iMjUlIiByPSI4MCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIuNTUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0M5OEU2QiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0E4NkY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjcyMCIgZmlsbD0iI0VFRjJGQSIvPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2wpIi8+CjxjaXJjbGUgY3g9IjQ3MCIgY3k9IjE1MCIgcj0iNTQiIGZpbGw9IiNFREZGMDAiIG9wYWNpdHk9Ii45Ii8+CjxwYXRoIGQ9Ik0xMjAgNzIwYzgtMTIwIDcwLTE5MCAxODAtMjAwIDExMCAxMCAxNzIgODAgMTgwIDIwMHoiIGZpbGw9IiMxRjJFNjAiLz4KPHBhdGggZD0iTTI1NSA1MjBsNDUgNzAgNDUtNzB6IiBmaWxsPSIjRjRGNEYyIi8+CjxyZWN0IHg9IjI2MiIgeT0iNDAwIiB3aWR0aD0iNzYiIGhlaWdodD0iMTEwIiByeD0iMzAiIGZpbGw9InVybCgjcykiLz4KPHBhdGggZD0iTTE5MCAzMDBjLTYtMTEwIDUwLTE4MCAxMTYtMTgwIDcyIDAgMTIyIDYyIDExMiAxNzYtNiA3MC0zMCAxNTAtNTAgMTkwIDQwLTEyMC00LTIwMC02Mi0yMDAtNjAgMC0xMDQgNzAtNjIgMjAwLTMwLTQwLTUwLTExMC01NC0xODZ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIzMDAiIGN5PSIzMTUiIHJ4PSI4OCIgcnk9IjExMiIgZmlsbD0idXJsKCNzKSIvPgo8cGF0aCBkPSJNMjE0IDI4MGMxOC04NCA3MC0xMTggMTI2LTEwOCA0NCA4IDcwIDUwIDcwIDk2LTQwLTM2LTEwNC01Ni0xOTYgMTJ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIyNjgiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPjxlbGxpcHNlIGN4PSIzMzQiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPgo8cGF0aCBkPSJNMjc2IDM3MmMxNCAxMiAzNiAxMiA1MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3QTNFMkMiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==');background-size:cover;background-position:center 30%;}
+.expert blockquote{margin:0;font-size:30px;line-height:1.3;color:var(--ink);letter-spacing:-.015em}
+.expert .who{margin-top:20px;color:var(--muted);font-size:15px}
+.steps{list-style:none;padding:0;margin:48px 0 0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:48px 1fr;padding:18px 0;border-top:1px solid var(--line-faint)}
+.steps li::before{counter-increment:s;content:counter(s);color:var(--ink);font-weight:600}
+.steps b{color:var(--ink);font-weight:600}
+
+/* faq accordion */
+.faq{grid-column:3/11;margin-top:40px}
+details{border-top:1px solid var(--line-faint)}
+details:last-child{border-bottom:1px solid var(--line-faint)}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:20px;color:var(--ink);cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary svg{width:22px;height:22px;flex:none}
+details p{margin:0 0 24px;max-width:62ch}
+
+/* booking */
+.book{grid-column:3/13;display:grid;grid-template-columns:5fr 7fr;gap:calc(var(--gap)*2);margin-top:56px;padding:48px;background:var(--court);border-radius:var(--r)}
+.lab,label{display:block;font-size:14px;color:var(--ink);font-weight:500;margin-bottom:8px}
+.type{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+.type button{background:transparent;border:0;padding:14px;font:15px var(--font);color:var(--ink);display:flex;align-items:center;gap:8px;justify-content:center;cursor:pointer}
+.type button + button{border-left:1px solid var(--line)}
+.type button[aria-pressed="true"]{background:var(--ink);color:var(--page)}
+.type svg{width:18px;height:18px}
+.month{margin-top:28px}
+.month table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;text-align:center;font-size:14.5px}
+.month th{font-weight:500;color:var(--muted);font-size:12.5px;padding-bottom:8px}
+.month td{padding:8px 0;color:var(--ink)}
+.month td.na{color:var(--line-faint)}
+.month td.sel span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ball);color:var(--on-ball);font-weight:600}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.slots button{border:1px solid var(--line-faint);background:var(--page);padding:10px 0;font:15px var(--font);font-variant-numeric:tabular-nums;color:var(--ink);cursor:pointer;border-radius:var(--r)}
+.slots button[aria-pressed="true"]{border:1px solid var(--ink);background:var(--ink);color:var(--page)}
+.tz{font-size:13.5px;color:var(--muted);margin-top:12px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px}
+.full{grid-column:1/-1}
+input,select,textarea{width:100%;font:16px var(--font);color:var(--ink);background:var(--page);border:1px solid var(--line-faint);border-radius:var(--r);padding:12px}
+textarea{min-height:96px;resize:vertical}
+.radios{display:flex;gap:20px;font-size:15.5px;color:var(--ink)}
+.radios span{display:inline-flex;align-items:center;gap:8px}
+.radios i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--ink);display:inline-block}
+.radios i.on{box-shadow:inset 0 0 0 4px var(--page);background:var(--ink)}
+.help{font-size:13px;color:var(--muted);margin-top:6px}
+.send{display:flex;align-items:center;justify-content:space-between;gap:16px}
+
+footer{margin-top:112px;border-top:1px solid var(--line-faint)}
+footer .grid{padding-top:28px;padding-bottom:40px;font-size:14px;color:var(--muted);align-items:center}
+footer .l{grid-column:1/6;display:flex;gap:12px;align-items:center}
+footer .r{grid-column:8/13;display:flex;justify-content:flex-end;gap:24px}
+.ar{font-family:'Geeza Pro',Tahoma,sans-serif}
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr;padding:0 16px}
+  .grid>*{grid-column:1/-1!important}
+  nav{display:none}
+  .paths,.money,.expert,.book,.form{grid-template-columns:1fr}
+  .ballmark{display:none}
+  .hero h1{font-size:44px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-basketball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6c2.6 2.4 2.6 10.4 0 12.8M18.4 5.6c-2.6 2.4-2.6 10.4 0 12.8"/></g></symbol>
+<symbol id="i-football" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4.5 19.5c-1.6-4.8 0-10 3.6-13.4C11.5 3 16.6 2.8 19.5 4.5c1.6 4.8 0 10-3.6 13.4C12.5 21 7.4 21.2 4.5 19.5z"/><path d="M9 15l6-6M10.6 10.2l1.4 1.4M12.2 8.6l1.4 1.4M9 11.8l1.4 1.4"/></g></symbol>
+<symbol id="i-baseball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6.2 5.2c2.4 3.6 2.4 10 0 13.6M17.8 5.2c-2.4 3.6-2.4 10 0 13.6"/><path d="M7.2 8.2l1.6-.6M7.8 11.2h1.7M7.6 14.4l1.6.5M16.8 8.2l-1.6-.6M16.2 11.2h-1.7M16.4 14.4l-1.6.5"/></g></symbol>
+<symbol id="i-soccer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.6l3.6 2.6-1.4 4.2H9.8l-1.4-4.2z"/><path d="M12 7.6V3.2M15.6 10.2l4.3-1.4M14.2 14.4l2.6 3.8M9.8 14.4l-2.6 3.8M8.4 10.2L4.1 8.8"/></g></symbol>
+<symbol id="i-tennis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><ellipse cx="9.5" cy="9" rx="5.6" ry="6.4" transform="rotate(-40 9.5 9)"/><path d="M6.6 6.2l5.8 5.8M5.2 9.4l4 4M8.6 4.8l4.2 4.2"/><path d="M13.3 13.6l6.2 6.2"/><circle cx="19" cy="6" r="2.2"/></g></symbol>
+<symbol id="i-volleyball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c-1.5 3.6-1 7.2 0 9M12 12c3.8.6 7 2.6 8.2 4.4M12 12c-2.4 3-5.6 4.6-8.8 4.4"/></g></symbol>
+<symbol id="i-track" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M10 3h4M12 3v3M18 7.5l1.4-1.4"/></g></symbol>
+<symbol id="i-swim" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 17c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><path d="M2.5 20.5c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><circle cx="16.5" cy="7" r="2.2"/><path d="M5 13l4.5-4.2 3.2 2.4 3-1.6"/></g></symbol>
+<symbol id="i-golf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20V3l8 3.2L9 9.4"/><ellipse cx="11" cy="20" rx="7" ry="1.6"/></g></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5L12 5l10 4.5-10 4.5z"/><path d="M6 11.4V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.6"/><path d="M21 10v5.5"/></g></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5v13c3.5-.4 6.5 0 8.5 1.5 2-1.5 5-1.9 8.5-1.5V5C17 4.6 14 5 12 6.5z"/><path d="M12 6.5v13"/></g></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20l1-4.6L16 4.4a2 2 0 012.8 0l.8.8a2 2 0 010 2.8L8.6 19z"/><path d="M14 6.4l3.6 3.6"/></g></symbol>
+<symbol id="i-campus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 9l9-5 9 5z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20.5h18"/></g></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="6.5" width="12.5" height="11" rx="2"/><path d="M15.5 10.5l5.5-3v9l-5.5-3z"/></g></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0113 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></g></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 9.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</defs></svg>
+<header>
+  <div class="grid">
+    <a class="brand" href="#"><svg class="logo-mark" width="40" height="40" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1F2E60">BNDH</text></svg> BNDH Consulting</a>
+    <nav aria-label="Main"><a href="#">College</a><a href="#">Academies</a><a href="#">Costs</a><a href="#">Questions</a></nav>
+    <div class="right"><span class="lang"><b>EN</b> FR ES DE <span class="ar" lang="ar">ع</span></span><a class="btn btn-ink" href="#book">Book a session</a></div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="court" aria-hidden="true"><span class="base-l"></span><span class="base-r"></span><span class="side-t"></span><span class="side-b"></span><span class="single-t"></span><span class="single-b"></span><span class="net"></span><span class="svc-l"></span><span class="svc-r"></span><span class="center"></span></div>
+    <div class="grid">
+      <h1>A clear path to playing in the US.</h1>
+      <p class="lede">College scholarships and tennis academies, explained honestly for athletes, parents and coaches anywhere in the world.</p>
+      <div class="ctas"><a class="btn btn-ink" href="#book">Book a session</a><a class="btn btn-line" href="#paths">Compare the two paths</a></div>
+      <div class="ballmark" aria-hidden="true"><svg class="logo-mark" width="280" height="280" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1F2E60">BNDH</text></svg><span class="tag">Sessions in English, French, Spanish, German and Arabic</span></div>
+    </div>
+  </div>
+
+  <section id="paths">
+    <div class="grid">
+      <p class="side-note"><b>Two paths</b>Most families weigh both before deciding.</p>
+      <div class="head"><h2>College on a scholarship, or an academy on the way to the tour.</h2></div>
+      <div class="paths">
+        <div class="p-col">
+          <h3>College in the US</h3>
+          <p>Compete at NCAA Division I, II or III, NAIA or junior college while you earn a degree. Athletic and academic aid can be combined.</p>
+          <div class="sport-row">
+            <div><svg><use href="#i-football"/></svg>Football</div><div><svg><use href="#i-basketball"/></svg>Basketball</div><div><svg><use href="#i-baseball"/></svg>Baseball</div><div><svg><use href="#i-soccer"/></svg>Soccer</div>
+            <div><svg><use href="#i-tennis"/></svg>Tennis</div><div><svg><use href="#i-volleyball"/></svg>Volleyball</div><div><svg><use href="#i-track"/></svg>Track</div><div><svg><use href="#i-swim"/></svg>Swimming</div>
+          </div>
+        </div>
+        <div class="p-col">
+          <h3>Tennis academies</h3>
+          <p>Full-time training with a professional pathway. We compare coaching, schooling and housing, and what a year really costs.</p>
+          <div class="when">
+            <div><b>During high school</b><span>From about age 14</span></div>
+            <div><b>After college</b><span>With a degree in hand</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+      <p class="side-note"><b>Costs</b>Example figures for one year at a private university.</p>
+      <div class="head"><h2>What a scholarship can leave you to pay.</h2><p>Cost of attendance $68,450. Here is how it can split once athletic and academic aid are stacked.</p></div>
+      <div class="money">
+        <div class="figure">$16,250<small>left for the family, per year</small></div>
+        <div>
+          <div class="bar" role="img" aria-label="Cost split: athletic scholarship $34,200, academic award $18,000, family $16,250"><span class="ath"></span><span class="aca"></span><span class="fam"></span></div>
+          <div class="legend"><span><b>$34,200</b>Athletic scholarship</span><span><b>$18,000</b>Academic award</span><span><b>$16,250</b>Family pays</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+      <p class="side-note"><b>Your expert</b>Every session is one to one.</p>
+      <div class="expert">
+        <div class="photo" role="img" aria-label="Portrait of your BNDH expert"></div>
+        <div>
+          <blockquote>&ldquo;I made this move myself, from abroad, with a lot of guessing. Families should not have to guess about money.&rdquo;</blockquote>
+          <p class="who">Founder of BNDH Consulting, former college tennis player on a US scholarship</p>
+          <ol class="steps">
+            <li><span><b>Tell us about the athlete.</b> A short form on sport, level, grades and budget.</span></li>
+            <li><span><b>Pick a time.</b> Video call or in person, in your language.</span></li>
+            <li><span><b>Ask everything.</b> Leave with a written plan and real numbers.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid">
+      <p class="side-note"><b>Questions</b>The ones families ask first.</p>
+      <div class="faq">
+        <details open><summary>How much of the cost can a scholarship cover?<svg><use href="#i-chev"/></svg></summary><p>Anywhere from a small share to nearly all of it. It depends on the division, the sport and your grades. We work it out with your numbers in the session.</p></details>
+        <details><summary>What is the difference between NCAA and NAIA?<svg><use href="#i-chev"/></svg></summary><p></p></details>
+        <details><summary>Does the athlete need the SAT or an English test?<svg><use href="#i-chev"/></svg></summary><p></p></details>
+        <details><summary>Is an academy worth it before college?<svg><use href="#i-chev"/></svg></summary><p></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="grid">
+      <p class="side-note"><b>Book</b>60 minutes, one to one.</p>
+      <div class="head"><h2>Book a session</h2></div>
+      <div class="book">
+        <div>
+          <span class="lab">Meeting type</span>
+          <div class="type"><button type="button" aria-pressed="true"><svg><use href="#i-video"/></svg>Video call</button><button type="button" aria-pressed="false"><svg><use href="#i-pin"/></svg>In person</button></div>
+          <div class="month">
+            <span class="lab">October 2026</span>
+            <table><thead><tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead>
+            <tbody>
+              <tr><td class="na">5</td><td class="na">6</td><td>7</td><td>8</td><td class="na">9</td></tr>
+              <tr><td>12</td><td class="sel"><span>13</span></td><td>14</td><td class="na">15</td><td>16</td></tr>
+              <tr><td>19</td><td>20</td><td class="na">21</td><td>22</td><td>23</td></tr>
+            </tbody></table>
+          </div>
+          <div class="slots"><button type="button" aria-pressed="false">09:00</button><button type="button" aria-pressed="false">11:30</button><button type="button" aria-pressed="true">15:00</button><button type="button" aria-pressed="false">18:30</button></div>
+          <p class="tz">Times shown in Central European Time.</p>
+        </div>
+        <form class="form" action="#">
+          <div class="full"><span class="lab">I am the</span><div class="radios"><span><i></i>Athlete</span><span><i class="on"></i>Parent or guardian</span><span><i></i>Coach</span></div></div>
+          <div><label for="a">Athlete's name</label><input id="a" value="Karim Haddad"></div>
+          <div><label for="b">Country</label><input id="b" value="Morocco"></div>
+          <div><label for="c">Sport</label><select id="c"><option>Tennis</option></select></div>
+          <div><label for="d">Graduates high school</label><select id="d"><option>2027</option></select></div>
+          <div><label for="e">Current level</label><input id="e" value="UTR 10.2, national U18 top 20"></div>
+          <div><label for="f">Yearly budget</label><select id="f"><option>$10,000 to $20,000</option></select></div>
+          <div class="full"><label for="g">What do you most want to know?</label><textarea id="g">Can a Division I scholarship and academic aid together cover most of the cost?</textarea><p class="help">Your expert reads this before you meet.</p></div>
+          <div class="full send"><span class="help">Confirmed by email within one working day.</span><button class="btn btn-ball" type="submit">Book my session</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="grid"><span class="l"><svg class="logo-mark" width="26" height="26" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1F2E60">BNDH</text></svg>BNDH Consulting</span><span class="r"><a href="#">Privacy</a><a href="#">Contact</a></span></div></footer>
+</body>
+</html>

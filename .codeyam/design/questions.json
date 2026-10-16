@@ -1,0 +1,76 @@
+{
+  "title": "Quick questions before I design this",
+  "lede": "A consulting website that helps international athletes, their parents and coaches understand US college scholarships and tennis academies, then book a session (in person or virtual) with an expert after filling in a short intake form.",
+  "questions": [
+    {
+      "id": "page",
+      "type": "single",
+      "title": "Which page should I design first?",
+      "why": "Every design will show the same page, so you can compare styles side by side. The home page sets the tone for everything else.",
+      "options": [
+        { "label": "Home page", "detail": "Explains the two paths (college scholarship or pro academy) and leads to booking" },
+        { "label": "Book a session + intake form", "detail": "Pick a time, choose virtual or in person, answer questions about the athlete" },
+        { "label": "College scholarships guide", "detail": "How US scholarships work and how to get the biggest share" }
+      ],
+      "ownPlaceholder": "e.g. a page comparing tennis academies"
+    },
+    {
+      "id": "look",
+      "type": "personality",
+      "title": "What should it feel like when a parent or athlete lands on it?",
+      "why": "Families are making a big money decision, often in a second language. The feel decides the colors, type and how much is on each screen.",
+      "sliders": [ ["Warm and personal", "Official and institutional", 35], ["Calm", "Energetic and sporty", 45], ["Airy", "Packed with information", 40] ],
+      "moreSliders": [ ["Classic", "Modern"], ["Understated", "Bold"] ],
+      "words": ["Trustworthy", "Clear", "Ambitious", "Welcoming", "Expert", "International"],
+      "moreWords": ["Premium", "Friendly", "Athletic", "Calm", "Honest"],
+      "maxWords": 6,
+      "textPlaceholder": "e.g. Like a trusted advisor who has been through it, not a sales pitch"
+    },
+    {
+      "id": "avoid",
+      "type": "multi",
+      "max": 3,
+      "title": "What should it definitely NOT look like?",
+      "why": "Ruling things out is the fastest way to keep the designs from looking like every other sports site.",
+      "options": [
+        { "label": "Flashy recruiting-service ads" },
+        { "label": "Stiff corporate consulting firm" },
+        { "label": "Loud TV sports channel" },
+        { "label": "Stock photos of trophies and handshakes" },
+        { "label": "A dense university admissions site" }
+      ]
+    },
+    {
+      "id": "photos",
+      "type": "single",
+      "title": "Should the pages show real photos?",
+      "why": "Photos of athletes, courts and campuses change the whole layout, so I want to know before I start.",
+      "options": [
+        { "label": "Yes, athlete and campus photos", "detail": "I will use placeholder photos you can swap later" },
+        { "label": "A photo of the expert", "detail": "Put a face to the consultant" },
+        { "label": "No photos", "detail": "Illustrations and type only" }
+      ]
+    },
+    {
+      "id": "count",
+      "type": "single",
+      "title": "How many designs should I make?",
+      "why": "More designs give more range; fewer are quicker to compare.",
+      "options": [ { "label": "2" }, { "label": "4" }, { "label": "6", "detail": "Recommended" }, { "label": "8" } ]
+    },
+    {
+      "id": "extra",
+      "type": "free",
+      "title": "Anything already decided?",
+      "why": "Optional. A business name, a logo, a color you must use, the languages the site needs, or a website you like the look of.",
+      "placeholder": "e.g. The business is called ..., it needs English and Spanish"
+    }
+  ],
+  "defaults": {
+    "page": "Home page",
+    "look": { "words": ["Trustworthy", "Clear", "International"] },
+    "avoid": ["Flashy recruiting-service ads", "Stock photos of trophies and handshakes"],
+    "photos": "Yes, athlete and campus photos",
+    "count": "6"
+  }
+}

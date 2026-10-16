@@ -1,0 +1,9 @@
+{
+  "appFormats": [
+    "static"
+  ],
+  "defaultDevice": "Desktop",
+  "designApproach": "skip",
+  "techStackId": null,
+  "startingSurface": "landing"
+}

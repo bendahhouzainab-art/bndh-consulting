@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="codeyam-viewport" content="desktop">
+<title>Big poster type on midnight</title>
+<style>
+:root{
+  --night:#243566;
+  --night-deep:#1C2A55;
+  --night-raised:#2C3F78;
+  --line:#3E5190;
+  --paper:#F1F3F8;
+  --text:#DCE2F2;
+  --ash:#9FACD3;
+  --ball:#EDFF00;
+  --seam:#C7D800;
+  --on-ball:#1C2A55;
+  --font-display:'Barlow Condensed','Avenir Next Condensed','Helvetica Neue','Arial Narrow','Liberation Sans Narrow',sans-serif;
+  --font-body:'Avenir Next','Segoe UI',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+figure{margin:0}
+body{background:var(--night);color:var(--text);font:16px/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ball);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 40px}
+.display{font-family:var(--font-display);font-stretch:condensed;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;color:var(--paper);line-height:.9;margin:0;text-wrap:balance}
+.dot{display:inline-block;width:.2em;height:.2em;border-radius:50%;background:var(--ball);margin-left:.04em;vertical-align:baseline;box-shadow:inset -.03em -.02em 0 var(--seam)}
+.chrome{font:500 12px/1 var(--font-mono);text-transform:uppercase;letter-spacing:.08em}
+.num{font-variant-numeric:tabular-nums}
+
+/* nav */
+header .wrap{display:flex;align-items:center;height:76px;gap:32px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--paper);font:600 17px var(--font-body)}
+nav{display:flex;gap:28px;margin-left:auto;color:var(--ash)}
+nav a:hover{color:var(--paper)}
+.langs{display:flex;gap:4px}
+.langs a{padding:6px 8px;color:var(--ash);border-radius:4px}
+.langs a[aria-current="true"]{color:var(--on-ball);background:var(--paper)}
+.langs .ar{font-family:'Geeza Pro',Tahoma,sans-serif;text-transform:none;letter-spacing:0;font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 22px;border-radius:4px;white-space:nowrap;cursor:pointer;border:0}
+.btn-ball{background:var(--ball);color:var(--on-ball)}
+.btn-ghost{border:1px solid var(--ash);color:var(--paper);background:transparent}
+.btn:active{transform:translateY(1px)}
+
+/* hero */
+.hero{padding:64px 0 56px;display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:end}
+.hero h1{font-size:clamp(76px,8.4vw,124px)}
+.hero .side p{margin:0 0 28px;font-size:18px;color:var(--text)}
+.hero .side .row{display:flex;gap:10px;flex-wrap:wrap}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--night-deep);overflow:hidden;white-space:nowrap}
+.marquee .track{display:inline-flex;align-items:center;gap:36px;padding:18px 0;font:700 28px/1 var(--font-display);font-stretch:condensed;text-transform:uppercase;color:var(--paper)}
+.marquee svg{width:26px;height:26px;color:var(--ball)}
+.marquee .sep{width:8px;height:8px;border-radius:50%;background:var(--line)}
+
+/* two paths */
+.paths{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.path{padding:72px 56px 64px 0}
+.path + .path{padding-left:56px;padding-right:0;border-left:1px solid var(--line)}
+.path h2{font-size:84px}
+.path p{max-width:46ch;margin:22px 0 0;font-size:17px}
+.levels{list-style:none;margin:36px 0 0;padding:0}
+.levels li{display:grid;grid-template-columns:120px 1fr;align-items:baseline;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.levels li:last-child{border-bottom:1px solid var(--line)}
+.levels .lv{font:800 44px/1 var(--font-display);font-stretch:condensed;color:var(--ball)}
+.levels span:last-child{color:var(--ash);font-size:15px}
+.academy-when{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:36px;border:1px solid var(--line)}
+.academy-when div{background:var(--night);padding:24px}
+.academy-when b{display:block;font:800 40px/1 var(--font-display);font-stretch:condensed;text-transform:uppercase;color:var(--paper)}
+.academy-when span{color:var(--ash);font-size:14.5px}
+
+/* ledger */
+.money{display:grid;grid-template-columns:420px 1fr;gap:64px;padding:88px 0;border-bottom:1px solid var(--line)}
+.money h2{font-size:76px}
+.money .note{color:var(--ash);margin-top:20px;max-width:34ch}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{text-align:left;font:500 12px var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--ash);padding:0 0 14px;border-bottom:1px solid var(--line)}
+th:not(:first-child),td:not(:first-child){text-align:right}
+td{padding:18px 0;border-bottom:1px solid var(--line);font-size:17px;color:var(--text)}
+td:not(:first-child){font-family:var(--font-mono);font-size:16px}
+tr.total td{border-bottom:0;padding-top:22px}
+tr.total td:first-child{font:800 30px/1 var(--font-display);font-stretch:condensed;text-transform:uppercase;color:var(--paper)}
+tr.total td:not(:first-child){font:800 46px/1 var(--font-display);font-stretch:condensed;color:var(--ball)}
+
+/* expert + steps */
+.expert{display:grid;grid-template-columns:400px 1fr;gap:64px;padding:88px 0;border-bottom:1px solid var(--line)}
+.portrait{aspect-ratio:5/6;border-radius:4px;filter:saturate(.9)}
+.portrait{background-image:url('https://loremflickr.com/600/720/coach,woman,portrait?lock=44'),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNzIwIj4KPGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJsIiBjeD0iMzUlIiBjeT0iMjUlIiByPSI4MCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIuNTUiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0M5OEU2QiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0E4NkY1MCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjcyMCIgZmlsbD0iIzJDM0Y3OCIvPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNzIwIiBmaWxsPSJ1cmwoI2wpIi8+CjxjaXJjbGUgY3g9IjQ3MCIgY3k9IjE1MCIgcj0iNTQiIGZpbGw9IiNFREZGMDAiIG9wYWNpdHk9Ii45Ii8+CjxwYXRoIGQ9Ik0xMjAgNzIwYzgtMTIwIDcwLTE5MCAxODAtMjAwIDExMCAxMCAxNzIgODAgMTgwIDIwMHoiIGZpbGw9IiNFREZGMDAiLz4KPHBhdGggZD0iTTI1NSA1MjBsNDUgNzAgNDUtNzB6IiBmaWxsPSIjRjRGNEYyIi8+CjxyZWN0IHg9IjI2MiIgeT0iNDAwIiB3aWR0aD0iNzYiIGhlaWdodD0iMTEwIiByeD0iMzAiIGZpbGw9InVybCgjcykiLz4KPHBhdGggZD0iTTE5MCAzMDBjLTYtMTEwIDUwLTE4MCAxMTYtMTgwIDcyIDAgMTIyIDYyIDExMiAxNzYtNiA3MC0zMCAxNTAtNTAgMTkwIDQwLTEyMC00LTIwMC02Mi0yMDAtNjAgMC0xMDQgNzAtNjIgMjAwLTMwLTQwLTUwLTExMC01NC0xODZ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIzMDAiIGN5PSIzMTUiIHJ4PSI4OCIgcnk9IjExMiIgZmlsbD0idXJsKCNzKSIvPgo8cGF0aCBkPSJNMjE0IDI4MGMxOC04NCA3MC0xMTggMTI2LTEwOCA0NCA4IDcwIDUwIDcwIDk2LTQwLTM2LTEwNC01Ni0xOTYgMTJ6IiBmaWxsPSIjMkIxQjE0Ii8+CjxlbGxpcHNlIGN4PSIyNjgiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPjxlbGxpcHNlIGN4PSIzMzQiIGN5PSIzMTgiIHJ4PSI3IiByeT0iOCIgZmlsbD0iIzJCMUIxNCIvPgo8cGF0aCBkPSJNMjc2IDM3MmMxNCAxMiAzNiAxMiA1MCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiM3QTNFMkMiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPg==');background-size:cover;background-position:center 30%;}
+.expert h2{font-size:84px}
+.expert .bio{font-size:19px;max-width:52ch;margin:24px 0 40px;color:var(--text)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:72px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);font:800 64px/.8 var(--font-display);font-stretch:condensed;color:var(--ball)}
+.steps b{display:block;color:var(--paper);font-size:19px;font-weight:600}
+.steps span{color:var(--ash)}
+
+/* booking */
+.book{padding:88px 0}
+.book h2{font-size:clamp(96px,11vw,160px)}
+.book-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;margin-top:48px}
+.block-title{color:var(--paper);font-size:20px;font-weight:600;margin:0 0 18px}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ash);border-radius:4px;overflow:hidden}
+.seg button{background:transparent;border:0;color:var(--paper);padding:16px;font:600 16px var(--font-body);display:flex;gap:10px;align-items:center;justify-content:center;cursor:pointer}
+.seg button svg{width:20px;height:20px}
+.seg button[aria-pressed="true"]{background:var(--paper);color:var(--on-ball)}
+.cal{margin-top:28px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cal div{background:var(--night);padding:12px 10px 14px}
+.cal .d{font:800 34px/1 var(--font-display);font-stretch:condensed;color:var(--paper)}
+.cal .w{color:var(--ash);font-size:13px}
+.cal .slots{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.cal .slots span{font:500 13px var(--font-mono);font-variant-numeric:tabular-nums;padding:6px 0;text-align:center;border:1px solid var(--line);border-radius:3px;color:var(--text)}
+.cal .slots span.on{background:var(--ball);color:var(--on-ball);border-color:var(--ball)}
+.cal .slots span.off{color:var(--line);text-decoration:line-through}
+.tz{font-size:13.5px;color:var(--ash);margin-top:12px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:26px 32px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label,.lab{font-size:14px;color:var(--ash)}
+input,select,textarea{background:transparent;border:0;border-bottom:1px solid var(--ash);color:var(--paper);font:18px var(--font-body);padding:8px 0;border-radius:0;width:100%}
+select{appearance:none;background:transparent}
+option{color:#1C2A55}
+textarea{min-height:76px;resize:vertical;line-height:1.5}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom:2px solid var(--ball)}
+.who{display:flex;gap:8px;flex-wrap:wrap}
+.who button{background:transparent;border:1px solid var(--line);color:var(--text);padding:10px 16px;border-radius:999px;font:15px var(--font-body);cursor:pointer}
+.who button[aria-pressed="true"]{border-color:var(--ball);color:var(--ball)}
+.help{font-size:13px;color:var(--ash)}
+.go{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding-top:8px}
+
+footer .wrap{display:flex;align-items:center;gap:16px;border-top:1px solid var(--line);padding-top:24px;padding-bottom:36px;color:var(--ash);font-size:14px}
+footer .end{margin-left:auto;display:flex;gap:24px}
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  nav{display:none}
+  .hero,.paths,.money,.expert,.book-grid,form{grid-template-columns:1fr}
+  .path,.path+.path{padding:48px 0;border-left:0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="i-basketball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6c2.6 2.4 2.6 10.4 0 12.8M18.4 5.6c-2.6 2.4-2.6 10.4 0 12.8"/></g></symbol>
+<symbol id="i-football" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4.5 19.5c-1.6-4.8 0-10 3.6-13.4C11.5 3 16.6 2.8 19.5 4.5c1.6 4.8 0 10-3.6 13.4C12.5 21 7.4 21.2 4.5 19.5z"/><path d="M9 15l6-6M10.6 10.2l1.4 1.4M12.2 8.6l1.4 1.4M9 11.8l1.4 1.4"/></g></symbol>
+<symbol id="i-baseball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M6.2 5.2c2.4 3.6 2.4 10 0 13.6M17.8 5.2c-2.4 3.6-2.4 10 0 13.6"/><path d="M7.2 8.2l1.6-.6M7.8 11.2h1.7M7.6 14.4l1.6.5M16.8 8.2l-1.6-.6M16.2 11.2h-1.7M16.4 14.4l-1.6.5"/></g></symbol>
+<symbol id="i-soccer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.6l3.6 2.6-1.4 4.2H9.8l-1.4-4.2z"/><path d="M12 7.6V3.2M15.6 10.2l4.3-1.4M14.2 14.4l2.6 3.8M9.8 14.4l-2.6 3.8M8.4 10.2L4.1 8.8"/></g></symbol>
+<symbol id="i-tennis" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><ellipse cx="9.5" cy="9" rx="5.6" ry="6.4" transform="rotate(-40 9.5 9)"/><path d="M6.6 6.2l5.8 5.8M5.2 9.4l4 4M8.6 4.8l4.2 4.2"/><path d="M13.3 13.6l6.2 6.2"/><circle cx="19" cy="6" r="2.2"/></g></symbol>
+<symbol id="i-volleyball" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3c-1.5 3.6-1 7.2 0 9M12 12c3.8.6 7 2.6 8.2 4.4M12 12c-2.4 3-5.6 4.6-8.8 4.4"/></g></symbol>
+<symbol id="i-track" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M10 3h4M12 3v3M18 7.5l1.4-1.4"/></g></symbol>
+<symbol id="i-swim" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 17c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><path d="M2.5 20.5c1.6 0 1.6-1.2 3.2-1.2s1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 3.2 1.2 1.6-1.2 3.2-1.2 1.6 1.2 2.9 1.2"/><circle cx="16.5" cy="7" r="2.2"/><path d="M5 13l4.5-4.2 3.2 2.4 3-1.6"/></g></symbol>
+<symbol id="i-golf" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20V3l8 3.2L9 9.4"/><ellipse cx="11" cy="20" rx="7" ry="1.6"/></g></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5L12 5l10 4.5-10 4.5z"/><path d="M6 11.4V16c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.6"/><path d="M21 10v5.5"/></g></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 6.5C10 5 7 4.6 3.5 5v13c3.5-.4 6.5 0 8.5 1.5 2-1.5 5-1.9 8.5-1.5V5C17 4.6 14 5 12 6.5z"/><path d="M12 6.5v13"/></g></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 20l1-4.6L16 4.4a2 2 0 012.8 0l.8.8a2 2 0 010 2.8L8.6 19z"/><path d="M14 6.4l3.6 3.6"/></g></symbol>
+<symbol id="i-campus" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 9l9-5 9 5z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 20.5h18"/></g></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="6.5" width="12.5" height="11" rx="2"/><path d="M15.5 10.5l5.5-3v9l-5.5-3z"/></g></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0113 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></g></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M7 9.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</defs></svg>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#"><svg class="logo-mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1C2A55">BNDH</text></svg> BNDH Consulting</a>
+    <nav class="chrome" aria-label="Main"><a href="#">College</a><a href="#">Academies</a><a href="#">The money</a><a href="#">About</a></nav>
+    <div class="langs chrome" aria-label="Language"><a href="#" aria-current="true">EN</a><a href="#">FR</a><a href="#">ES</a><a href="#">DE</a><a href="#" class="ar" lang="ar">عربي</a></div>
+    <a class="btn btn-ball chrome" href="#book">Book a session</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1 class="display">Play in the US. Know the cost first<span class="dot"></span></h1>
+    <div class="side">
+      <p>Honest answers on college scholarships and tennis academies, for athletes, parents and coaches anywhere in the world.</p>
+      <div class="row"><a class="btn btn-ball chrome" href="#book">Book a session</a><a class="btn btn-ghost chrome" href="#how">How it works</a></div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-label="Sports we advise on">
+    <div class="track">
+      <svg><use href="#i-football"/></svg>Football<span class="sep"></span>
+      <svg><use href="#i-basketball"/></svg>Basketball<span class="sep"></span>
+      <svg><use href="#i-baseball"/></svg>Baseball<span class="sep"></span>
+      <svg><use href="#i-soccer"/></svg>Soccer<span class="sep"></span>
+      <svg><use href="#i-tennis"/></svg>Tennis<span class="sep"></span>
+      <svg><use href="#i-volleyball"/></svg>Volleyball<span class="sep"></span>
+      <svg><use href="#i-track"/></svg>Track and field<span class="sep"></span>
+      <svg><use href="#i-swim"/></svg>Swimming<span class="sep"></span>
+      <svg><use href="#i-golf"/></svg>Golf<span class="sep"></span>
+      <svg><use href="#i-football"/></svg>Football
+    </div>
+  </div>
+
+  <div class="wrap paths">
+    <section class="path">
+      <h2 class="display">College on a scholarship<span class="dot"></span></h2>
+      <p>Compete for a US university while you earn a degree. Every level pays differently, and the right one can cut your bill in half.</p>
+      <ul class="levels">
+        <li><span class="lv">D-I</span><span>The most athletic money, and the most competition for it.</span></li>
+        <li><span class="lv">D-II</span><span>Partial scholarships that stack well with academic aid.</span></li>
+        <li><span class="lv">D-III</span><span>No athletic money, but generous academic awards.</span></li>
+        <li><span class="lv">NAIA</span><span>Flexible rules and quicker eligibility for international players.</span></li>
+        <li><span class="lv">JUCO</span><span>Two years to raise grades or ranking, then transfer.</span></li>
+      </ul>
+    </section>
+    <section class="path">
+      <h2 class="display">Tennis academy, pro track<span class="dot"></span></h2>
+      <p>Train full time with a pro pathway. We compare programs, coaching and housing, and tell you what each one costs over a full year.</p>
+      <div class="academy-when">
+        <div><b>During high school</b><span>Train and study at once, usually from age 14.</span></div>
+        <div><b>After college</b><span>A focused run at the tour with a degree in hand.</span></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap money">
+    <div>
+      <h2 class="display">The money, line by line<span class="dot"></span></h2>
+      <p class="note">An example for one year at a private university. In your session we do this with your real numbers.</p>
+    </div>
+    <table>
+      <thead><tr><th>Per year</th><th>Division I</th><th>Division II</th><th>NAIA</th></tr></thead>
+      <tbody>
+        <tr><td>Cost of attendance</td><td>$68,450</td><td>$52,300</td><td>$41,900</td></tr>
+        <tr><td>Athletic scholarship</td><td>-$34,200</td><td>-$21,000</td><td>-$18,500</td></tr>
+        <tr><td>Academic award</td><td>-$18,000</td><td>-$16,000</td><td>-$12,000</td></tr>
+        <tr class="total"><td>Family pays</td><td>$16,250</td><td>$15,300</td><td>$11,400</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="wrap expert" id="how">
+    <div class="portrait" role="img" aria-label="Portrait of your BNDH expert"></div>
+    <div>
+      <h2 class="display">Your expert<span class="dot"></span></h2>
+      <p class="bio">Grew up abroad, played college tennis in the US on a scholarship, and now walks families through the same decision, in five languages.</p>
+      <ol class="steps">
+        <li><span><b>Tell us about the athlete</b><span>A short form on sport, level, grades and budget.</span></span></li>
+        <li><span><b>Pick a time</b><span>Video call or in person, in your language.</span></span></li>
+        <li><span><b>Ask everything</b><span>Leave with a written plan and real numbers.</span></span></li>
+      </ol>
+    </div>
+  </div>
+
+  <section class="wrap book" id="book">
+    <h2 class="display">Book a session<span class="dot"></span></h2>
+    <div class="book-grid">
+      <div>
+        <p class="block-title">How and when</p>
+        <div class="seg"><button type="button" aria-pressed="true"><svg><use href="#i-video"/></svg>Video call</button><button type="button" aria-pressed="false"><svg><use href="#i-pin"/></svg>In person</button></div>
+        <div class="cal">
+          <div><span class="w">Mon</span><div class="d">12</div><div class="slots"><span>09:00</span><span class="off">15:00</span></div></div>
+          <div><span class="w">Tue</span><div class="d">13</div><div class="slots"><span>11:30</span><span class="on">15:00</span></div></div>
+          <div><span class="w">Wed</span><div class="d">14</div><div class="slots"><span>09:00</span><span>18:30</span></div></div>
+          <div><span class="w">Thu</span><div class="d">15</div><div class="slots"><span class="off">11:30</span><span>18:30</span></div></div>
+          <div><span class="w">Fri</span><div class="d">16</div><div class="slots"><span>09:00</span><span>15:00</span></div></div>
+        </div>
+        <p class="tz">60 minutes. Times shown in Central European Time.</p>
+      </div>
+      <form action="#">
+        <div class="f full"><span class="lab">I am the</span><div class="who"><button type="button" aria-pressed="false">Athlete</button><button type="button" aria-pressed="true">Parent or guardian</button><button type="button" aria-pressed="false">Coach</button></div></div>
+        <div class="f"><label for="a">Athlete's name</label><input id="a" value="Karim Haddad"></div>
+        <div class="f"><label for="b">Country</label><input id="b" value="Morocco"></div>
+        <div class="f"><label for="c">Sport</label><select id="c"><option>Tennis</option></select></div>
+        <div class="f"><label for="d">Graduates high school</label><select id="d"><option>2027</option></select></div>
+        <div class="f"><label for="e">Current level</label><input id="e" value="UTR 10.2, national U18 top 20"></div>
+        <div class="f"><label for="g">Yearly budget</label><select id="g"><option>$10,000 to $20,000</option></select></div>
+        <div class="f full"><label for="h">What do you most want to know?</label><textarea id="h">Can a Division I scholarship and academic aid together cover most of the cost?</textarea><span class="help">Your expert reads this before you meet.</span></div>
+        <div class="go"><span class="help">Confirmed by email within one working day.</span><button class="btn btn-ball chrome" type="submit">Book my session</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><svg class="logo-mark" width="26" height="26" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1C2A55">BNDH</text></svg><span>BNDH Consulting</span><span class="end"><a href="#">Privacy</a><a href="#">Contact</a></span></div></footer>
+</body>
+</html>
