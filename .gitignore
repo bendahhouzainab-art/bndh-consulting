@@ -84,6 +84,7 @@ blob-report/
 .codeyam/state/last-step-show.txt
 .codeyam/state/handoff-sections/
 .codeyam/state/provider-auth-verdict.json
+.codeyam/state/pre-commit-sync-last-integration.json
 .codeyam/state/dependency-provision.json
 .codeyam/state/setup-provision.json
 .codeyam/state/provisioning-lockfile-rewrites.jsonl
@@ -107,6 +108,7 @@ blob-report/
 .codeyam/state/pretool-hook-inflight/
 .codeyam/state/rebase-heal.json
 .codeyam/state/rebuild-self-restart.json
+.codeyam/state/build-source-snapshot.json
 .codeyam/state/push-auto-amend.json
 .codeyam/state/change-origin.json
 .codeyam/state/audit-split.json
