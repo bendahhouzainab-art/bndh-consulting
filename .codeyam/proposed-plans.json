@@ -1,0 +1,48 @@
+{
+  "proposals": [
+    {
+      "id": "book-a-consultation-virtual-option-with-the-sports-abroad-expert-booking-mechanism-decision-deferred-by-the-user",
+      "title": "Book a consultation (virtual option) with the sports-abroad expert — booking mechanism decision deferred by the user",
+      "mode": "backend",
+      "body": "## Summary\n\nBook a consultation (virtual option) with the sports-abroad expert — booking mechanism decision deferred by the user\n\nThis was deferred from the project's deliverables in an earlier build cycle. Investigate the current code before planning the implementation.",
+      "reason": "Deferred from this project's deliverables.",
+      "severity": 3,
+      "source": "deferred-deliverable",
+      "deliverableId": "book-a-consultation-virtual-option-with-the",
+      "status": "pending",
+      "proposedAt": "2026-11-06T15:46:20.131987339+00:00",
+      "kind": "feature",
+      "sightings": 1
+    },
+    {
+      "id": "pre-meeting-questionnaire-so-the-expert-knows-about-the-athlete-before-the-meeting",
+      "title": "Pre-meeting questionnaire so the expert knows about the athlete before the meeting",
+      "mode": "backend",
+      "body": "## Summary\n\nPre-meeting questionnaire so the expert knows about the athlete before the meeting\n\nThis was deferred from the project's deliverables in an earlier build cycle. Investigate the current code before planning the implementation.",
+      "reason": "Deferred from this project's deliverables.",
+      "severity": 3,
+      "source": "deferred-deliverable",
+      "deliverableId": "pre-meeting-questionnaire-so-the-expert-knows",
+      "status": "pending",
+      "proposedAt": "2026-11-06T15:46:20.131987339+00:00",
+      "kind": "feature",
+      "sightings": 1
+    }
+  ],
+  "rounds": [
+    {
+      "at": "2026-11-06T15:46:09.440664509+00:00",
+      "feature": "Simpler booking panel in design 6",
+      "notes": "Design-mockup-only cycle on 06-offcatalog-mockup.html; no app code changed. Booking panel cut to role pills + Talk-to select + one Choose-a-time button; language switcher kept in panel per user. Queued plans for the landing-page build and …"
+    },
+    {
+      "at": "2026-11-06T15:46:20.131987339+00:00",
+      "feature": "Simpler booking panel in design 6",
+      "notes": "Design-mockup-only cycle on 06-offcatalog-mockup.html; no app code changed. Booking panel cut to role pills + Talk-to select + one Choose-a-time button; language switcher kept in panel per user. Queued plans for the landing-page build and …",
+      "proposedIds": [
+        "book-a-consultation-virtual-option-with-the-sports-abroad-expert-booking-mechanism-decision-deferred-by-the-user",
+        "pre-meeting-questionnaire-so-the-expert-knows-about-the-athlete-before-the-meeting"
+      ]
+    }
+  ]
+}

@@ -6,62 +6,62 @@
     {
       "id": "landing-page-explaining-the-sports-abroad",
       "text": "Landing page explaining the sports-abroad consulting service, who it is for (international athletes, parents/guardians, coaches), with a clear call to book a consultation",
-      "status": "open",
-      "resolvedAt": null,
-      "resolvedInFeature": null,
-      "planSlug": null,
-      "note": null,
-      "decidedBy": null
+      "status": "deferred",
+      "resolvedAt": "2026-11-06T15:46:19.950224553+00:00",
+      "resolvedInFeature": "Simpler booking panel in design 6",
+      "planSlug": "build-the-bndh-consulting-landing-page-in-the-chosen-design-direction",
+      "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Covered by the queued landing-page build.",
+      "decidedBy": "agent"
     },
     {
       "id": "us-college-guide-how-playing-college-sports-in",
       "text": "US college guide: how playing college sports in the USA works for international athletes and how to maximize scholarship percentage",
-      "status": "open",
-      "resolvedAt": null,
-      "resolvedInFeature": null,
-      "planSlug": null,
-      "note": null,
-      "decidedBy": null
+      "status": "deferred",
+      "resolvedAt": "2026-11-06T15:46:19.996297762+00:00",
+      "resolvedInFeature": "Simpler booking panel in design 6",
+      "planSlug": "athletic-resources-tab-in-design-6",
+      "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Covered by the queued Athletic Resources plan.",
+      "decidedBy": "agent"
     },
     {
       "id": "tennis-academy-guide-academies-for-turning-pro",
       "text": "Tennis academy guide: academies for turning pro during high school or after college, including costs",
-      "status": "open",
-      "resolvedAt": null,
-      "resolvedInFeature": null,
-      "planSlug": null,
-      "note": null,
-      "decidedBy": null
+      "status": "deferred",
+      "resolvedAt": "2026-11-06T15:46:20.019218176+00:00",
+      "resolvedInFeature": "Simpler booking panel in design 6",
+      "planSlug": "athletic-resources-tab-in-design-6",
+      "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Covered by the queued Athletic Resources plan.",
+      "decidedBy": "agent"
     },
     {
       "id": "book-a-consultation-virtual-option-with-the",
       "text": "Book a consultation (virtual option) with the sports-abroad expert — booking mechanism decision deferred by the user",
-      "status": "open",
-      "resolvedAt": null,
-      "resolvedInFeature": null,
+      "status": "deferred",
+      "resolvedAt": "2026-11-06T15:46:20.042146157+00:00",
+      "resolvedInFeature": "Simpler booking panel in design 6",
       "planSlug": null,
-      "note": null,
-      "decidedBy": null
+      "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Booking mechanism decision still deferred by the user.",
+      "decidedBy": "agent"
     },
     {
       "id": "pre-meeting-questionnaire-so-the-expert-knows",
       "text": "Pre-meeting questionnaire so the expert knows about the athlete before the meeting",
-      "status": "open",
-      "resolvedAt": null,
-      "resolvedInFeature": null,
+      "status": "deferred",
+      "resolvedAt": "2026-11-06T15:46:20.063894766+00:00",
+      "resolvedInFeature": "Simpler booking panel in design 6",
       "planSlug": null,
-      "note": null,
-      "decidedBy": null
+      "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Not yet planned.",
+      "decidedBy": "agent"
     },
     {
       "id": "multilingual-support-english-at-launch-with-a",
       "text": "Multilingual support: English at launch, with a language switcher and structure ready for more languages",
-      "status": "open",
-      "resolvedAt": null,
-      "resolvedInFeature": null,
-      "planSlug": null,
-      "note": null,
-      "decidedBy": null
+      "status": "deferred",
+      "resolvedAt": "2026-11-06T15:46:19.973655692+00:00",
+      "resolvedInFeature": "Simpler booking panel in design 6",
+      "planSlug": "build-the-bndh-consulting-landing-page-in-the-chosen-design-direction",
+      "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Language switcher is in the mockup; built with the landing page.",
+      "decidedBy": "agent"
     }
   ]
 }
