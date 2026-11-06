@@ -17,15 +17,37 @@
     "coverageBootstrap": {
       "enabled": true
     },
+    "glossarySkip": [
+      {
+        "filePath": "scripts/build-app.mjs",
+        "name": "isolationDirs",
+        "reason": "editor-shipped"
+      },
+      {
+        "filePath": "scripts/build-app.mjs",
+        "name": "runBuild",
+        "reason": "editor-shipped"
+      }
+    ],
     "itemShape": {
       "changeWithoutVerify": "note",
       "compound": "warning",
       "vague": "warning"
     },
     "scenarioFreshnessDays": 14,
+    "sharedBaselineMinScenarios": 10,
+    "sizeBudget": {
+      "maxEntityLines": 150,
+      "maxFileLines": 500,
+      "severity": "warning"
+    },
     "stepBudget": {
       "maxChecklistItems": 6,
       "maxLines": 80,
+      "severity": "warning"
+    },
+    "suppressions": {
+      "ratchet": true,
       "severity": "warning"
     },
     "testNamingConventions": {}
@@ -69,7 +91,10 @@
       "maxProgressStallSec": 900,
       "pollIntervalMs": 2000,
       "serverHeartbeatIntervalSec": 60,
-      "waitTimeoutSec": 300
+      "stallEscalationSec": 1800,
+      "surfaceWaitAfterSec": 1800,
+      "waitTimeoutSec": 300,
+      "yieldOnQuestionSec": 600
     },
     "planClaims": {
       "enabled": true,
@@ -80,6 +105,7 @@
   "port": 3000,
   "projectDescription": "I want to build a website that facilitates comprhension of how sports fucntion abroad , because my main audience would be people international athletes from all over the world but can be in the USA as well, parents, guadians and coaches to have access to information about the  ressoucess available to either play college in the USA with scholarships and how to get the biggest percentage of scholarships or join acadmeies to play tennis professinally either in high school or post coellge. This would be a consulting spots website, ince they book their appointment, which can be virtual, they can meet with the sports abroad expert and ask all the questions they need answers for to make the right decision, finanacially especially. they will fill out a form with question so that the perosn they are meeting with can know a bit about them before hand. ",
   "projectTitle": "BNDH Consulting",
+  "provider": "claude",
   "proxy": {
     "controlPort": 14303,
     "dbPort": 14205,
@@ -197,6 +223,7 @@
     {
       "changedCommand": "npx vitest run --changed --reporter=json",
       "command": "npx vitest run --reporter=json",
+      "coverageExcludePaths": [],
       "excludePatterns": [
         "**/node_modules/**",
         "**/dist/**",

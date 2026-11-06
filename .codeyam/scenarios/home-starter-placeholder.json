@@ -1,0 +1,13 @@
+{
+  "name": "Home - Starter Placeholder",
+  "id": "215420a2-c7dd-4467-b4c4-4219d22318f5",
+  "url": "/",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "seed": {},
+  "scenarioType": "application",
+  "pageFilePath": "app/page.tsx",
+  "description": "The starter welcome page shown at / before the BNDH landing page is built."
+}

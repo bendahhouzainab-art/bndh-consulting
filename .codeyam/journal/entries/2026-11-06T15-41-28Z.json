@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-11-06T15:41:28Z",
+  "title": "Simpler booking panel in design 6",
+  "type": "feature",
+  "userRequest": "Project context: I want to build a website that facilitates comprhension of how sports fucntion abroad , because my main audience would be people international athletes from all over the world but can be in the USA as well, parents, guadians and coaches to have access to information about the  ressoucess available to either play college in the USA with scholarships and how to get the biggest percentage of scholarships or join acadmeies to play tennis professinally either in high school or post coellge. This would be a consulting spots website, ince they book their appointment, which can be virtual, they can meet with the sports abroad expert and ask all the questions they need answers for to make the right decision, finanacially especially. they will fill out a form with question so that the perosn they are meeting with can know a bit about them before hand.",
+  "description": "Simplified the booking panel in the Offcatalog design mockup (design 6): it now shows only the \"I am the\" role pills, a \"Talk to\" select, and a single \"Choose a time\" button. The calendar/time grid, video/in-person toggle, progress bar and queued step cards (plus their CSS) were removed; the language switcher stays in the panel. Scope verdict: this is a design-mockup change only, no app code — no deliverables delivered this cycle; all six (landing page, US college guide, tennis academy guide, booking, pre-meeting questionnaire, multilingual support) remain open and deferred to the queued landing-page / design-switch builds. No agent-decided deferrals.",
+  "modifiedFiles": [
+    {
+      "path": ".codeyam/capture.js",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/dependency-graph.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/design/active_tab.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/06-offcatalog-mockup.html",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/feedback.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/editor.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/scenario-issues.js",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/scenario-metrics.js",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/scenario-mocks.js",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/scenario-playwright.js",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/test-cache.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/test-cache/all.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/13b621e200250e1f8b61316a76affbe74057488e1e558418763ae37a3ccb2d04.json",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/6faa9bec89521db6f1abb67559960db7ad8e172dc5e4fc30f71574a8da3aea1e.json",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/bd0f302647a157ff25f40eed8424c41b9ea133a96dc15b7ef598b2a23a638d90.json",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/01-offcatalog-mockup.html",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/02-offcatalog-mockup.html",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/03-offcatalog-mockup.html",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/04-offcatalog-mockup.html",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/05-offcatalog-mockup.html",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/06-offcatalog-mockup.html",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/design/project_mockups/history/round-13/feedback.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/glossary.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/per-test-evidence.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/plans/design--switch-the-app-to-the-offcatalog-design.md",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenario-check-attribution.js",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenario-check-run.js",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenario-launch.js",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenario-targeting.js",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/home-starter-placeholder.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/.capture-pipeline.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-starter-placeholder--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-starter-placeholder--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/state/finalize-debt.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/ce4268b6af7eff0484e1acc83da7d904c6e6817b89c619ecdcd80d25dd2c1d40.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/test-registry.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/wasm-name-section.js",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/wasm-source-attribution.js",
+      "status": "added"
+    }
+  ],
+  "scenarioScreenshots": [
+    {
+      "name": "Home - Starter Placeholder",
+      "screenshotPath": "home-starter-placeholder--desktop.png"
+    }
+  ],
+  "testResults": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "runners": [
+      {
+        "name": "tests",
+        "total": 2,
+        "passed": 2
+      }
+    ]
+  }
+}

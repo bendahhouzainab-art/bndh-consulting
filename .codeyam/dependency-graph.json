@@ -1,147 +1,615 @@
 {
-  "files": {
-    "app/api/codeyam-revalidate/route.ts": {
-      "imports": [],
-      "importedBy": []
-    },
-    "app/codeyam-isolate/layout.tsx": {
-      "imports": [],
-      "importedBy": []
-    },
-    "app/globals.css": {
-      "imports": [],
-      "importedBy": [
-        "app/layout.tsx"
-      ]
-    },
-    "app/layout.test.ts": {
-      "imports": [
-        "app/layout.tsx"
-      ],
-      "importedBy": []
-    },
-    "app/layout.tsx": {
-      "imports": [
-        "app/globals.css"
-      ],
-      "importedBy": [
-        "app/layout.test.ts"
-      ]
-    },
-    "app/lib/loadEnv.ts": {
-      "imports": [],
-      "importedBy": [
-        "prisma.config.ts",
-        "prisma/seed.ts",
-        "vitest.config.ts"
-      ]
-    },
-    "app/lib/prisma.ts": {
-      "imports": [],
-      "importedBy": []
-    },
-    "app/page.tsx": {
-      "imports": [],
-      "importedBy": []
-    },
-    "app/scenario/[slug]/page.tsx": {
-      "imports": [],
-      "importedBy": []
-    },
-    "eslint.config.mjs": {
-      "imports": [],
-      "importedBy": []
-    },
-    "next.config.ts": {
-      "imports": [],
-      "importedBy": []
-    },
-    "postcss.config.mjs": {
-      "imports": [],
-      "importedBy": []
-    },
-    "prisma.config.ts": {
-      "imports": [
-        "app/lib/loadEnv.ts"
-      ],
-      "importedBy": []
-    },
-    "prisma/seed.ts": {
-      "imports": [
-        "app/lib/loadEnv.ts"
-      ],
-      "importedBy": []
-    },
-    "scripts/build-app.mjs": {
-      "imports": [],
-      "importedBy": []
-    },
-    "vitest.config.ts": {
-      "imports": [
-        "app/lib/loadEnv.ts"
-      ],
-      "importedBy": []
-    }
-  },
   "entities": {
+    ".claude/skills/review-session/scripts/extract-session-helpers.mjs::buildConversationTurns": {
+      "filePath": ".claude/skills/review-session/scripts/extract-session-helpers.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "buildConversationTurns"
+    },
+    ".claude/skills/review-session/scripts/extract-session-helpers.mjs::detectFormat": {
+      "filePath": ".claude/skills/review-session/scripts/extract-session-helpers.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "detectFormat"
+    },
+    ".claude/skills/review-session/scripts/extract-session-helpers.mjs::detectFormatFromPath": {
+      "filePath": ".claude/skills/review-session/scripts/extract-session-helpers.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "detectFormatFromPath"
+    },
+    ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__": {
+      "filePath": ".claude/skills/review-session/scripts/extract-session.mjs",
+      "importedBy": [],
+      "imports": [
+        ".claude/skills/review-session/scripts/extract-session-helpers.mjs::buildConversationTurns",
+        ".claude/skills/review-session/scripts/extract-session-helpers.mjs::detectFormat",
+        ".claude/skills/review-session/scripts/extract-session-helpers.mjs::detectFormatFromPath",
+        ".claude/skills/review-session/scripts/session-tokens.mjs::profileSession",
+        ".claude/skills/review-session/scripts/session-tokens-report.mjs::renderTokensMarkdown",
+        ".claude/skills/review-session/scripts/session-tokens-subagents.mjs::readSubagentLines"
+      ],
+      "name": "__file_root__"
+    },
+    ".claude/skills/review-session/scripts/find-last-session-helpers.mjs::claudeProjectHashFromPath": {
+      "filePath": ".claude/skills/review-session/scripts/find-last-session-helpers.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/find-last-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "claudeProjectHashFromPath"
+    },
+    ".claude/skills/review-session/scripts/find-last-session-helpers.mjs::readBuildSessionIds": {
+      "filePath": ".claude/skills/review-session/scripts/find-last-session-helpers.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/find-last-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "readBuildSessionIds"
+    },
+    ".claude/skills/review-session/scripts/find-last-session-helpers.mjs::sessionSourceLabel": {
+      "filePath": ".claude/skills/review-session/scripts/find-last-session-helpers.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/find-last-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "sessionSourceLabel"
+    },
+    ".claude/skills/review-session/scripts/find-last-session.mjs::__file_root__": {
+      "filePath": ".claude/skills/review-session/scripts/find-last-session.mjs",
+      "importedBy": [],
+      "imports": [
+        ".claude/skills/review-session/scripts/find-last-session-helpers.mjs::claudeProjectHashFromPath",
+        ".claude/skills/review-session/scripts/find-last-session-helpers.mjs::readBuildSessionIds",
+        ".claude/skills/review-session/scripts/find-last-session-helpers.mjs::sessionSourceLabel"
+      ],
+      "name": "__file_root__"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-carried.mjs::createCarriedTracker": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-carried.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "createCarriedTracker"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-labels.mjs::sourcesForToolUse": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-labels.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "sourcesForToolUse"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-report.mjs::__file_root__": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-report.mjs",
+      "importedBy": [],
+      "imports": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__"
+      ],
+      "name": "__file_root__"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-report.mjs::renderTokensMarkdown": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-report.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "renderTokensMarkdown"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepFromBanner": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-steps.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "stepFromBanner"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepFromHook": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-steps.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "stepFromHook"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepLabel": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-steps.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "stepLabel"
+    },
+    ".claude/skills/review-session/scripts/session-tokens-subagents.mjs::readSubagentLines": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens-subagents.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "readSubagentLines"
+    },
+    ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens.mjs",
+      "importedBy": [],
+      "imports": [
+        ".claude/skills/review-session/scripts/session-tokens-carried.mjs::createCarriedTracker",
+        ".claude/skills/review-session/scripts/session-tokens-labels.mjs::sourcesForToolUse",
+        ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepFromBanner",
+        ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepFromHook",
+        ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepLabel"
+      ],
+      "name": "__file_root__"
+    },
+    ".codeyam/capture.js::{\n  DEV_SERVER_DOWN_HEADER,\n  classifyInteractionEffect,\n  resolvePixelClip,\n  interactionEffectSignal,\n  fingerprintHtml,\n  getDOMFingerprint,\n  mergeVisibleTextLength,\n  isCrossOriginRequest,\n  isCaptureFatalRequestFailure,\n  isDevServerPlaceholderResponse,\n  buildCaptureContextOptions,\n  attachCaptureCollectors,\n  navigationStatusIssue,\n  resolveSettleBudgets,\n  collectRenderedContent,\n  scenarioErrorMarkerIssue,\n  driveSingleInteraction,\n  decorateCaptureResult,\n}": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-check-run.js::__file_root__"
+      ],
+      "name": "{\n  DEV_SERVER_DOWN_HEADER,\n  classifyInteractionEffect,\n  resolvePixelClip,\n  interactionEffectSignal,\n  fingerprintHtml,\n  getDOMFingerprint,\n  mergeVisibleTextLength,\n  isCrossOriginRequest,\n  isCaptureFatalRequestFailure,\n  isDevServerPlaceholderResponse,\n  buildCaptureContextOptions,\n  attachCaptureCollectors,\n  navigationStatusIssue,\n  resolveSettleBudgets,\n  collectRenderedContent,\n  scenarioErrorMarkerIssue,\n  driveSingleInteraction,\n  decorateCaptureResult,\n}"
+    },
+    ".codeyam/capture.js::{\n  assertAppPortReachable,\n  defaultReadServerState,\n  loadScenarioInIframe,\n  loadScenarioTopLevel,\n  resolveHarnessOrigin,\n  waitForStablePage,\n  waitForReadySignal,\n  watchNavigationAfterReady,\n  createNetworkTracker,\n  waitForNetworkQuiet,\n  scrollThroughDocument,\n  forceFinalVisualState,\n  centerCaptureWrapper,\n  isCanvasInteraction,\n  performInteraction,\n  pixelSnapshot,\n  samePixels,\n  waitForPixelStable,\n  waitForPredicate,\n  performInteractionSequence,\n  assertIsolatedComponentResolved,\n  logCaptureTiming,\n}": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-playwright.js::__file_root__"
+      ],
+      "name": "{\n  assertAppPortReachable,\n  defaultReadServerState,\n  loadScenarioInIframe,\n  loadScenarioTopLevel,\n  resolveHarnessOrigin,\n  waitForStablePage,\n  waitForReadySignal,\n  watchNavigationAfterReady,\n  createNetworkTracker,\n  waitForNetworkQuiet,\n  scrollThroughDocument,\n  forceFinalVisualState,\n  centerCaptureWrapper,\n  isCanvasInteraction,\n  performInteraction,\n  pixelSnapshot,\n  samePixels,\n  waitForPixelStable,\n  waitForPredicate,\n  performInteractionSequence,\n  assertIsolatedComponentResolved,\n  logCaptureTiming,\n}"
+    },
+    ".codeyam/capture.js::{\n  buildCounterpartProbe,\n  subpathHydrationEscalation,\n  waitForHydration,\n}": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-interactivity.js::__file_root__"
+      ],
+      "name": "{\n  buildCounterpartProbe,\n  subpathHydrationEscalation,\n  waitForHydration,\n}"
+    },
+    ".codeyam/capture.js::{\n  createIssue,\n  pushIssue,\n  buildResult,\n  RELOADED_AFTER_READY,\n  retryOnLiveReload,\n}": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-issues.js::__file_root__"
+      ],
+      "name": "{\n  createIssue,\n  pushIssue,\n  buildResult,\n  RELOADED_AFTER_READY,\n  retryOnLiveReload,\n}"
+    },
+    ".codeyam/capture.js::{\n  isCanvasDominated,\n  frameHasVisualContent,\n  frameContentStats,\n  buildSettleAdvisory,\n  stripStateSelector,\n  collectCssRuleMatches,\n}": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-metrics.js::__file_root__"
+      ],
+      "name": "{\n  isCanvasDominated,\n  frameHasVisualContent,\n  frameContentStats,\n  buildSettleAdvisory,\n  stripStateSelector,\n  collectCssRuleMatches,\n}"
+    },
+    ".codeyam/capture.js::{\n  resolveRenderedSourcesAttribution,\n  armRenderedSourcesAttribution,\n  retryUnarmedOnReadyTimeout,\n  renderedSourcesRecordPath,\n  recordRenderedSources,\n  renderedSourcesFromOutcome,\n}": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-check-attribution.js::__file_root__"
+      ],
+      "name": "{\n  resolveRenderedSourcesAttribution,\n  armRenderedSourcesAttribution,\n  retryUnarmedOnReadyTimeout,\n  renderedSourcesRecordPath,\n  recordRenderedSources,\n  renderedSourcesFromOutcome,\n}"
+    },
+    ".codeyam/capture.js::{ attachHttpMocks, recordInPageMockHits }": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-mocks.js::__file_root__"
+      ],
+      "name": "{ attachHttpMocks, recordInPageMockHits }"
+    },
+    ".codeyam/capture.js::{ devicePixelRatioOf }": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-targeting.js::__file_root__"
+      ],
+      "name": "{ devicePixelRatioOf }"
+    },
+    ".codeyam/capture.js::{ getInitScript }": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-handlers.js::__file_root__"
+      ],
+      "name": "{ getInitScript }"
+    },
+    ".codeyam/capture.js::{ launchChromiumWithSelfHeal }": {
+      "filePath": ".codeyam/capture.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-launch.js::__file_root__"
+      ],
+      "name": "{ launchChromiumWithSelfHeal }"
+    },
+    ".codeyam/scenario-check-attribution.js::__file_root__": {
+      "filePath": ".codeyam/scenario-check-attribution.js",
+      "importedBy": [
+        ".codeyam/capture.js::{\n  resolveRenderedSourcesAttribution,\n  armRenderedSourcesAttribution,\n  retryUnarmedOnReadyTimeout,\n  renderedSourcesRecordPath,\n  recordRenderedSources,\n  renderedSourcesFromOutcome,\n}"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    ".codeyam/scenario-check-run.js::__file_root__": {
+      "filePath": ".codeyam/scenario-check-run.js",
+      "importedBy": [
+        ".codeyam/capture.js::{\n  DEV_SERVER_DOWN_HEADER,\n  classifyInteractionEffect,\n  resolvePixelClip,\n  interactionEffectSignal,\n  fingerprintHtml,\n  getDOMFingerprint,\n  mergeVisibleTextLength,\n  isCrossOriginRequest,\n  isCaptureFatalRequestFailure,\n  isDevServerPlaceholderResponse,\n  buildCaptureContextOptions,\n  attachCaptureCollectors,\n  navigationStatusIssue,\n  resolveSettleBudgets,\n  collectRenderedContent,\n  scenarioErrorMarkerIssue,\n  driveSingleInteraction,\n  decorateCaptureResult,\n}"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    ".codeyam/scenario-handlers.js::__file_root__": {
+      "filePath": ".codeyam/scenario-handlers.js",
+      "importedBy": [
+        ".codeyam/capture.js::{ getInitScript }"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    ".codeyam/scenario-interactivity.js::__file_root__": {
+      "filePath": ".codeyam/scenario-interactivity.js",
+      "importedBy": [
+        ".codeyam/capture.js::{\n  buildCounterpartProbe,\n  subpathHydrationEscalation,\n  waitForHydration,\n}"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    ".codeyam/scenario-launch.js::__file_root__": {
+      "filePath": ".codeyam/scenario-launch.js",
+      "importedBy": [
+        ".codeyam/capture.js::{ launchChromiumWithSelfHeal }"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    ".codeyam/scenario-metrics.js::__file_root__": {
+      "filePath": ".codeyam/scenario-metrics.js",
+      "importedBy": [
+        ".codeyam/scenario-playwright.js::{\n  hasLoadingMarkers,\n  isCanvasDominated,\n  shouldStopWaitingForImages,\n}"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    ".codeyam/scenario-playwright.js::{\n  candidateLabelSummary,\n  noMatchGuidance,\n  describeMatchCandidates,\n  resolveTextTarget,\n  pickBestCandidate,\n  pageOf,\n  targetBox,\n  pointIn,\n  devicePixelRatioOf,\n  outsideTargetMessage,\n  outsideTargetError,\n  pointerGeometry,\n  locatorPointGeometry,\n}": {
+      "filePath": ".codeyam/scenario-playwright.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-targeting.js::__file_root__"
+      ],
+      "name": "{\n  candidateLabelSummary,\n  noMatchGuidance,\n  describeMatchCandidates,\n  resolveTextTarget,\n  pickBestCandidate,\n  pageOf,\n  targetBox,\n  pointIn,\n  devicePixelRatioOf,\n  outsideTargetMessage,\n  outsideTargetError,\n  pointerGeometry,\n  locatorPointGeometry,\n}"
+    },
+    ".codeyam/scenario-playwright.js::{\n  hasLoadingMarkers,\n  isCanvasDominated,\n  shouldStopWaitingForImages,\n}": {
+      "filePath": ".codeyam/scenario-playwright.js",
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-metrics.js::__file_root__"
+      ],
+      "name": "{\n  hasLoadingMarkers,\n  isCanvasDominated,\n  shouldStopWaitingForImages,\n}"
+    },
+    ".codeyam/scenario-targeting.js::__file_root__": {
+      "filePath": ".codeyam/scenario-targeting.js",
+      "importedBy": [
+        ".codeyam/capture.js::{ devicePixelRatioOf }",
+        ".codeyam/scenario-playwright.js::{\n  candidateLabelSummary,\n  noMatchGuidance,\n  describeMatchCandidates,\n  resolveTextTarget,\n  pickBestCandidate,\n  pageOf,\n  targetBox,\n  pointIn,\n  devicePixelRatioOf,\n  outsideTargetMessage,\n  outsideTargetError,\n  pointerGeometry,\n  locatorPointGeometry,\n}"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
     "app/globals.css::__file_root__": {
       "filePath": "app/globals.css",
-      "name": "__file_root__",
-      "imports": [],
       "importedBy": [
         "app/layout.tsx::__file_root__"
-      ]
+      ],
+      "imports": [],
+      "name": "__file_root__"
     },
     "app/layout.test.ts::__file_root__": {
       "filePath": "app/layout.test.ts",
-      "name": "__file_root__",
+      "importedBy": [],
       "imports": [
         "app/layout.tsx::__file_root__"
       ],
-      "importedBy": []
+      "name": "__file_root__"
     },
     "app/layout.tsx::__file_root__": {
       "filePath": "app/layout.tsx",
-      "name": "__file_root__",
+      "importedBy": [
+        "app/layout.test.ts::__file_root__"
+      ],
       "imports": [
         "app/globals.css::__file_root__"
       ],
-      "importedBy": []
+      "name": "__file_root__"
     },
     "app/lib/loadEnv.ts::__file_root__": {
       "filePath": "app/lib/loadEnv.ts",
-      "name": "__file_root__",
-      "imports": [],
       "importedBy": [
         "prisma.config.ts::__file_root__",
         "prisma/seed.ts::__file_root__",
         "vitest.config.ts::__file_root__"
-      ]
+      ],
+      "imports": [],
+      "name": "__file_root__"
     },
     "prisma.config.ts::__file_root__": {
       "filePath": "prisma.config.ts",
-      "name": "__file_root__",
+      "importedBy": [],
       "imports": [
         "app/lib/loadEnv.ts::__file_root__"
       ],
-      "importedBy": []
+      "name": "__file_root__"
     },
     "prisma/seed.ts::__file_root__": {
       "filePath": "prisma/seed.ts",
-      "name": "__file_root__",
+      "importedBy": [],
       "imports": [
         "app/lib/loadEnv.ts::__file_root__"
       ],
-      "importedBy": []
+      "name": "__file_root__"
     },
     "vitest.config.ts::__file_root__": {
       "filePath": "vitest.config.ts",
-      "name": "__file_root__",
+      "importedBy": [],
       "imports": [
         "app/lib/loadEnv.ts::__file_root__"
       ],
-      "importedBy": []
+      "name": "__file_root__"
     }
   },
-  "lastUpdated": "2026-10-16T21:33:09Z"
+  "files": {
+    ".claude/hooks/_step_metadata.py": {
+      "importedBy": [],
+      "imports": []
+    },
+    ".claude/hooks/editor-pretool-hook.py": {
+      "importedBy": [],
+      "imports": []
+    },
+    ".claude/hooks/editor-step-hook.py": {
+      "importedBy": [],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/extract-session-helpers.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs"
+      ],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/extract-session.mjs": {
+      "importedBy": [],
+      "imports": [
+        ".claude/skills/review-session/scripts/extract-session-helpers.mjs",
+        ".claude/skills/review-session/scripts/session-tokens.mjs",
+        ".claude/skills/review-session/scripts/session-tokens-report.mjs",
+        ".claude/skills/review-session/scripts/session-tokens-subagents.mjs"
+      ]
+    },
+    ".claude/skills/review-session/scripts/find-last-session-helpers.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/find-last-session.mjs"
+      ],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/find-last-session.mjs": {
+      "importedBy": [],
+      "imports": [
+        ".claude/skills/review-session/scripts/find-last-session-helpers.mjs"
+      ]
+    },
+    ".claude/skills/review-session/scripts/session-tokens-carried.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs"
+      ],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/session-tokens-labels.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs"
+      ],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/session-tokens-report.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs"
+      ],
+      "imports": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs"
+      ]
+    },
+    ".claude/skills/review-session/scripts/session-tokens-steps.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens.mjs"
+      ],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/session-tokens-subagents.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs"
+      ],
+      "imports": []
+    },
+    ".claude/skills/review-session/scripts/session-tokens.mjs": {
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens-report.mjs",
+        ".claude/skills/review-session/scripts/extract-session.mjs"
+      ],
+      "imports": [
+        ".claude/skills/review-session/scripts/session-tokens-carried.mjs",
+        ".claude/skills/review-session/scripts/session-tokens-labels.mjs",
+        ".claude/skills/review-session/scripts/session-tokens-steps.mjs"
+      ]
+    },
+    ".codeyam/capture.js": {
+      "importedBy": [],
+      "imports": [
+        ".codeyam/scenario-launch.js",
+        ".codeyam/scenario-check-run.js",
+        ".codeyam/scenario-metrics.js",
+        ".codeyam/scenario-issues.js",
+        ".codeyam/scenario-mocks.js",
+        ".codeyam/scenario-check-attribution.js",
+        ".codeyam/scenario-playwright.js",
+        ".codeyam/scenario-targeting.js",
+        ".codeyam/scenario-handlers.js",
+        ".codeyam/scenario-interactivity.js"
+      ]
+    },
+    ".codeyam/design/project_mockups/06-offcatalog-mockup.html": {
+      "importedBy": [],
+      "imports": []
+    },
+    ".codeyam/scenario-check-attribution.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-check-run.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-handlers.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-interactivity.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-issues.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-launch.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-metrics.js": {
+      "importedBy": [
+        ".codeyam/capture.js",
+        ".codeyam/scenario-playwright.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-mocks.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": []
+    },
+    ".codeyam/scenario-playwright.js": {
+      "importedBy": [
+        ".codeyam/capture.js"
+      ],
+      "imports": [
+        ".codeyam/scenario-metrics.js",
+        ".codeyam/scenario-targeting.js"
+      ]
+    },
+    ".codeyam/scenario-targeting.js": {
+      "importedBy": [
+        ".codeyam/capture.js",
+        ".codeyam/scenario-playwright.js"
+      ],
+      "imports": []
+    },
+    "app/api/codeyam-revalidate/route.ts": {
+      "importedBy": [],
+      "imports": []
+    },
+    "app/codeyam-isolate/layout.tsx": {
+      "importedBy": [],
+      "imports": []
+    },
+    "app/globals.css": {
+      "importedBy": [
+        "app/layout.tsx"
+      ],
+      "imports": []
+    },
+    "app/layout.test.ts": {
+      "importedBy": [],
+      "imports": [
+        "app/layout.tsx"
+      ]
+    },
+    "app/layout.tsx": {
+      "importedBy": [
+        "app/layout.test.ts"
+      ],
+      "imports": [
+        "app/globals.css"
+      ]
+    },
+    "app/lib/loadEnv.ts": {
+      "importedBy": [
+        "prisma.config.ts",
+        "prisma/seed.ts",
+        "vitest.config.ts"
+      ],
+      "imports": []
+    },
+    "app/lib/prisma.ts": {
+      "importedBy": [],
+      "imports": []
+    },
+    "app/page.tsx": {
+      "importedBy": [],
+      "imports": []
+    },
+    "app/scenario/[slug]/page.tsx": {
+      "importedBy": [],
+      "imports": []
+    },
+    "eslint.config.mjs": {
+      "importedBy": [],
+      "imports": []
+    },
+    "next.config.ts": {
+      "importedBy": [],
+      "imports": []
+    },
+    "postcss.config.mjs": {
+      "importedBy": [],
+      "imports": []
+    },
+    "prisma.config.ts": {
+      "importedBy": [],
+      "imports": [
+        "app/lib/loadEnv.ts"
+      ]
+    },
+    "prisma/seed.ts": {
+      "importedBy": [],
+      "imports": [
+        "app/lib/loadEnv.ts"
+      ]
+    },
+    "scripts/build-app.mjs": {
+      "importedBy": [],
+      "imports": []
+    },
+    "vitest.config.ts": {
+      "importedBy": [],
+      "imports": [
+        "app/lib/loadEnv.ts"
+      ]
+    }
+  },
+  "lastUpdated": "2026-11-06T15:41:53Z"
 }

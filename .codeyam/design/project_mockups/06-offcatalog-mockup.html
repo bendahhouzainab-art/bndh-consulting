@@ -70,37 +70,17 @@ h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;color:var(--ink);text-wr
 .lang{font-size:14px;padding:6px 10px;border-radius:var(--r-pill);color:var(--muted)}
 .lang[aria-current="true"]{background:var(--page);color:var(--ink);box-shadow:0 0 0 1px var(--rule)}
 .lang.ar{font-family:'Geeza Pro',Tahoma,sans-serif}
-.panel{margin-top:28px;background:var(--page);border-radius:var(--r-panel);padding:24px;box-shadow:0 1px 2px rgba(29,43,87,.06),0 18px 40px rgba(29,43,87,.08)}
-.panel h2{font-size:22px}
-.progress{display:flex;gap:6px;margin:14px 0 4px}
-.progress i{flex:1;height:4px;border-radius:4px;background:var(--rule)}
-.progress i.on{background:var(--mid)}
-:root[data-theme="dark"] .progress i.on{background:var(--ball)}
-.stepname{font-size:13.5px;color:var(--muted)}
+.panel{margin:auto 0;background:var(--page);border-radius:var(--r-panel);padding:32px 28px;box-shadow:0 1px 2px rgba(29,43,87,.06),0 18px 40px rgba(29,43,87,.08)}
+.panel h2{font-size:26px}
+.panel .sub{margin:8px 0 4px;font-size:15px;color:var(--muted)}
 .lab,label{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin:16px 0 8px}
-.panel select{width:100%;font:15px var(--font);color:var(--ink);background:var(--tint);border:1px solid var(--rule);border-radius:var(--r-ctl);padding:10px 12px}
-.seg{display:grid;grid-template-columns:1fr 1fr;padding:4px;background:var(--tint);border-radius:var(--r-ctl)}
-.seg button{border:0;background:transparent;padding:11px;border-radius:9px;font:600 14.5px var(--font);color:var(--muted);display:flex;gap:8px;align-items:center;justify-content:center;cursor:pointer}
-.seg button svg{width:18px;height:18px}
-.seg button[aria-pressed="true"]{background:var(--page);color:var(--ink);box-shadow:0 1px 3px rgba(29,43,87,.15)}
-.days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
-.days button{border:1px solid var(--rule);background:transparent;border-radius:var(--r-ctl);padding:8px 0;font:13px var(--font);color:var(--muted);cursor:pointer}
-.days b{display:block;font-size:19px;color:var(--ink);font-variant-numeric:tabular-nums}
-.days button[aria-pressed="true"]{background:var(--mid);border-color:var(--mid);color:var(--on-mid-soft)}
-.days button[aria-pressed="true"] b{color:var(--on-mid)}
-.times{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}
-.days b{font-size:17px}
-.times button{border:1px solid var(--rule);background:transparent;border-radius:var(--r-ctl);padding:9px 0;font:14px var(--font);font-variant-numeric:tabular-nums;color:var(--ink);cursor:pointer}
-.times button[aria-pressed="true"]{background:var(--ball);border-color:var(--ball);color:var(--on-ball);font-weight:600}
-.tz{font-size:13px;color:var(--muted);margin-top:8px}
+.panel .lab{margin-top:24px}
+.panel select{width:100%;font:15px var(--font);color:var(--ink);background:var(--tint);border:1px solid var(--rule);border-radius:var(--r-ctl);padding:12px}
 .who{display:flex;gap:6px;flex-wrap:wrap}
-.who button{border:1px solid var(--rule);background:transparent;border-radius:var(--r-pill);padding:8px 14px;font:14px var(--font);color:var(--ink);cursor:pointer}
+.who button{border:1px solid var(--rule);background:transparent;border-radius:var(--r-pill);padding:9px 16px;font:14.5px var(--font);color:var(--ink);cursor:pointer}
 .who button[aria-pressed="true"]{border-color:var(--mid);background:var(--mid);color:var(--on-mid)}
-.panel .btn{width:100%;margin-top:26px;padding:16px}
-.panel .help{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 0}
-.queued{margin-top:14px;display:grid;gap:8px}
-.queued div{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-radius:var(--r-ctl);background:var(--page);color:var(--muted);font-size:14.5px;box-shadow:0 0 0 1px var(--rule)}
-.queued b{color:var(--ink);font-weight:600}
+.panel .btn{width:100%;margin-top:32px;padding:16px}
+.panel .help{text-align:center;font-size:13px;color:var(--muted);margin:12px 0 0}
 
 /* below the fold */
 .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
@@ -145,6 +125,32 @@ h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;color:var(--ink);text-wr
 .m-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px}
 .m-opts span{background:var(--page);border-radius:var(--r-ctl);padding:14px 16px;font-size:14.5px}
 .m-opts b{display:block;color:var(--ink)}
+/* resources */
+.resources{margin-top:112px}
+.resources h2{font-size:40px}
+.resources .lede{margin:10px 0 0;max-width:36em}
+.tabs{display:flex;gap:8px;margin:28px 0 24px}
+.tabs label{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:var(--r-pill);border:1px solid var(--rule);background:transparent;font:600 14.5px var(--font);color:var(--ink);white-space:nowrap;cursor:pointer}
+.tabs label svg{width:18px;height:18px}
+.tabs label:hover{border-color:var(--mid-3)}
+.res-radio{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+#r-books:checked ~ .tabs label[for="r-books"],#r-articles:checked ~ .tabs label[for="r-articles"],#r-stories:checked ~ .tabs label[for="r-stories"],#r-videos:checked ~ .tabs label[for="r-videos"]{background:var(--ball);border-color:var(--ball);color:var(--on-ball)}
+#r-books:focus-visible ~ .tabs label[for="r-books"],#r-articles:focus-visible ~ .tabs label[for="r-articles"],#r-stories:focus-visible ~ .tabs label[for="r-stories"],#r-videos:focus-visible ~ .tabs label[for="r-videos"]{outline:2px solid var(--ball);outline-offset:3px}
+.res-grid{display:none;grid-template-columns:repeat(3,1fr);gap:12px}
+#r-books:checked ~ #panel-books,#r-articles:checked ~ #panel-articles,#r-stories:checked ~ #panel-stories,#r-videos:checked ~ #panel-videos{display:grid}
+.res{display:flex;flex-direction:column;gap:6px;padding:22px;border-radius:var(--r-panel);background:var(--tint);font-size:15px}
+.res b{color:var(--ink);font-size:17.5px;line-height:1.3}
+.res .meta{color:var(--muted);font-size:13.5px}
+.res .tag{align-self:flex-start;margin-top:auto;padding:3px 10px;border-radius:var(--r-pill);background:var(--page);box-shadow:0 0 0 1px var(--rule);color:var(--ink);font-size:12.5px;font-weight:600}
+.res .who-row{display:flex;align-items:center;gap:12px}
+.res .avatar{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--mid);color:var(--ball)}
+.res .avatar svg{width:26px;height:26px}
+.res q{color:var(--text);font-style:italic}
+.res .thumb{position:relative;aspect-ratio:16/9;border-radius:var(--r-ctl);background:var(--mid);background-image:radial-gradient(ellipse 70% 80% at 80% 100%,var(--mid-3),transparent 70%);display:grid;place-items:center;color:var(--ball);margin-bottom:8px}
+.res .thumb svg{width:44px;height:44px}
+.res .thumb span{position:absolute;right:10px;bottom:8px;padding:2px 8px;border-radius:var(--r-pill);background:rgba(0,0,0,.45);color:#FFFFFF;font-size:12px;font-variant-numeric:tabular-nums}
+.res-note{color:var(--muted);font-size:13.5px;margin:14px 0 0}
+
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:112px;border-top:2px solid var(--ink)}
 .steps div{padding:24px 28px 0 0}
 .steps .n{font-size:15px;color:var(--muted)}
@@ -161,6 +167,9 @@ footer .end{margin-left:auto;display:flex;gap:24px}
   .choose,.steps{grid-template-columns:1fr}
   .bento{grid-template-columns:repeat(2,1fr)}
   .wrap{padding:0 16px}
+  .resources h2{font-size:32px}
+  .tabs{overflow-x:auto;margin-left:-16px;margin-right:-16px;padding:2px 16px;scrollbar-width:none}
+  .res-grid,#r-books:checked ~ #panel-books,#r-articles:checked ~ #panel-articles,#r-stories:checked ~ #panel-stories,#r-videos:checked ~ #panel-videos{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -191,7 +200,7 @@ footer .end{margin-left:auto;display:flex;gap:24px}
   <div class="story">
     <header>
       <a class="brand" href="#"><svg class="logo-mark" width="42" height="42" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1D2B57">BNDH</text></svg> BNDH Consulting</a>
-      <nav aria-label="Main"><a href="#">College sports</a><a href="#">Academies</a><a href="#mentoring">Athlete mentoring</a><a href="#">About</a></nav>
+      <nav aria-label="Main"><a href="#">College sports</a><a href="#">Academies</a><a href="#mentoring">Athlete mentoring</a><a href="#resources">Athletic resources</a><a href="#">About</a></nav>
     </header>
     <div class="bigmark" aria-hidden="true"><svg class="logo-mark" width="220" height="220" viewBox="0 0 48 48" role="img" aria-label="BNDH Consulting"><circle cx="24" cy="24" r="23.5" fill="#EDFF00"/><path d="M5.5 9.5c8.5 6.8 8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><path d="M42.5 9.5c-8.5 6.8-8.5 22.2 0 29" fill="none" stroke="#C7D800" stroke-width="1.7" stroke-linecap="round"/><text x="24" y="28.2" text-anchor="middle" font-family="Futura, 'Century Gothic', 'Avenir Next', 'Trebuchet MS', sans-serif" font-size="11.5" font-weight="700" letter-spacing=".4" fill="#1D2B57">BNDH</text></svg></div>
     <h1>Sports consulting to play and study abroad.</h1>
@@ -211,25 +220,14 @@ footer .end{margin-left:auto;display:flex;gap:24px}
     <div class="top"><a class="lang" href="#" aria-current="true">EN</a><a class="lang" href="#">FR</a><a class="lang" href="#">ES</a><a class="lang" href="#">DE</a><a class="lang ar" href="#" lang="ar">عربي</a></div>
     <form class="panel" action="#">
       <h2>Book a session</h2>
-      <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
-      <span class="stepname">Step 1 of 3: time and place</span>
-      <span class="lab">Talk to</span>
-      <select aria-label="Who you want to talk to"><option>Sports expert (consulting)</option><option>Athlete mentor</option><option>Mental health professional</option></select>
-      <span class="lab">Meet by</span>
-      <div class="seg"><button type="button" aria-pressed="true"><svg><use href="#i-video"/></svg>Video call</button><button type="button" aria-pressed="false"><svg><use href="#i-pin"/></svg>In person</button></div>
-      <span class="lab">Day</span>
-      <div class="days"><button type="button" aria-pressed="false">Mon<b>12</b></button><button type="button" aria-pressed="true">Tue<b>13</b></button><button type="button" aria-pressed="false">Wed<b>14</b></button><button type="button" aria-pressed="false">Thu<b>15</b></button><button type="button" aria-pressed="false">Fri<b>16</b></button></div>
-      <div class="times"><button type="button" aria-pressed="false">09:00</button><button type="button" aria-pressed="false">11:30</button><button type="button" aria-pressed="true">15:00</button><button type="button" aria-pressed="false">18:30</button></div>
-      <p class="tz">60 minutes. Central European Time.</p>
+      <p class="sub">A 60-minute video call with an expert, in your language.</p>
       <span class="lab">I am the</span>
       <div class="who"><button type="button" aria-pressed="false">Athlete</button><button type="button" aria-pressed="true">Parent or guardian</button><button type="button" aria-pressed="false">Coach</button></div>
-      <button class="btn btn-ball" type="submit">Continue</button>
-      <p class="help">Next: a few questions about the athlete.</p>
+      <span class="lab">Talk to</span>
+      <select aria-label="Who you want to talk to"><option>Sports expert (consulting)</option><option>Athlete mentor</option><option>Mental health professional</option></select>
+      <button class="btn btn-ball" type="submit">Choose a time</button>
+      <p class="help">Then a few short questions so your expert can prepare.</p>
     </form>
-    <div class="queued" aria-label="Next steps">
-      <div><b>About the athlete</b><span>Sport, level, grades, country</span></div>
-      <div><b>Your questions and budget</b><span>Read by your expert beforehand</span></div>
-    </div>
   </aside>
 </div>
 
@@ -266,6 +264,49 @@ footer .end{margin-left:auto;display:flex;gap:24px}
     <div><h2>Athlete mentoring</h2><p>Moving abroad to play is a big step. Book calls with a mentor who has made the move, or with a licensed mental health professional who works with athletes.</p>
       <div class="m-opts"><span><b>Athlete mentor</b>Training, teammates, life far from home</span><span><b>Mental health professional</b>Pressure, injury, confidence</span></div>
       <a class="btn btn-ball" href="#book">Book a call</a></div>
+  </section>
+
+  <section class="resources" id="resources" aria-labelledby="resources-title">
+    <input class="res-radio" type="radio" name="res-type" id="r-books" checked>
+    <input class="res-radio" type="radio" name="res-type" id="r-articles">
+    <input class="res-radio" type="radio" name="res-type" id="r-stories">
+    <input class="res-radio" type="radio" name="res-type" id="r-videos">
+    <h2 id="resources-title">Athletic resources</h2>
+    <p class="lede">Reading, watching and real stories to prepare for college sport abroad.</p>
+    <div class="tabs" aria-label="Resource type">
+      <label for="r-books"><svg aria-hidden="true"><use href="#i-book"/></svg>Books</label>
+      <label for="r-articles"><svg aria-hidden="true"><use href="#i-pencil"/></svg>Articles</label>
+      <label for="r-stories"><svg aria-hidden="true"><use href="#i-cap"/></svg>Success stories</label>
+      <label for="r-videos"><svg aria-hidden="true"><use href="#i-video"/></svg>Educational videos</label>
+    </div>
+
+    <div class="res-grid" id="panel-books">
+      <article class="res"><b>The Inner Game of Tennis</b><span class="meta">W. Timothy Gallwey</span><p>Quiet the self-critic and play with focus under match pressure.</p><span class="tag">Mindset</span></article>
+      <article class="res"><b>Mindset</b><span class="meta">Carol S. Dweck</span><p>Why athletes who treat setbacks as practice keep improving.</p><span class="tag">Mindset</span></article>
+      <article class="res"><b>Open</b><span class="meta">Andre Agassi</span><p>An honest look at life inside a tennis academy as a teenager.</p><span class="tag">Academies</span></article>
+      <article class="res"><b>The Champion's Mind</b><span class="meta">Jim Afremow</span><p>Routines for confidence, recovery and staying calm before big games.</p><span class="tag">Performance</span></article>
+    </div>
+
+    <div class="res-grid" id="panel-articles">
+      <article class="res"><b>How athletic scholarships are split across a team</b><span class="meta">BNDH guide · 6 min read</span><p>Why most offers are partial, and how to stack them with academic awards.</p><span class="tag">Scholarships</span></article>
+      <article class="res"><b>NCAA, NAIA or junior college: which fits your level?</b><span class="meta">BNDH guide · 8 min read</span><p>Divisions, eligibility rules and what each means for playing time.</p><span class="tag">Recruiting</span></article>
+      <article class="res"><b>Your first email to a college coach</b><span class="meta">BNDH guide · 4 min read</span><p>What to include, when to send it and how to follow up.</p><span class="tag">Recruiting</span></article>
+      <article class="res"><b>SAT, TOEFL and transcripts from abroad</b><span class="meta">BNDH guide · 7 min read</span><p>The paperwork international athletes need, and the deadlines.</p><span class="tag">Admissions</span></article>
+      <article class="res"><b>Choosing a tennis academy: costs and red flags</b><span class="meta">BNDH guide · 9 min read</span><p>What a year really costs, and the questions to ask on a visit.</p><span class="tag">Academies</span></article>
+    </div>
+
+    <div class="res-grid" id="panel-stories">
+      <article class="res"><div class="who-row"><span class="avatar"><svg aria-hidden="true"><use href="#i-tennis"/></svg></span><span><b>Léa</b><span class="meta">France → Division II tennis</span></span></div><q>We compared four offers line by line and found the one my family could afford.</q><span class="tag">Example story</span></article>
+      <article class="res"><div class="who-row"><span class="avatar"><svg aria-hidden="true"><use href="#i-soccer"/></svg></span><span><b>Omar</b><span class="meta">Morocco → NAIA soccer</span></span></div><q>An academic award covered the part my athletic scholarship didn't.</q><span class="tag">Example story</span></article>
+      <article class="res"><div class="who-row"><span class="avatar"><svg aria-hidden="true"><use href="#i-swim"/></svg></span><span><b>Jonas</b><span class="meta">Germany → Division I swimming</span></span></div><q>Having a mentor in my first semester made being far from home much easier.</q><span class="tag">Example story</span></article>
+    </div>
+
+    <div class="res-grid" id="panel-videos">
+      <article class="res"><div class="thumb"><svg aria-hidden="true"><use href="#i-video"/></svg><span>12:40</span></div><b>US college sport, explained in 12 minutes</b><span class="meta">BNDH explainer</span><span class="tag">Getting started</span></article>
+      <article class="res"><div class="thumb"><svg aria-hidden="true"><use href="#i-video"/></svg><span>08:15</span></div><b>Filming a recruiting video coaches will watch</b><span class="meta">BNDH how-to</span><span class="tag">Recruiting</span></article>
+      <article class="res"><div class="thumb"><svg aria-hidden="true"><use href="#i-video"/></svg><span>15:02</span></div><b>A day at a tennis academy</b><span class="meta">BNDH explainer</span><span class="tag">Academies</span></article>
+    </div>
+    <p class="res-note">Sample resources for this design. Success stories are examples, not real athletes.</p>
   </section>
 
   <section class="steps">

@@ -1,0 +1,10 @@
+{
+  "05-offcatalog-mockup.html": {
+    "comment": "",
+    "rating": null
+  },
+  "06-offcatalog-mockup.html": {
+    "comment": "Add an Athletic resources tab to design 6 (06-offcatalog-mockup.html, \"Booking up front, split screen\" for BNDH Consulting). It gets a link in the main navigation, next to \"Athlete mentoring\", and opens a new section with four sub-tabs: Books, Articles, Success stories and Educational videos. Visitors switch between the sub-tabs to browse each kind of resource, and Books is open by default. The section uses design 6's existing look: midnight/tint panels, the yellow \"ball\" accent, pill shapes and line icons.",
+    "rating": 80
+  }
+}

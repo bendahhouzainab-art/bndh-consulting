@@ -51,3 +51,32 @@ npm run db:reset   # Reset database: drop, recreate, and re-seed
 | `npm run db:push`  | Apply Prisma schema changes                  |
 | `npm run db:seed`  | Seed the database                            |
 | `npm run db:reset` | Reset and re-seed the database               |
+
+<!-- codeyam:run-and-edit:start d=e57883f0c068 -->
+## Develop this project with codeyam-editor
+
+This project is built with [codeyam-editor](https://codeyam.com) — code and runnable data scenarios are authored side by side against a live preview.
+
+```bash
+# Clone the repo
+git clone https://github.com/jaredcosulich/bndh-consulting && cd bndh-consulting
+
+# Install codeyam-editor
+npm install -g @codeyam-editor/codeyam-editor@latest
+
+# Launch the editor (split-screen terminal + live preview)
+codeyam-editor start
+```
+<!-- codeyam:run-and-edit:end -->
+
+<!-- codeyam:scenario-gallery:start d=78239a56f109 -->
+## Scenario gallery
+
+States captured as runnable scenarios with codeyam-editor:
+
+### Home - Starter Placeholder
+
+<img src=".codeyam/scenarios/screenshots/home-starter-placeholder--desktop.png" alt="Home - Starter Placeholder" width="280">
+
+The starter welcome page shown at / before the BNDH landing page is built.
+<!-- codeyam:scenario-gallery:end -->

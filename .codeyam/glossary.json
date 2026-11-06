@@ -1,0 +1,46 @@
+[
+  {
+    "description": "Editor-installed layout for isolated component previews; hides them in production.",
+    "filePath": "app/codeyam-isolate/layout.tsx",
+    "name": "CodeYamIsolateLayout",
+    "untestabilityReason": {
+      "justification": "Editor-shipped dev-only preview wrapper; renders children or a framework 404, nothing visual of its own.",
+      "kind": "platform-glue"
+    }
+  },
+  {
+    "description": "Home page at /; currently the starter welcome placeholder, to be replaced by the BNDH landing page.",
+    "filePath": "app/page.tsx",
+    "name": "Home",
+    "scenarios": [
+      "home-starter-placeholder"
+    ]
+  },
+  {
+    "description": "Root HTML shell for every page: sets the language, global styles and the site title and description.",
+    "filePath": "app/layout.tsx",
+    "name": "RootLayout",
+    "untestabilityReason": {
+      "justification": "Single html/body passthrough around children with no props, iteration or conditional rendering.",
+      "kind": "trivial-wrapper"
+    }
+  },
+  {
+    "description": "Editor-installed route that redirects /scenario/<slug> to the scenario URL; 404 in production.",
+    "filePath": "app/scenario/[slug]/page.tsx",
+    "name": "ScenarioRedirectPage",
+    "untestabilityReason": {
+      "justification": "Editor-shipped dev-only redirect with no rendered output of its own.",
+      "kind": "platform-glue"
+    }
+  },
+  {
+    "description": "Database seed entry point; currently a placeholder that logs that there are no models to seed yet.",
+    "filePath": "prisma/seed.ts",
+    "name": "main",
+    "untestabilityReason": {
+      "justification": "Stack scaffold placeholder with no logic until data models are added.",
+      "kind": "scaffold"
+    }
+  }
+]

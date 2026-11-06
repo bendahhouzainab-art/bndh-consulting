@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "description": "The site description used by search engines says the service is for international athletes.",
+      "file": "app/layout.test.ts",
+      "format": "vitest",
+      "key": "site metadata › describes the consulting service",
+      "line": 13,
+      "registeredAt": "2026-10-20T14:29:02.406269083+00:00",
+      "runner": "tests"
+    },
+    {
+      "description": "The site title in the browser tab is the business name, BNDH Consulting.",
+      "file": "app/layout.test.ts",
+      "format": "vitest",
+      "key": "site metadata › names the business in the browser tab",
+      "line": 7,
+      "registeredAt": "2026-10-20T14:29:02.385711252+00:00",
+      "runner": "tests"
+    }
+  ],
+  "version": 2
+}
