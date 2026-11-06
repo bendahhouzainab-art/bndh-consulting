@@ -37,11 +37,11 @@
       "id": "book-a-consultation-virtual-option-with-the",
       "text": "Book a consultation (virtual option) with the sports-abroad expert — booking mechanism decision deferred by the user",
       "status": "deferred",
-      "resolvedAt": "2026-11-06T15:46:20.042146157+00:00",
-      "resolvedInFeature": "Simpler booking panel in design 6",
-      "planSlug": null,
+      "resolvedAt": "2026-11-06T15:58:09.507634231+00:00",
+      "resolvedInFeature": null,
+      "planSlug": "book-a-consultation-virtual-option-with-the-sports-abroad-expert-booking-mechanism-decision-deferred-by-the-user",
       "note": "Design-mockup-only cycle (simpler booking panel in design 6); no app code built yet. Booking mechanism decision still deferred by the user.",
-      "decidedBy": "agent"
+      "decidedBy": "user"
     },
     {
       "id": "pre-meeting-questionnaire-so-the-expert-knows",

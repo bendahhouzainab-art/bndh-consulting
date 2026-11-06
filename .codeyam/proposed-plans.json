@@ -9,10 +9,15 @@
       "severity": 3,
       "source": "deferred-deliverable",
       "deliverableId": "book-a-consultation-virtual-option-with-the",
-      "status": "pending",
+      "status": "written",
+      "planSlug": "book-a-consultation-virtual-option-with-the-sports-abroad-expert-booking-mechanism-decision-deferred-by-the-user",
       "proposedAt": "2026-11-06T15:46:20.131987339+00:00",
       "kind": "feature",
-      "sightings": 1
+      "sightings": 1,
+      "decidedAt": "2026-11-06T15:58:09Z",
+      "sightingsAtDecision": 1,
+      "offeredCount": 1,
+      "lastOfferedAt": "2026-11-06T15:46:31.608009838+00:00"
     },
     {
       "id": "pre-meeting-questionnaire-so-the-expert-knows-about-the-athlete-before-the-meeting",
