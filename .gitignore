@@ -94,6 +94,7 @@ blob-report/
 .codeyam/state/handoff-said-once.json
 .codeyam/state/check-in-loop.json
 .codeyam/state/idle-stopped-agents.json
+.codeyam/state/static-check-durations.json
 .codeyam/state/claude-launch-settings.json
 .codeyam/state/extraction-plan.md
 .codeyam/state/deconstruct-plan.md
@@ -124,8 +125,10 @@ blob-report/
 .codeyam/state/step-highwater.json
 .codeyam/state/finalize-phase-fingerprints.json
 .codeyam/state/static-check-fingerprints.json
+.codeyam/state/static-check-scoped-passes.json
 .codeyam/state/merge-drivers-version
 .codeyam/state/command-output/
+.codeyam/state/relaunch-progress/
 .codeyam/state/needs-login.json
 .codeyam/state/check-in-grant.json
 .codeyam/state/plan-run-schedule.json
