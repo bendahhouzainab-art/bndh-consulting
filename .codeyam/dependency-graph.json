@@ -137,7 +137,9 @@
     },
     ".claude/skills/review-session/scripts/session-tokens.mjs::__file_root__": {
       "filePath": ".claude/skills/review-session/scripts/session-tokens.mjs",
-      "importedBy": [],
+      "importedBy": [
+        ".claude/skills/review-session/scripts/session-tokens-report.mjs::__file_root__"
+      ],
       "imports": [
         ".claude/skills/review-session/scripts/session-tokens-carried.mjs::createCarriedTracker",
         ".claude/skills/review-session/scripts/session-tokens-labels.mjs::sourcesForToolUse",
@@ -146,6 +148,14 @@
         ".claude/skills/review-session/scripts/session-tokens-steps.mjs::stepLabel"
       ],
       "name": "__file_root__"
+    },
+    ".claude/skills/review-session/scripts/session-tokens.mjs::profileSession": {
+      "filePath": ".claude/skills/review-session/scripts/session-tokens.mjs",
+      "importedBy": [
+        ".claude/skills/review-session/scripts/extract-session.mjs::__file_root__"
+      ],
+      "imports": [],
+      "name": "profileSession"
     },
     ".codeyam/capture.js::{\n  DEV_SERVER_DOWN_HEADER,\n  classifyInteractionEffect,\n  resolvePixelClip,\n  interactionEffectSignal,\n  fingerprintHtml,\n  getDOMFingerprint,\n  mergeVisibleTextLength,\n  isCrossOriginRequest,\n  isCaptureFatalRequestFailure,\n  isDevServerPlaceholderResponse,\n  buildCaptureContextOptions,\n  attachCaptureCollectors,\n  navigationStatusIssue,\n  resolveSettleBudgets,\n  collectRenderedContent,\n  scenarioErrorMarkerIssue,\n  driveSingleInteraction,\n  decorateCaptureResult,\n}": {
       "filePath": ".codeyam/capture.js",
@@ -329,8 +339,8 @@
     "app/lib/loadEnv.ts::__file_root__": {
       "filePath": "app/lib/loadEnv.ts",
       "importedBy": [
-        "prisma.config.ts::__file_root__",
         "prisma/seed.ts::__file_root__",
+        "prisma.config.ts::__file_root__",
         "vitest.config.ts::__file_root__"
       ],
       "imports": [],
@@ -435,8 +445,8 @@
     },
     ".claude/skills/review-session/scripts/session-tokens.mjs": {
       "importedBy": [
-        ".claude/skills/review-session/scripts/session-tokens-report.mjs",
-        ".claude/skills/review-session/scripts/extract-session.mjs"
+        ".claude/skills/review-session/scripts/extract-session.mjs",
+        ".claude/skills/review-session/scripts/session-tokens-report.mjs"
       ],
       "imports": [
         ".claude/skills/review-session/scripts/session-tokens-carried.mjs",
@@ -558,8 +568,8 @@
     },
     "app/lib/loadEnv.ts": {
       "importedBy": [
-        "prisma.config.ts",
         "prisma/seed.ts",
+        "prisma.config.ts",
         "vitest.config.ts"
       ],
       "imports": []
@@ -611,5 +621,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-11-06T15:41:53Z"
+  "lastUpdated": "2026-11-09T15:12:36Z"
 }

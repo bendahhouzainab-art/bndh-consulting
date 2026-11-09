@@ -6,6 +6,9 @@
     "Desktop"
   ],
   "mocks": {},
+  "clock": {
+    "now": "2026-11-06T15:42:03Z"
+  },
   "seed": {},
   "scenarioType": "application",
   "pageFilePath": "app/page.tsx",
