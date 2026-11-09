@@ -224,3 +224,7 @@ dev.db-journal
 .codeyam/db.sqlite3-wal
 .codeyam/db.sqlite3-shm
 /app/isolated-components/
+
+# Per-session findings and observation logs written at feature completion (generated, not shared).
+.codeyam/debt-findings.jsonl
+.codeyam/feature-observations.jsonl
