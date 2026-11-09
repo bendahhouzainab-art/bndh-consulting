@@ -4,6 +4,13 @@
       "openFiles": [
         ".devcontainer/codeyam-welcome.md"
       ]
+    },
+    "vscode": {
+      "settings": {
+        "workbench.editorAssociations": {
+          "**/.devcontainer/codeyam-welcome.md": "vscode.markdown.preview.editor"
+        }
+      }
     }
   },
   "features": {
