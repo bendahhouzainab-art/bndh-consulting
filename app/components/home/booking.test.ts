@@ -5,7 +5,8 @@ const REQ: BookingRequest = {
   fullName: 'Amina & Co',
   email: 'amina@example.com',
   phone: '+212 600 000 000',
-  location: 'Casablanca, Morocco',
+  country: 'Morocco',
+  state: '',
   level: 'College',
   mentoring: 'Yes',
 };
@@ -17,9 +18,15 @@ describe('buildBookingBody', () => {
     expect(body).toContain('Full name: Amina & Co');
     expect(body).toContain('Email: amina@example.com');
     expect(body).toContain('Phone number: +212 600 000 000');
-    expect(body).toContain('State or country I live in: Casablanca, Morocco');
+    expect(body).toContain('Country: Morocco');
     expect(body).toContain('Going to: College');
     expect(body).toContain('Need mentoring: Yes');
+  });
+
+  // State is optional: a blank state reads as "Not provided", a filled one is listed as typed.
+  it('marks a blank state as not provided and lists a filled one', () => {
+    expect(buildBookingBody(REQ)).toContain('State: Not provided');
+    expect(buildBookingBody({ ...REQ, country: 'United States', state: 'Florida' })).toContain('State: Florida');
   });
 });
 

@@ -8,7 +8,8 @@ const EMPTY: BookingRequest = {
   fullName: '',
   email: '',
   phone: '',
-  location: '',
+  country: '',
+  state: '',
   level: '',
   mentoring: '',
 };
@@ -74,13 +75,24 @@ export default function BookingPanel({ points }: { points: string[] }) {
             />
           </label>
           <label>
-            <span>State or country you live in</span>
+            <span>Country</span>
             <input
               required
-              name="location"
+              name="country"
               autoComplete="country-name"
-              value={form.location}
-              onChange={(e) => set('location')(e.target.value)}
+              value={form.country}
+              onChange={(e) => set('country')(e.target.value)}
+            />
+          </label>
+          <label>
+            <span>
+              State <em className="optional">(optional)</em>
+            </span>
+            <input
+              name="state"
+              autoComplete="address-level1"
+              value={form.state}
+              onChange={(e) => set('state')(e.target.value)}
             />
           </label>
 

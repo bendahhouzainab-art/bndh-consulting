@@ -71,6 +71,7 @@
 .bndh .book-form .choice input:checked + span { background: var(--mid); border-color: var(--mid); color: var(--on-mid); font-weight: 600; }
 .bndh .book-form .choice input:focus-visible + span { outline: 2px solid var(--mid-3); outline-offset: 2px; }
 .bndh .book-form .btn { margin-top: 8px; }
+.bndh .book-form .optional { font-style: normal; font-weight: 400; color: var(--muted); }
 
 /* below the fold */
 .bndh .wrap { max-width: 1160px; margin: 0 auto; padding: 0 40px; }

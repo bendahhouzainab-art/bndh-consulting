@@ -30,7 +30,7 @@
     },
     {
       "action": "fill",
-      "selector": "input[name=location]",
+      "selector": "input[name=country]",
       "value": "Morocco"
     },
     {
