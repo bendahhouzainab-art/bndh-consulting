@@ -57,6 +57,20 @@
 .bndh .panel li svg { width: 20px; height: 20px; flex: none; margin-top: 2px; color: var(--mid-3); }
 .bndh .panel .btn { width: 100%; margin-top: 28px; padding: 16px; }
 .bndh .panel .help { text-align: center; font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+.bndh .panel .help a { color: var(--mid-3); text-decoration: underline; overflow-wrap: anywhere; }
+.bndh .book-form { display: grid; gap: 12px; margin-top: 24px; }
+.bndh .book-form label { display: grid; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.bndh .book-form input:not([type='radio']) { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--rule); border-radius: var(--r-ctl); background: var(--page); color: var(--ink); font: 400 15px var(--font); }
+.bndh .book-form input:not([type='radio']):focus { outline: 2px solid var(--mid-3); outline-offset: 1px; border-color: var(--mid-3); }
+.bndh .book-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.bndh .book-form legend { padding: 0; margin-bottom: 6px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.bndh .book-form .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.bndh .book-form .choice { position: relative; display: block; }
+.bndh .book-form .choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.bndh .book-form .choice span { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 10px; border: 1px solid var(--rule); border-radius: var(--r-ctl); font-weight: 500; font-size: 14.5px; color: var(--text); cursor: pointer; }
+.bndh .book-form .choice input:checked + span { background: var(--mid); border-color: var(--mid); color: var(--on-mid); font-weight: 600; }
+.bndh .book-form .choice input:focus-visible + span { outline: 2px solid var(--mid-3); outline-offset: 2px; }
+.bndh .book-form .btn { margin-top: 8px; }
 
 /* below the fold */
 .bndh .wrap { max-width: 1160px; margin: 0 auto; padding: 0 40px; }
