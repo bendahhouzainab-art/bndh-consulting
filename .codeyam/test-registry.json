@@ -46,6 +46,24 @@
       "runner": "tests"
     },
     {
+      "description": "Every field the visitor fills in must appear in the email template.",
+      "file": "app/components/home/booking.test.ts",
+      "format": "vitest",
+      "key": "buildBookingBody › lists every booking field",
+      "line": 15,
+      "registeredAt": "2026-11-09T18:02:22.504306431+00:00",
+      "runner": "tests"
+    },
+    {
+      "description": "The link goes to the booking inbox with subject and body URL-encoded.",
+      "file": "app/components/home/booking.test.ts",
+      "format": "vitest",
+      "key": "buildBookingMailto › addresses the booking inbox with an encoded subject and body",
+      "line": 28,
+      "registeredAt": "2026-11-09T18:02:22.504306431+00:00",
+      "runner": "tests"
+    },
+    {
       "description": "Every icon referenced by the page artwork is a known name.",
       "file": "app/components/home/content.test.ts",
       "format": "vitest",

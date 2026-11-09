@@ -1,7 +1,7 @@
 {
   "anchorTarget › ignores surrounding whitespace": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -10,7 +10,7 @@
   },
   "anchorTarget › returns null for a bare hash": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -19,7 +19,7 @@
   },
   "anchorTarget › returns null for an empty string": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -28,7 +28,7 @@
   },
   "anchorTarget › returns null for non-anchor links": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -37,16 +37,34 @@
   },
   "anchorTarget › returns the id of an in-page anchor": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
       "pass|changed|2026-11-09T15:39:09.552Z"
     ]
   },
+  "buildBookingBody › lists every booking field": {
+    "file": "app/components/home/booking.test.ts",
+    "lastRunAt": "2026-11-09T18:02:22.504Z",
+    "lastRunKind": "full",
+    "lastStatus": "pass",
+    "statusRing": [
+      "pass|full|2026-11-09T18:02:22.504Z"
+    ]
+  },
+  "buildBookingMailto › addresses the booking inbox with an encoded subject and body": {
+    "file": "app/components/home/booking.test.ts",
+    "lastRunAt": "2026-11-09T18:02:22.504Z",
+    "lastRunKind": "full",
+    "lastStatus": "pass",
+    "statusRing": [
+      "pass|full|2026-11-09T18:02:22.504Z"
+    ]
+  },
   "isIconName › accepts a defined icon": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -55,7 +73,7 @@
   },
   "isIconName › rejects unknown names": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -64,7 +82,7 @@
   },
   "landing page content › has unique keys in every list": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -73,7 +91,7 @@
   },
   "landing page content › highlights tennis and only tennis": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -82,7 +100,7 @@
   },
   "landing page content › links only to sections that exist": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -91,7 +109,7 @@
   },
   "landing page content › starts the steps with booking a consultation": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -100,7 +118,7 @@
   },
   "landing page content › uses only defined icons": {
     "file": "app/components/home/content.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -109,7 +127,7 @@
   },
   "site metadata › describes the consulting service": {
     "file": "app/layout.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -118,7 +136,7 @@
   },
   "site metadata › names the business in the browser tab": {
     "file": "app/layout.test.ts",
-    "lastRunAt": "2026-11-09T17:45:25.341Z",
+    "lastRunAt": "2026-11-09T18:02:19.253Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
