@@ -50,8 +50,17 @@
       "file": "app/components/home/booking.test.ts",
       "format": "vitest",
       "key": "buildBookingBody › lists every booking field",
-      "line": 15,
+      "line": 16,
       "registeredAt": "2026-11-09T18:02:22.504306431+00:00",
+      "runner": "tests"
+    },
+    {
+      "description": "State is optional: a blank state reads as \"Not provided\", a filled one is listed as typed.",
+      "file": "app/components/home/booking.test.ts",
+      "format": "vitest",
+      "key": "buildBookingBody › marks a blank state as not provided and lists a filled one",
+      "line": 27,
+      "registeredAt": "2026-11-09T18:19:34.139483966+00:00",
       "runner": "tests"
     },
     {
@@ -59,7 +68,7 @@
       "file": "app/components/home/booking.test.ts",
       "format": "vitest",
       "key": "buildBookingMailto › addresses the booking inbox with an encoded subject and body",
-      "line": 28,
+      "line": 35,
       "registeredAt": "2026-11-09T18:02:22.504306431+00:00",
       "runner": "tests"
     },
