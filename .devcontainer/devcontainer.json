@@ -1,0 +1,37 @@
+{
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        ".devcontainer/codeyam-welcome.md"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24"
+    }
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
+  },
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "name": "CodeYam Editor",
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  },
+  "portsAttributes": {
+    "14199": {
+      "label": "CodeYam Editor",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "BNDH Consulting app",
+      "onAutoForward": "silent"
+    }
+  },
+  "postAttachCommand": "sh .devcontainer/codeyam-ready.sh",
+  "postCreateCommand": "sh .devcontainer/codeyam-system-deps.sh && npm install -g @codeyam-editor/codeyam-editor@latest @anthropic-ai/claude-code && npx -y playwright install --with-deps chromium && sh .devcontainer/project-setup.sh",
+  "postStartCommand": "sh .devcontainer/codeyam-system-deps.sh; deps=$?; sh .devcontainer/project-setup.sh || echo 'Project setup failed; see the output above.'; mkdir -p .codeyam/logs && setsid -f nohup sh .devcontainer/codeyam-start.sh postStart \"$deps\" >> .codeyam/logs/codespaces-editor.log 2>&1 < /dev/null"
+}
