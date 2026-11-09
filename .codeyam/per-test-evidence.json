@@ -1,7 +1,7 @@
 {
   "site metadata › describes the consulting service": {
     "file": "app/layout.test.ts",
-    "lastRunAt": "2026-11-09T15:12:13.658Z",
+    "lastRunAt": "2026-11-09T15:23:18.197Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
@@ -10,7 +10,7 @@
   },
   "site metadata › names the business in the browser tab": {
     "file": "app/layout.test.ts",
-    "lastRunAt": "2026-11-09T15:12:13.658Z",
+    "lastRunAt": "2026-11-09T15:23:18.197Z",
     "lastRunKind": "full",
     "lastStatus": "pass",
     "statusRing": [
