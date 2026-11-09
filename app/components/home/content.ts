@@ -36,7 +36,7 @@ export const NAV_LINKS: NavLink[] = [
 export const PATHS: PathItem[] = [
   { href: '#college', icon: 'cap', title: 'College in the US', body: 'NCAA, NAIA or junior college teams that fit your level, and how to get the biggest scholarship.' },
   { href: '#academies', icon: 'tennis', title: 'Tennis academies', body: 'A pro pathway during high school or after college, and what it really costs.' },
-  { href: '#mentoring', icon: 'chat', title: 'Athlete mentoring', body: 'Support from someone who made the move, once you arrive.' },
+  { href: '#mentoring', icon: 'chat', title: 'Athlete mentoring', body: 'Book a 1:1 call with an athletic mentor to support your athlete journey, in high school, college or professional level.' },
 ];
 
 export const BOOKING_POINTS: string[] = [
