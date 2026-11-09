@@ -1,6 +1,22 @@
 import type { NextConfig } from 'next';
 
+// GitHub Pages build only. The deploy workflow sets GITHUB_PAGES=true, which
+// turns the site into plain static files served under the repository's
+// subpath (https://<owner>.github.io/bndh-consulting/). Local dev and the
+// CodeYam preview never set it, so they keep the normal server behaviour.
+const githubPages = process.env.GITHUB_PAGES === 'true';
+const pagesBasePath = process.env.PAGES_BASE_PATH ?? '/bndh-consulting';
+
 const nextConfig: NextConfig = {
+  ...(githubPages
+    ? {
+        output: 'export' as const,
+        basePath: pagesBasePath,
+        trailingSlash: true,
+        images: { unoptimized: true },
+      }
+    : {}),
+
   // Required: better-sqlite3 is a native module that can't be bundled
   serverExternalPackages: ['better-sqlite3'],
 
