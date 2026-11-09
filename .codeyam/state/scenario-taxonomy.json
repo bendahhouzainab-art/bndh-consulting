@@ -1,0 +1,37 @@
+{
+  "views": {
+    "Home": {
+      "empty": {
+        "status": "n-a",
+        "reason": "Static marketing page: content is fixed in code, there is no data source that can be empty."
+      },
+      "single": {
+        "status": "n-a",
+        "reason": "Static marketing page with fixed content lists; no data-driven item count to vary."
+      },
+      "typical": {
+        "status": "covered"
+      },
+      "many": {
+        "status": "n-a",
+        "reason": "Lists are fixed editorial content in code, not user data, so they cannot overflow."
+      },
+      "loading": {
+        "status": "n-a",
+        "reason": "Page is rendered statically with no fetch or async state."
+      },
+      "edge": {
+        "status": "n-a",
+        "reason": "Copy is fixed in code; the mobile capture already covers the narrowest layout where long text wraps."
+      },
+      "error": {
+        "status": "n-a",
+        "reason": "Page performs no requests or validation, so there is no failure state to show."
+      },
+      "key-interaction": {
+        "status": "n-a",
+        "reason": "The only actions are in-page anchor links that scroll; the real booking flow is deliberately deferred to a later plan."
+      }
+    }
+  }
+}

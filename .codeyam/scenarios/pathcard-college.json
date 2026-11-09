@@ -1,0 +1,15 @@
+{
+  "name": "PathCard - College",
+  "id": "038c029d-a8dc-4aa2-bdfc-3ec26cf5dab0",
+  "url": "/isolated-components/PathCard?s=College",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "PathCard",
+  "scenarioType": "component",
+  "description": "Path card for US college with the graduation cap icon."
+}

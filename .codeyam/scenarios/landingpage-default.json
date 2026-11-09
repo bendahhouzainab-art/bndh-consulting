@@ -1,0 +1,16 @@
+{
+  "name": "LandingPage - Default",
+  "id": "ccf6238b-c942-401f-982e-a7e1c09396a6",
+  "url": "/isolated-components/LandingPage?s=Default",
+  "dimensions": [
+    "Desktop",
+    "Mobile"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "LandingPage",
+  "scenarioType": "component",
+  "description": "The full BNDH landing page: split hero with booking panel, sports, who we help, mentoring, how it works, CTA and footer."
+}

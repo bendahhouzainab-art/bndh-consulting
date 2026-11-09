@@ -1,0 +1,16 @@
+{
+  "name": "MentoringSection - Default",
+  "id": "b53a4bbb-6265-44e4-87f3-4abdbb6187ee",
+  "url": "/isolated-components/MentoringSection?s=Default",
+  "dimensions": [
+    "Desktop",
+    "Mobile"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "MentoringSection",
+  "scenarioType": "component",
+  "description": "Navy mentoring band with Book a call button and two mentor options."
+}

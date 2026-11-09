@@ -1,0 +1,15 @@
+{
+  "name": "AudienceCard - Parents",
+  "id": "abdfbff5-3b79-40b0-a522-fa2c62e03d10",
+  "url": "/isolated-components/AudienceCard?s=Parents",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "AudienceCard",
+  "scenarioType": "component",
+  "description": "Outlined audience card for parents and guardians."
+}

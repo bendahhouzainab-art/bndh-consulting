@@ -1,0 +1,15 @@
+{
+  "name": "SportTile - Standard",
+  "id": "0f951084-509a-4b7a-a1b2-7ca26ee375b9",
+  "url": "/isolated-components/SportTile?s=Standard",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SportTile",
+  "scenarioType": "component",
+  "description": "Soccer tile in the standard light-tint style."
+}

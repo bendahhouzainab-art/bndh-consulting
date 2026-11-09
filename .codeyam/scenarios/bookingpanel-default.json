@@ -1,0 +1,15 @@
+{
+  "name": "BookingPanel - Default",
+  "id": "6e07dc1e-e666-4bdf-a317-a25443fe37fe",
+  "url": "/isolated-components/BookingPanel?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "BookingPanel",
+  "scenarioType": "component",
+  "description": "Book a consultation panel with three checklist points, yellow call-to-action and helper note."
+}

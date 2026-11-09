@@ -1,0 +1,15 @@
+{
+  "name": "Icon - Tennis",
+  "id": "a936b001-1003-41b7-8e34-fc306ff75fe0",
+  "url": "/isolated-components/Icon?s=Tennis",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "Icon",
+  "scenarioType": "component",
+  "description": "Tennis racket icon."
+}

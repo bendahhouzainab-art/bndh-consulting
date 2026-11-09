@@ -1,0 +1,819 @@
+{
+  "timestamp": "2026-11-09T16:23:58Z",
+  "title": "BNDH Consulting landing page (design 6, split screen)",
+  "type": "feature",
+  "userRequest": "## Goal\nBuild the BNDH Consulting landing page once the user picks one of the six design directions in `.codeyam/design/project_mockups/` (01–06).\n\n## Decisions already made\n- Name: BNDH Consulting. Colours: the specific yellow from the user's reference (angelakerek.com/makeithappenworkbook) with a subtle tennis-ball logo shape, name centred; a not-too-dark midnight blue as the dominant secondary colour.\n- Audience: international athletes, parents/guardians, coaches.\n- Feel: clear, welcoming, expert, international — \"a trusted coach\". Avoid recruiting-agency / flashy ad / stiff corporate / dense admissions looks.\n- Imagery: photo of the expert; illustrations of popular US college sports and school items.\n- Languages: English at launch, with a language switcher and structure ready for Arabic (right-to-left), French, Spanish, German.\n- Booking mechanism: deferred by the user — landing page only links to a \"Book a consultation\" call to action.\n\n## Scope of the landing page\n- Hero explaining the service + Book a consultation button.\n- Two paths: Play college sports in the USA (scholarships, maximizing percentage) and Tennis academies / going pro (high school or post-college).\n- Who it's for: athletes, parents/guardians, coaches.\n- How it works: book → questionnaire → meet the expert (virtual or in person).\n\n## Scenarios\n- Launch-day landing page (desktop), mobile width, long-content edge case.\n\n## Stack\nScaffold with `codeyam-editor editor template nextjs-prisma-sqlite` at ui-prepare (needed later for the questionnaire and booking).",
+  "description": "Built the BNDH Consulting home page in the chosen design 6 direction: a navy story hero next to a Book a consultation panel, then sections on the sports colleges recruit, who we help, athlete mentoring, how it works, a closing call to action and a footer. The page is composed from 20 single-file components in app/components/home, with content data and an anchor-target helper covered by unit tests, and 27 scenarios (component previews plus the full page at desktop and phone widths). Scope verdict: DELIVERED the landing page deliverable (simplified per the user, without the expert photo, sports illustrations and the scholarship chart). DEFERRED, unchanged this cycle: the US college guide, the tennis academy guide and the pre-meeting questionnaire (deferrals recorded by the agent, not confirmed by the user); multilingual support, with no language switcher or right-to-left layout yet (agent-recorded); and real booking (deferred by the user), so every Book button is an in-page link. This also covers the queued plan to switch the app to the off-catalog design.",
+  "modifiedFiles": [
+    {
+      "path": ".codeyam/dependency-graph.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/glossary.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/per-test-evidence.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/plans/build-the-bndh-consulting-landing-page-in-the-chosen-design-direction.md\t.codeyam/plans/completed/build-the-bndh-consulting-landing-page-in-the-chosen-design-direction.md",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/scenarios/home-starter-placeholder.json",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/.capture-pipeline.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-starter-placeholder--desktop.png",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-starter-placeholder--desktop.png.hash",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/test-cache.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/test-cache/all.json",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/204e0ddef727cb67b92df8028526a7b838a4b1fb99bd9fd3971a569ff6c6f11a.json",
+      "status": "deleted"
+    },
+    {
+      "path": ".codeyam/test-registry.json",
+      "status": "modified"
+    },
+    {
+      "path": "app/page.tsx",
+      "status": "modified"
+    },
+    {
+      "path": ".codeyam/design/offer-declined",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/AudienceCard.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/AudienceCard.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/AudienceSection.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/AudienceSection.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/BookingPanel.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/BookingPanel.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/CtaBand.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/CtaBand.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/HeroSplit.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/HeroSplit.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/HeroStory.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/HeroStory.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/HowItWorksSection.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/HowItWorksSection.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/Icon.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/Icon.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/LandingPage.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/LandingPage.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/LogoMark.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/LogoMark.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/MentorOption.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/MentorOption.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/MentoringSection.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/MentoringSection.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/PathCard.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/PathCard.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/PathChooser.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/PathChooser.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SectionHeading.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SectionHeading.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SiteFooter.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SiteFooter.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SiteHeader.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SiteHeader.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SportTile.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SportTile.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SportsSection.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/SportsSection.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/StepCard.render.tsx",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/StepCard.ts",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/isolation-props/package.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/audiencecard-parents.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/audiencesection-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/bookingpanel-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/coverage-plan/home.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/coverage-plan/landingpage.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/ctaband-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/herosplit-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/herostory-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/home-landing-page.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/howitworkssection-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/icon-check.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/icon-tennis.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/landingpage-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/logomark-header.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/logomark-large.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/mentoringsection-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/mentoroption-athlete-mentor.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/pathcard-college.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/pathcard-mentoring.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/pathchooser-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/pathchooser-single-path.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/audiencecard-parents--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/audiencecard-parents--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/audiencesection-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/audiencesection-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/bookingpanel-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/bookingpanel-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/ctaband-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/ctaband-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/herosplit-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/herosplit-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/herosplit-default--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/herostory-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/herostory-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-landing-page--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-landing-page--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/home-landing-page--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/howitworkssection-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/howitworkssection-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/howitworkssection-default--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/icon-check--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/icon-check--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/icon-tennis--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/icon-tennis--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/landingpage-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/landingpage-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/landingpage-default--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/logomark-header--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/logomark-header--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/logomark-large--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/logomark-large--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/mentoringsection-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/mentoringsection-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/mentoringsection-default--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/mentoroption-athlete-mentor--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/mentoroption-athlete-mentor--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathcard-college--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathcard-college--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathcard-mentoring--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathcard-mentoring--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathchooser-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathchooser-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathchooser-single-path--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/pathchooser-single-path--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sectionheading-title-only--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sectionheading-title-only--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sectionheading-with-lede--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sectionheading-with-lede--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sitefooter-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sitefooter-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/siteheader-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/siteheader-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sportssection-default--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sportssection-default--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sportssection-default--mobile.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sporttile-highlighted--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sporttile-highlighted--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sporttile-standard--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/sporttile-standard--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/stepcard-first-step--desktop.png",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/screenshots/stepcard-first-step--desktop.png.hash",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/sectionheading-title-only.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/sectionheading-with-lede.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/sitefooter-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/siteheader-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/sportssection-default.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/sporttile-highlighted.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/sporttile-standard.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/scenarios/stepcard-first-step.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/state/red-proofs/build-the-bndh-consulting-landing-page-in-the-chosen-design-direction.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/state/scenario-taxonomy.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/17f368737055fe58c5ec2e9cd4f2529e1dbad9a460e9123815776a30cf363ca0.json",
+      "status": "added"
+    },
+    {
+      "path": ".codeyam/test-cache/blobs/adef2fb46cfdb1a64edc5d509dffb90137b6ece87ae2620b1e4a9c821adcadff.json",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/AudienceCard.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/AudienceSection.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/BookingPanel.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/CtaBand.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/HeroSplit.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/HeroStory.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/HowItWorksSection.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/Icon.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/LandingPage.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/LogoMark.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/MentorOption.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/MentoringSection.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/PathCard.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/PathChooser.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/SectionHeading.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/SiteFooter.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/SiteHeader.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/SportTile.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/SportsSection.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/StepCard.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/content.test.ts",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/content.ts",
+      "status": "added"
+    },
+    {
+      "path": "app/components/home/icons.tsx",
+      "status": "added"
+    },
+    {
+      "path": "app/home.css",
+      "status": "added"
+    }
+  ],
+  "scenarioScreenshots": [
+    {
+      "name": "Home - Landing Page",
+      "screenshotPath": "home-landing-page--desktop.png"
+    },
+    {
+      "name": "AudienceCard - Parents",
+      "screenshotPath": "audiencecard-parents--desktop.png"
+    },
+    {
+      "name": "AudienceSection - Default",
+      "screenshotPath": "audiencesection-default--desktop.png"
+    },
+    {
+      "name": "BookingPanel - Default",
+      "screenshotPath": "bookingpanel-default--desktop.png"
+    },
+    {
+      "name": "CtaBand - Default",
+      "screenshotPath": "ctaband-default--desktop.png"
+    },
+    {
+      "name": "HeroSplit - Default",
+      "screenshotPath": "herosplit-default--desktop.png"
+    },
+    {
+      "name": "HeroStory - Default",
+      "screenshotPath": "herostory-default--desktop.png"
+    },
+    {
+      "name": "HowItWorksSection - Default",
+      "screenshotPath": "howitworkssection-default--desktop.png"
+    },
+    {
+      "name": "Icon - Check",
+      "screenshotPath": "icon-check--desktop.png"
+    },
+    {
+      "name": "Icon - Tennis",
+      "screenshotPath": "icon-tennis--desktop.png"
+    },
+    {
+      "name": "LandingPage - Default",
+      "screenshotPath": "landingpage-default--desktop.png"
+    },
+    {
+      "name": "LogoMark - Header",
+      "screenshotPath": "logomark-header--desktop.png"
+    },
+    {
+      "name": "LogoMark - Large",
+      "screenshotPath": "logomark-large--desktop.png"
+    },
+    {
+      "name": "MentorOption - Athlete mentor",
+      "screenshotPath": "mentoroption-athlete-mentor--desktop.png"
+    },
+    {
+      "name": "MentoringSection - Default",
+      "screenshotPath": "mentoringsection-default--desktop.png"
+    },
+    {
+      "name": "PathCard - College",
+      "screenshotPath": "pathcard-college--desktop.png"
+    },
+    {
+      "name": "PathCard - Mentoring",
+      "screenshotPath": "pathcard-mentoring--desktop.png"
+    },
+    {
+      "name": "PathChooser - Default",
+      "screenshotPath": "pathchooser-default--desktop.png"
+    },
+    {
+      "name": "PathChooser - Single path",
+      "screenshotPath": "pathchooser-single-path--desktop.png"
+    },
+    {
+      "name": "SectionHeading - Title only",
+      "screenshotPath": "sectionheading-title-only--desktop.png"
+    },
+    {
+      "name": "SectionHeading - With lede",
+      "screenshotPath": "sectionheading-with-lede--desktop.png"
+    },
+    {
+      "name": "SiteFooter - Default",
+      "screenshotPath": "sitefooter-default--desktop.png"
+    },
+    {
+      "name": "SiteHeader - Default",
+      "screenshotPath": "siteheader-default--desktop.png"
+    },
+    {
+      "name": "SportTile - Highlighted",
+      "screenshotPath": "sporttile-highlighted--desktop.png"
+    },
+    {
+      "name": "SportTile - Standard",
+      "screenshotPath": "sporttile-standard--desktop.png"
+    },
+    {
+      "name": "SportsSection - Default",
+      "screenshotPath": "sportssection-default--desktop.png"
+    },
+    {
+      "name": "StepCard - First step",
+      "screenshotPath": "stepcard-first-step--desktop.png"
+    }
+  ],
+  "testResults": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "runners": [
+      {
+        "name": "tests",
+        "total": 14,
+        "passed": 14
+      }
+    ]
+  }
+}

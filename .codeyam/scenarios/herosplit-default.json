@@ -1,0 +1,16 @@
+{
+  "name": "HeroSplit - Default",
+  "id": "6e134e0b-ebcc-4cc2-9ab0-9ca1d48dcb7d",
+  "url": "/isolated-components/HeroSplit?s=Default",
+  "dimensions": [
+    "Desktop",
+    "Mobile"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "HeroSplit",
+  "scenarioType": "component",
+  "description": "Split hero: navy story column on the left, booking panel on the right."
+}

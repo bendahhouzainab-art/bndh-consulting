@@ -1,0 +1,15 @@
+{
+  "name": "LogoMark - Header",
+  "id": "10417627-4a00-411d-b159-c0f1020b4678",
+  "url": "/isolated-components/LogoMark?s=Header",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "LogoMark",
+  "scenarioType": "component",
+  "description": "Tennis-ball logo mark at header size, 42px, on navy."
+}

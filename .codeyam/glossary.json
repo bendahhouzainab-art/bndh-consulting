@@ -1,5 +1,38 @@
 [
   {
+    "description": "Outlined card with an audience title and description.",
+    "filePath": "app/components/home/AudienceCard.tsx",
+    "name": "AudienceCard",
+    "scenarios": [
+      "audiencecard-parents"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Who we help section with a card per audience group.",
+    "filePath": "app/components/home/AudienceSection.tsx",
+    "name": "AudienceSection",
+    "scenarios": [
+      "audiencesection-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Book a consultation panel: intro, checklist of topics, call-to-action button and helper note.",
+    "filePath": "app/components/home/BookingPanel.tsx",
+    "name": "BookingPanel",
+    "scenarios": [
+      "bookingpanel-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
     "description": "Editor-installed layout for isolated component previews; hides them in production.",
     "filePath": "app/codeyam-isolate/layout.tsx",
     "name": "CodeYamIsolateLayout",
@@ -9,11 +42,136 @@
     }
   },
   {
-    "description": "Home page at /; currently the starter welcome placeholder, to be replaced by the BNDH landing page.",
+    "description": "Closing call-to-action band linking to the booking panel.",
+    "filePath": "app/components/home/CtaBand.tsx",
+    "name": "CtaBand",
+    "scenarios": [
+      "ctaband-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Two-column hero: the navy story column beside the booking panel; stacks on mobile.",
+    "filePath": "app/components/home/HeroSplit.tsx",
+    "name": "HeroSplit",
+    "scenarios": [
+      "herosplit-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Navy hero story column: site header, decorative logo mark, headline, lede and path chooser.",
+    "filePath": "app/components/home/HeroStory.tsx",
+    "name": "HeroStory",
+    "scenarios": [
+      "herostory-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Root route / : renders the BNDH Consulting landing page.",
     "filePath": "app/page.tsx",
     "name": "Home",
     "scenarios": [
-      "home-starter-placeholder"
+      "home-landing-page"
+    ]
+  },
+  {
+    "description": "How it works section rendering numbered step cards.",
+    "filePath": "app/components/home/HowItWorksSection.tsx",
+    "name": "HowItWorksSection",
+    "scenarios": [
+      "howitworkssection-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Renders one named inline SVG icon from the landing page icon set.",
+    "filePath": "app/components/home/Icon.tsx",
+    "name": "Icon",
+    "scenarios": [
+      "icon-tennis",
+      "icon-check"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Composes the whole BNDH landing page under the scoped .bndh theme: hero split, sports, audience, mentoring, how it works, CTA band and footer.",
+    "filePath": "app/components/home/LandingPage.tsx",
+    "name": "LandingPage",
+    "scenarios": [
+      "landingpage-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "BNDH tennis-ball logo mark as inline SVG at a given size.",
+    "filePath": "app/components/home/LogoMark.tsx",
+    "name": "LogoMark",
+    "scenarios": [
+      "logomark-header",
+      "logomark-large"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Tile naming one kind of mentor and the topics they cover.",
+    "filePath": "app/components/home/MentorOption.tsx",
+    "name": "MentorOption",
+    "scenarios": [
+      "mentoroption-athlete-mentor"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Navy athlete mentoring band with intro, Book a call button and mentor option tiles.",
+    "filePath": "app/components/home/MentoringSection.tsx",
+    "name": "MentoringSection",
+    "scenarios": [
+      "mentoringsection-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Linked card for one path: icon, title and short description.",
+    "filePath": "app/components/home/PathCard.tsx",
+    "name": "PathCard",
+    "scenarios": [
+      "pathcard-college",
+      "pathcard-mentoring"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Grid of path cards for the routes a visitor can explore.",
+    "filePath": "app/components/home/PathChooser.tsx",
+    "name": "PathChooser",
+    "scenarios": [
+      "pathchooser-default",
+      "pathchooser-single-path"
+    ],
+    "tags": [
+      "landing-page"
     ]
   },
   {
@@ -33,6 +191,92 @@
       "justification": "Editor-shipped dev-only redirect with no rendered output of its own.",
       "kind": "platform-glue"
     }
+  },
+  {
+    "description": "Section h2 title with an optional lede paragraph.",
+    "filePath": "app/components/home/SectionHeading.tsx",
+    "name": "SectionHeading",
+    "scenarios": [
+      "sectionheading-with-lede",
+      "sectionheading-title-only"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Footer with small logo mark, business name and Privacy / Contact links.",
+    "filePath": "app/components/home/SiteFooter.tsx",
+    "name": "SiteFooter",
+    "scenarios": [
+      "sitefooter-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Brand link with logo mark plus the main in-page navigation links.",
+    "filePath": "app/components/home/SiteHeader.tsx",
+    "name": "SiteHeader",
+    "scenarios": [
+      "siteheader-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Single sport tile with icon and name; highlighted variant uses the ball-yellow style.",
+    "filePath": "app/components/home/SportTile.tsx",
+    "name": "SportTile",
+    "scenarios": [
+      "sporttile-highlighted",
+      "sporttile-standard"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Section listing the sports BNDH advises on as a tile grid.",
+    "filePath": "app/components/home/SportsSection.tsx",
+    "name": "SportsSection",
+    "scenarios": [
+      "sportssection-default"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "One numbered step: yellow number badge, title and body.",
+    "filePath": "app/components/home/StepCard.tsx",
+    "name": "StepCard",
+    "scenarios": [
+      "stepcard-first-step"
+    ],
+    "tags": [
+      "landing-page"
+    ]
+  },
+  {
+    "description": "Returns the section id an in-page '#id' href scrolls to, or null for a bare hash, path or external link. Used to check that landing page navigation only targets real sections.",
+    "filePath": "app/components/home/content.ts",
+    "name": "anchorTarget",
+    "tags": [
+      "landing-page"
+    ],
+    "testFile": "app/components/home/content.test.ts"
+  },
+  {
+    "description": "Type guard: true when a string names an icon defined in the landing page ICONS artwork map, rejecting unknown and inherited object keys.",
+    "filePath": "app/components/home/icons.tsx",
+    "name": "isIconName",
+    "tags": [
+      "landing-page"
+    ],
+    "testFile": "app/components/home/content.test.ts"
   },
   {
     "description": "Database seed entry point; currently a placeholder that logs that there are no models to seed yet.",

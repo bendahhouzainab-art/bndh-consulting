@@ -1,0 +1,15 @@
+{
+  "name": "SectionHeading - Title only",
+  "id": "6ae5a8c3-cc40-4a0c-8f49-269089d23b0b",
+  "url": "/isolated-components/SectionHeading?s=Title%20only",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SectionHeading",
+  "scenarioType": "component",
+  "description": "Section title with no lede."
+}

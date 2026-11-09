@@ -1,6 +1,114 @@
 {
   "tests": [
     {
+      "description": "Surrounding whitespace in authored data should not break the lookup.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "anchorTarget › ignores surrounding whitespace",
+      "line": 12,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "The bare \"#\" used by the brand and footer links scrolls to the top, not to a section.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "anchorTarget › returns null for a bare hash",
+      "line": 17,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "Empty input must not throw.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "anchorTarget › returns null for an empty string",
+      "line": 28,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "External or path links are not in-page anchors.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "anchorTarget › returns null for non-anchor links",
+      "line": 22,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "A plain in-page anchor resolves to the id it scrolls to.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "anchorTarget › returns the id of an in-page anchor",
+      "line": 7,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "Every icon referenced by the page artwork is a known name.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "isIconName › accepts a defined icon",
+      "line": 35,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "Unknown names and inherited object keys are rejected.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "isIconName › rejects unknown names",
+      "line": 40,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "List items are keyed by title or text, so duplicates would collide in React.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "landing page content › has unique keys in every list",
+      "line": 69,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "The design highlights exactly one sport, tennis, the firm's specialty.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "landing page content › highlights tennis and only tennis",
+      "line": 62,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "Navigation and path cards must only link to sections that exist on the page.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "landing page content › links only to sections that exist",
+      "line": 48,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "The \"How it works\" walkthrough is three numbered steps and starts with booking.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "landing page content › starts the steps with booking a consultation",
+      "line": 85,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
+      "description": "Every icon named in the data has artwork, so no tile renders blank.",
+      "file": "app/components/home/content.test.ts",
+      "format": "vitest",
+      "key": "landing page content › uses only defined icons",
+      "line": 55,
+      "registeredAt": "2026-11-09T15:38:50Z",
+      "runner": "tests"
+    },
+    {
       "description": "The site description used by search engines says the service is for international athletes.",
       "file": "app/layout.test.ts",
       "format": "vitest",

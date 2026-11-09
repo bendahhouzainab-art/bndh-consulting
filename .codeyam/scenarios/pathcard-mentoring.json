@@ -1,0 +1,15 @@
+{
+  "name": "PathCard - Mentoring",
+  "id": "cfa20ef0-5c05-4c17-83c0-916463538ab1",
+  "url": "/isolated-components/PathCard?s=Mentoring",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "PathCard",
+  "scenarioType": "component",
+  "description": "Path card for athlete mentoring with the chat icon."
+}

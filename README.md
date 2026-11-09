@@ -103,14 +103,14 @@ codeyam-editor start
 ```
 <!-- codeyam:run-and-edit:end -->
 
-<!-- codeyam:scenario-gallery:start d=78239a56f109 -->
+<!-- codeyam:scenario-gallery:start d=b99465a5223e -->
 ## Scenario gallery
 
 States captured as runnable scenarios with codeyam-editor:
 
-### Home - Starter Placeholder
+### Home - Landing Page
 
-<img src=".codeyam/scenarios/screenshots/home-starter-placeholder--desktop.png" alt="Home - Starter Placeholder" width="280">
+<img src=".codeyam/scenarios/screenshots/home-landing-page--desktop.png" alt="Home - Landing Page" width="280">
 
-The starter welcome page shown at / before the BNDH landing page is built.
+The BNDH Consulting landing page at /, in the design 6 split-screen layout with booking up front. The page reads no database data, so the seed is empty.
 <!-- codeyam:scenario-gallery:end -->

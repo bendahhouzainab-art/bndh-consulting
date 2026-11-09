@@ -310,10 +310,446 @@
       "imports": [],
       "name": "__file_root__"
     },
+    "app/components/home/AudienceCard.tsx::AudienceCard": {
+      "filePath": "app/components/home/AudienceCard.tsx",
+      "importedBy": [
+        "app/components/home/AudienceSection.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "AudienceCard"
+    },
+    "app/components/home/AudienceCard.tsx::__file_root__": {
+      "filePath": "app/components/home/AudienceCard.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/content.ts::TextItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/AudienceSection.tsx::AudienceSection": {
+      "filePath": "app/components/home/AudienceSection.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "AudienceSection"
+    },
+    "app/components/home/AudienceSection.tsx::__file_root__": {
+      "filePath": "app/components/home/AudienceSection.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/AudienceCard.tsx::AudienceCard",
+        "app/components/home/SectionHeading.tsx::SectionHeading",
+        "app/components/home/content.ts::TextItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/BookingPanel.tsx::BookingPanel": {
+      "filePath": "app/components/home/BookingPanel.tsx",
+      "importedBy": [
+        "app/components/home/HeroSplit.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "BookingPanel"
+    },
+    "app/components/home/BookingPanel.tsx::__file_root__": {
+      "filePath": "app/components/home/BookingPanel.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/Icon.tsx::Icon"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/CtaBand.tsx::CtaBand": {
+      "filePath": "app/components/home/CtaBand.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "CtaBand"
+    },
+    "app/components/home/HeroSplit.tsx::HeroSplit": {
+      "filePath": "app/components/home/HeroSplit.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "HeroSplit"
+    },
+    "app/components/home/HeroSplit.tsx::__file_root__": {
+      "filePath": "app/components/home/HeroSplit.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/BookingPanel.tsx::BookingPanel",
+        "app/components/home/HeroStory.tsx::HeroStory",
+        "app/components/home/content.ts::NavLink",
+        "app/components/home/content.ts::PathItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/HeroStory.tsx::HeroStory": {
+      "filePath": "app/components/home/HeroStory.tsx",
+      "importedBy": [
+        "app/components/home/HeroSplit.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "HeroStory"
+    },
+    "app/components/home/HeroStory.tsx::__file_root__": {
+      "filePath": "app/components/home/HeroStory.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/LogoMark.tsx::LogoMark",
+        "app/components/home/PathChooser.tsx::PathChooser",
+        "app/components/home/SiteHeader.tsx::SiteHeader",
+        "app/components/home/content.ts::NavLink",
+        "app/components/home/content.ts::PathItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/HowItWorksSection.tsx::HowItWorksSection": {
+      "filePath": "app/components/home/HowItWorksSection.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "HowItWorksSection"
+    },
+    "app/components/home/HowItWorksSection.tsx::__file_root__": {
+      "filePath": "app/components/home/HowItWorksSection.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/SectionHeading.tsx::SectionHeading",
+        "app/components/home/StepCard.tsx::StepCard",
+        "app/components/home/content.ts::TextItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/Icon.tsx::Icon": {
+      "filePath": "app/components/home/Icon.tsx",
+      "importedBy": [
+        "app/components/home/BookingPanel.tsx::__file_root__",
+        "app/components/home/PathCard.tsx::__file_root__",
+        "app/components/home/SportTile.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "Icon"
+    },
+    "app/components/home/Icon.tsx::__file_root__": {
+      "filePath": "app/components/home/Icon.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/icons.tsx::IconName",
+        "app/components/home/icons.tsx::__file_root__"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/LandingPage.tsx::LandingPage": {
+      "filePath": "app/components/home/LandingPage.tsx",
+      "importedBy": [
+        "app/page.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "LandingPage"
+    },
+    "app/components/home/LandingPage.tsx::__file_root__": {
+      "filePath": "app/components/home/LandingPage.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/home.css::__file_root__",
+        "app/components/home/AudienceSection.tsx::AudienceSection",
+        "app/components/home/CtaBand.tsx::CtaBand",
+        "app/components/home/HeroSplit.tsx::HeroSplit",
+        "app/components/home/HowItWorksSection.tsx::HowItWorksSection",
+        "app/components/home/MentoringSection.tsx::MentoringSection",
+        "app/components/home/SiteFooter.tsx::SiteFooter",
+        "app/components/home/SportsSection.tsx::SportsSection",
+        "app/components/home/content.ts::__file_root__"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/LogoMark.tsx::LogoMark": {
+      "filePath": "app/components/home/LogoMark.tsx",
+      "importedBy": [
+        "app/components/home/HeroStory.tsx::__file_root__",
+        "app/components/home/SiteFooter.tsx::__file_root__",
+        "app/components/home/SiteHeader.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "LogoMark"
+    },
+    "app/components/home/MentorOption.tsx::MentorOption": {
+      "filePath": "app/components/home/MentorOption.tsx",
+      "importedBy": [
+        "app/components/home/MentoringSection.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "MentorOption"
+    },
+    "app/components/home/MentorOption.tsx::__file_root__": {
+      "filePath": "app/components/home/MentorOption.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/content.ts::TextItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/MentoringSection.tsx::MentoringSection": {
+      "filePath": "app/components/home/MentoringSection.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "MentoringSection"
+    },
+    "app/components/home/MentoringSection.tsx::__file_root__": {
+      "filePath": "app/components/home/MentoringSection.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/MentorOption.tsx::MentorOption",
+        "app/components/home/SectionHeading.tsx::SectionHeading",
+        "app/components/home/content.ts::TextItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/PathCard.tsx::PathCard": {
+      "filePath": "app/components/home/PathCard.tsx",
+      "importedBy": [
+        "app/components/home/PathChooser.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "PathCard"
+    },
+    "app/components/home/PathCard.tsx::__file_root__": {
+      "filePath": "app/components/home/PathCard.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/Icon.tsx::Icon",
+        "app/components/home/content.ts::PathItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/PathChooser.tsx::PathChooser": {
+      "filePath": "app/components/home/PathChooser.tsx",
+      "importedBy": [
+        "app/components/home/HeroStory.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "PathChooser"
+    },
+    "app/components/home/PathChooser.tsx::__file_root__": {
+      "filePath": "app/components/home/PathChooser.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/PathCard.tsx::PathCard",
+        "app/components/home/content.ts::PathItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/SectionHeading.tsx::SectionHeading": {
+      "filePath": "app/components/home/SectionHeading.tsx",
+      "importedBy": [
+        "app/components/home/AudienceSection.tsx::__file_root__",
+        "app/components/home/HowItWorksSection.tsx::__file_root__",
+        "app/components/home/MentoringSection.tsx::__file_root__",
+        "app/components/home/SportsSection.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "SectionHeading"
+    },
+    "app/components/home/SiteFooter.tsx::SiteFooter": {
+      "filePath": "app/components/home/SiteFooter.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "SiteFooter"
+    },
+    "app/components/home/SiteFooter.tsx::__file_root__": {
+      "filePath": "app/components/home/SiteFooter.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/LogoMark.tsx::LogoMark"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/SiteHeader.tsx::SiteHeader": {
+      "filePath": "app/components/home/SiteHeader.tsx",
+      "importedBy": [
+        "app/components/home/HeroStory.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "SiteHeader"
+    },
+    "app/components/home/SiteHeader.tsx::__file_root__": {
+      "filePath": "app/components/home/SiteHeader.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/LogoMark.tsx::LogoMark",
+        "app/components/home/content.ts::NavLink"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/SportTile.tsx::SportTile": {
+      "filePath": "app/components/home/SportTile.tsx",
+      "importedBy": [
+        "app/components/home/SportsSection.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "SportTile"
+    },
+    "app/components/home/SportTile.tsx::__file_root__": {
+      "filePath": "app/components/home/SportTile.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/Icon.tsx::Icon",
+        "app/components/home/content.ts::SportItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/SportsSection.tsx::SportsSection": {
+      "filePath": "app/components/home/SportsSection.tsx",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "SportsSection"
+    },
+    "app/components/home/SportsSection.tsx::__file_root__": {
+      "filePath": "app/components/home/SportsSection.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/SectionHeading.tsx::SectionHeading",
+        "app/components/home/SportTile.tsx::SportTile",
+        "app/components/home/content.ts::SportItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/StepCard.tsx::StepCard": {
+      "filePath": "app/components/home/StepCard.tsx",
+      "importedBy": [
+        "app/components/home/HowItWorksSection.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "StepCard"
+    },
+    "app/components/home/StepCard.tsx::__file_root__": {
+      "filePath": "app/components/home/StepCard.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/content.ts::TextItem"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/content.test.ts::__file_root__": {
+      "filePath": "app/components/home/content.test.ts",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/content.ts::__file_root__",
+        "app/components/home/content.ts::anchorTarget",
+        "app/components/home/icons.tsx::isIconName"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/content.ts::NavLink": {
+      "filePath": "app/components/home/content.ts",
+      "importedBy": [
+        "app/components/home/HeroSplit.tsx::__file_root__",
+        "app/components/home/HeroStory.tsx::__file_root__",
+        "app/components/home/SiteHeader.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "NavLink"
+    },
+    "app/components/home/content.ts::PathItem": {
+      "filePath": "app/components/home/content.ts",
+      "importedBy": [
+        "app/components/home/HeroSplit.tsx::__file_root__",
+        "app/components/home/HeroStory.tsx::__file_root__",
+        "app/components/home/PathCard.tsx::__file_root__",
+        "app/components/home/PathChooser.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "PathItem"
+    },
+    "app/components/home/content.ts::SportItem": {
+      "filePath": "app/components/home/content.ts",
+      "importedBy": [
+        "app/components/home/SportTile.tsx::__file_root__",
+        "app/components/home/SportsSection.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "SportItem"
+    },
+    "app/components/home/content.ts::TextItem": {
+      "filePath": "app/components/home/content.ts",
+      "importedBy": [
+        "app/components/home/AudienceCard.tsx::__file_root__",
+        "app/components/home/AudienceSection.tsx::__file_root__",
+        "app/components/home/HowItWorksSection.tsx::__file_root__",
+        "app/components/home/MentorOption.tsx::__file_root__",
+        "app/components/home/MentoringSection.tsx::__file_root__",
+        "app/components/home/StepCard.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "TextItem"
+    },
+    "app/components/home/content.ts::__file_root__": {
+      "filePath": "app/components/home/content.ts",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__",
+        "app/components/home/content.test.ts::__file_root__"
+      ],
+      "imports": [
+        "app/components/home/icons.tsx::IconName"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/content.ts::anchorTarget": {
+      "filePath": "app/components/home/content.ts",
+      "importedBy": [
+        "app/components/home/content.test.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "anchorTarget"
+    },
+    "app/components/home/icons.tsx::IconName": {
+      "filePath": "app/components/home/icons.tsx",
+      "importedBy": [
+        "app/components/home/Icon.tsx::__file_root__",
+        "app/components/home/content.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "IconName"
+    },
+    "app/components/home/icons.tsx::__file_root__": {
+      "filePath": "app/components/home/icons.tsx",
+      "importedBy": [
+        "app/components/home/Icon.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    "app/components/home/icons.tsx::isIconName": {
+      "filePath": "app/components/home/icons.tsx",
+      "importedBy": [
+        "app/components/home/content.test.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "isIconName"
+    },
     "app/globals.css::__file_root__": {
       "filePath": "app/globals.css",
       "importedBy": [
         "app/layout.tsx::__file_root__"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    "app/home.css::__file_root__": {
+      "filePath": "app/home.css",
+      "importedBy": [
+        "app/components/home/LandingPage.tsx::__file_root__"
       ],
       "imports": [],
       "name": "__file_root__"
@@ -344,6 +780,14 @@
         "vitest.config.ts::__file_root__"
       ],
       "imports": [],
+      "name": "__file_root__"
+    },
+    "app/page.tsx::__file_root__": {
+      "filePath": "app/page.tsx",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/LandingPage.tsx::LandingPage"
+      ],
       "name": "__file_root__"
     },
     "prisma.config.ts::__file_root__": {
@@ -546,9 +990,238 @@
       "importedBy": [],
       "imports": []
     },
+    "app/components/home/AudienceCard.tsx": {
+      "importedBy": [
+        "app/components/home/AudienceSection.tsx"
+      ],
+      "imports": [
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/AudienceSection.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": [
+        "app/components/home/AudienceCard.tsx",
+        "app/components/home/SectionHeading.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/BookingPanel.tsx": {
+      "importedBy": [
+        "app/components/home/HeroSplit.tsx"
+      ],
+      "imports": [
+        "app/components/home/Icon.tsx"
+      ]
+    },
+    "app/components/home/CtaBand.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": []
+    },
+    "app/components/home/HeroSplit.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": [
+        "app/components/home/BookingPanel.tsx",
+        "app/components/home/HeroStory.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/HeroStory.tsx": {
+      "importedBy": [
+        "app/components/home/HeroSplit.tsx"
+      ],
+      "imports": [
+        "app/components/home/LogoMark.tsx",
+        "app/components/home/PathChooser.tsx",
+        "app/components/home/SiteHeader.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/HowItWorksSection.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": [
+        "app/components/home/SectionHeading.tsx",
+        "app/components/home/StepCard.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/Icon.tsx": {
+      "importedBy": [
+        "app/components/home/BookingPanel.tsx",
+        "app/components/home/PathCard.tsx",
+        "app/components/home/SportTile.tsx"
+      ],
+      "imports": [
+        "app/components/home/icons.tsx"
+      ]
+    },
+    "app/components/home/LandingPage.tsx": {
+      "importedBy": [
+        "app/page.tsx"
+      ],
+      "imports": [
+        "app/home.css",
+        "app/components/home/AudienceSection.tsx",
+        "app/components/home/CtaBand.tsx",
+        "app/components/home/HeroSplit.tsx",
+        "app/components/home/HowItWorksSection.tsx",
+        "app/components/home/MentoringSection.tsx",
+        "app/components/home/SiteFooter.tsx",
+        "app/components/home/SportsSection.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/LogoMark.tsx": {
+      "importedBy": [
+        "app/components/home/HeroStory.tsx",
+        "app/components/home/SiteFooter.tsx",
+        "app/components/home/SiteHeader.tsx"
+      ],
+      "imports": []
+    },
+    "app/components/home/MentorOption.tsx": {
+      "importedBy": [
+        "app/components/home/MentoringSection.tsx"
+      ],
+      "imports": [
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/MentoringSection.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": [
+        "app/components/home/MentorOption.tsx",
+        "app/components/home/SectionHeading.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/PathCard.tsx": {
+      "importedBy": [
+        "app/components/home/PathChooser.tsx"
+      ],
+      "imports": [
+        "app/components/home/Icon.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/PathChooser.tsx": {
+      "importedBy": [
+        "app/components/home/HeroStory.tsx"
+      ],
+      "imports": [
+        "app/components/home/PathCard.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/SectionHeading.tsx": {
+      "importedBy": [
+        "app/components/home/AudienceSection.tsx",
+        "app/components/home/HowItWorksSection.tsx",
+        "app/components/home/MentoringSection.tsx",
+        "app/components/home/SportsSection.tsx"
+      ],
+      "imports": []
+    },
+    "app/components/home/SiteFooter.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": [
+        "app/components/home/LogoMark.tsx"
+      ]
+    },
+    "app/components/home/SiteHeader.tsx": {
+      "importedBy": [
+        "app/components/home/HeroStory.tsx"
+      ],
+      "imports": [
+        "app/components/home/LogoMark.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/SportTile.tsx": {
+      "importedBy": [
+        "app/components/home/SportsSection.tsx"
+      ],
+      "imports": [
+        "app/components/home/Icon.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/SportsSection.tsx": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
+      ],
+      "imports": [
+        "app/components/home/SectionHeading.tsx",
+        "app/components/home/SportTile.tsx",
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/StepCard.tsx": {
+      "importedBy": [
+        "app/components/home/HowItWorksSection.tsx"
+      ],
+      "imports": [
+        "app/components/home/content.ts"
+      ]
+    },
+    "app/components/home/content.test.ts": {
+      "importedBy": [],
+      "imports": [
+        "app/components/home/content.ts",
+        "app/components/home/icons.tsx"
+      ]
+    },
+    "app/components/home/content.ts": {
+      "importedBy": [
+        "app/components/home/AudienceCard.tsx",
+        "app/components/home/AudienceSection.tsx",
+        "app/components/home/HeroSplit.tsx",
+        "app/components/home/HeroStory.tsx",
+        "app/components/home/HowItWorksSection.tsx",
+        "app/components/home/LandingPage.tsx",
+        "app/components/home/MentorOption.tsx",
+        "app/components/home/MentoringSection.tsx",
+        "app/components/home/PathCard.tsx",
+        "app/components/home/PathChooser.tsx",
+        "app/components/home/SiteHeader.tsx",
+        "app/components/home/SportTile.tsx",
+        "app/components/home/SportsSection.tsx",
+        "app/components/home/StepCard.tsx",
+        "app/components/home/content.test.ts"
+      ],
+      "imports": [
+        "app/components/home/icons.tsx"
+      ]
+    },
+    "app/components/home/icons.tsx": {
+      "importedBy": [
+        "app/components/home/Icon.tsx",
+        "app/components/home/content.test.ts",
+        "app/components/home/content.ts"
+      ],
+      "imports": []
+    },
     "app/globals.css": {
       "importedBy": [
         "app/layout.tsx"
+      ],
+      "imports": []
+    },
+    "app/home.css": {
+      "importedBy": [
+        "app/components/home/LandingPage.tsx"
       ],
       "imports": []
     },
@@ -580,7 +1253,9 @@
     },
     "app/page.tsx": {
       "importedBy": [],
-      "imports": []
+      "imports": [
+        "app/components/home/LandingPage.tsx"
+      ]
     },
     "app/scenario/[slug]/page.tsx": {
       "importedBy": [],
@@ -621,5 +1296,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-11-09T15:23:23Z"
+  "lastUpdated": "2026-11-09T16:24:34Z"
 }

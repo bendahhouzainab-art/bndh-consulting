@@ -1,0 +1,15 @@
+{
+  "name": "Icon - Check",
+  "id": "166fccd9-04ea-4b42-97c7-08ae1083d3ea",
+  "url": "/isolated-components/Icon?s=Check",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "Icon",
+  "scenarioType": "component",
+  "description": "Checkmark icon used in the booking list."
+}

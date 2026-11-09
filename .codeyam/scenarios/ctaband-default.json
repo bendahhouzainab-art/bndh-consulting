@@ -1,0 +1,15 @@
+{
+  "name": "CtaBand - Default",
+  "id": "17931ae2-9197-4113-aea8-11556162774b",
+  "url": "/isolated-components/CtaBand?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "CtaBand",
+  "scenarioType": "component",
+  "description": "Closing band asking Ready to plan your next step with a Book a consultation button."
+}

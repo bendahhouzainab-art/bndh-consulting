@@ -1,0 +1,15 @@
+{
+  "name": "SiteFooter - Default",
+  "id": "72beb45b-a8b8-4fa4-be4b-7a83c4857452",
+  "url": "/isolated-components/SiteFooter?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SiteFooter",
+  "scenarioType": "component",
+  "description": "Footer with small logo mark, name, Privacy and Contact links."
+}

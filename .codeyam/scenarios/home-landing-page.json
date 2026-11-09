@@ -1,0 +1,17 @@
+{
+  "name": "Home - Landing Page",
+  "id": "81122745-d4ad-4298-99ff-4bb0aec0dc27",
+  "url": "/",
+  "dimensions": [
+    "Desktop",
+    "Mobile"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:43:03Z"
+  },
+  "seed": {},
+  "scenarioType": "application",
+  "pageFilePath": "app/page.tsx",
+  "description": "The BNDH Consulting landing page at /, in the design 6 split-screen layout with booking up front. The page reads no database data, so the seed is empty."
+}

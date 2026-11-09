@@ -1,0 +1,15 @@
+{
+  "name": "SiteHeader - Default",
+  "id": "1df31403-53e1-4b13-a047-0cc3212fb3e1",
+  "url": "/isolated-components/SiteHeader?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SiteHeader",
+  "scenarioType": "component",
+  "description": "Brand mark and name with the four in-page navigation links on the navy hero."
+}

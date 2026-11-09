@@ -1,0 +1,15 @@
+{
+  "name": "MentorOption - Athlete mentor",
+  "id": "695358d4-bfdb-4c04-a1a2-29e6f64eab58",
+  "url": "/isolated-components/MentorOption?s=Athlete%20mentor",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "MentorOption",
+  "scenarioType": "component",
+  "description": "Mentor option tile: athlete mentor with its topics."
+}

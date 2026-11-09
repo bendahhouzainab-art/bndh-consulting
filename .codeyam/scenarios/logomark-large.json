@@ -1,0 +1,15 @@
+{
+  "name": "LogoMark - Large",
+  "id": "2e1b2276-3629-4950-9f66-042807173ba9",
+  "url": "/isolated-components/LogoMark?s=Large",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "LogoMark",
+  "scenarioType": "component",
+  "description": "Tennis-ball logo mark at the 200px hero size."
+}

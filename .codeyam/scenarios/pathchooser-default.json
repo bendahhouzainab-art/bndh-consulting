@@ -1,0 +1,15 @@
+{
+  "name": "PathChooser - Default",
+  "id": "9491fbc2-6817-4447-a52e-5b9b433e68ab",
+  "url": "/isolated-components/PathChooser?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "PathChooser",
+  "scenarioType": "component",
+  "description": "The three path cards: college in the US, tennis academies, athlete mentoring."
+}

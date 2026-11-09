@@ -1,0 +1,15 @@
+{
+  "name": "StepCard - First step",
+  "id": "d002588f-c919-43d5-8fc6-ed7cbdaff070",
+  "url": "/isolated-components/StepCard?s=First%20step",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "StepCard",
+  "scenarioType": "component",
+  "description": "Step 1, Book a consultation, with its yellow number badge."
+}

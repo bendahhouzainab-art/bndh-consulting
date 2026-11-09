@@ -1,0 +1,15 @@
+{
+  "name": "HeroStory - Default",
+  "id": "9523535c-e4f0-43c6-a79c-7a5960b72c5e",
+  "url": "/isolated-components/HeroStory?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "HeroStory",
+  "scenarioType": "component",
+  "description": "Navy story column with header, big logo mark, headline, lede and the three path cards."
+}

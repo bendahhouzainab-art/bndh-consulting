@@ -1,0 +1,16 @@
+{
+  "name": "HowItWorksSection - Default",
+  "id": "86ace479-0bbe-419e-a0b6-4ee48569ad82",
+  "url": "/isolated-components/HowItWorksSection?s=Default",
+  "dimensions": [
+    "Desktop",
+    "Mobile"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "HowItWorksSection",
+  "scenarioType": "component",
+  "description": "Three numbered steps from booking to a clear plan."
+}

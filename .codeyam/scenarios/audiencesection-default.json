@@ -1,0 +1,15 @@
+{
+  "name": "AudienceSection - Default",
+  "id": "09112ca5-fff9-4b5b-baa6-4953bd6d6250",
+  "url": "/isolated-components/AudienceSection?s=Default",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "AudienceSection",
+  "scenarioType": "component",
+  "description": "Who we help: athletes, parents and guardians, coaches."
+}

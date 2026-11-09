@@ -1,0 +1,16 @@
+{
+  "name": "SportsSection - Default",
+  "id": "e721d0b1-4a98-4aa3-8d4d-a6545f09c7c5",
+  "url": "/isolated-components/SportsSection?s=Default",
+  "dimensions": [
+    "Desktop",
+    "Mobile"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SportsSection",
+  "scenarioType": "component",
+  "description": "Section listing the eight sports US colleges recruit most, tennis highlighted."
+}

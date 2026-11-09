@@ -1,0 +1,15 @@
+{
+  "name": "SportTile - Highlighted",
+  "id": "15b98c45-20af-4310-add6-c57d72ebc8fe",
+  "url": "/isolated-components/SportTile?s=Highlighted",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SportTile",
+  "scenarioType": "component",
+  "description": "Tennis tile in the yellow highlight style."
+}

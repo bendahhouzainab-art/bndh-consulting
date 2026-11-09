@@ -1,0 +1,15 @@
+{
+  "name": "SectionHeading - With lede",
+  "id": "5c9f70b2-6afb-4969-936c-65b3fe10c193",
+  "url": "/isolated-components/SectionHeading?s=With%20lede",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "SectionHeading",
+  "scenarioType": "component",
+  "description": "Section title with a supporting lede paragraph."
+}

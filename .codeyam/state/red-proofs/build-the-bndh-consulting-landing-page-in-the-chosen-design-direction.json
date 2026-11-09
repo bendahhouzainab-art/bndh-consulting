@@ -1,0 +1,45 @@
+{
+  "provenAt": "2026-11-09T15:38:38Z",
+  "slug": "build-the-bndh-consulting-landing-page-in-the-chosen-design-direction",
+  "paths": [],
+  "runScope": [
+    "app/components/home/content.ts",
+    "app/components/home/icons.tsx",
+    "app/components/home/content.test.ts"
+  ],
+  "neuters": [
+    {
+      "file": "app/components/home/content.ts",
+      "find": "return match ? match[1] : null;",
+      "replace": "return match ? null : null;"
+    },
+    {
+      "file": "app/components/home/icons.tsx",
+      "find": "return Object.prototype.hasOwnProperty.call(ICONS, name);",
+      "replace": "return name.length > 0;"
+    }
+  ],
+  "tests": {
+    "rejects unknown names": {
+      "withoutFix": "fail",
+      "withFix": "pass",
+      "established": {
+        "kind": "measured"
+      }
+    },
+    "returns the id of an in-page anchor": {
+      "withoutFix": "fail",
+      "withFix": "pass",
+      "established": {
+        "kind": "measured"
+      }
+    }
+  },
+  "proof": {
+    "verdict": "proven",
+    "flipped": [
+      "returns the id of an in-page anchor",
+      "rejects unknown names"
+    ]
+  }
+}

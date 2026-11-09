@@ -1,0 +1,15 @@
+{
+  "name": "PathChooser - Single path",
+  "id": "53e0f39d-71c1-4ea4-851a-25f52a7d6df9",
+  "url": "/isolated-components/PathChooser?s=Single%20path",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T15:41:22Z"
+  },
+  "componentName": "PathChooser",
+  "scenarioType": "component",
+  "description": "Chooser with only one path, showing a card sits in the grid without stretching."
+}
