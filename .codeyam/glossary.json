@@ -270,6 +270,18 @@
     "testFile": "app/components/home/content.test.ts"
   },
   {
+    "description": "Builds the plain-text consultation request email body listing every booking form field (name, email, phone, location, school level, mentoring need).",
+    "filePath": "app/components/home/booking.ts",
+    "name": "buildBookingBody",
+    "testFile": "app/components/home/booking.test.ts"
+  },
+  {
+    "description": "Builds the mailto: link to the booking inbox with an encoded subject and prefilled body, so the static GitHub Pages site can take bookings without a server.",
+    "filePath": "app/components/home/booking.ts",
+    "name": "buildBookingMailto",
+    "testFile": "app/components/home/booking.test.ts"
+  },
+  {
     "description": "Type guard: true when a string names an icon defined in the landing page ICONS artwork map, rejecting unknown and inherited object keys.",
     "filePath": "app/components/home/icons.tsx",
     "name": "isIconName",

@@ -356,7 +356,10 @@
       "filePath": "app/components/home/BookingPanel.tsx",
       "importedBy": [],
       "imports": [
-        "app/components/home/Icon.tsx::Icon"
+        "app/components/home/Icon.tsx::Icon",
+        "app/components/home/booking.ts::BookingRequest",
+        "app/components/home/booking.ts::__file_root__",
+        "app/components/home/booking.ts::buildBookingMailto"
       ],
       "name": "__file_root__"
     },
@@ -640,6 +643,52 @@
         "app/components/home/content.ts::TextItem"
       ],
       "name": "__file_root__"
+    },
+    "app/components/home/booking.test.ts::__file_root__": {
+      "filePath": "app/components/home/booking.test.ts",
+      "importedBy": [],
+      "imports": [
+        "app/components/home/booking.ts::BookingRequest",
+        "app/components/home/booking.ts::__file_root__",
+        "app/components/home/booking.ts::buildBookingBody",
+        "app/components/home/booking.ts::buildBookingMailto"
+      ],
+      "name": "__file_root__"
+    },
+    "app/components/home/booking.ts::BookingRequest": {
+      "filePath": "app/components/home/booking.ts",
+      "importedBy": [
+        "app/components/home/BookingPanel.tsx::__file_root__",
+        "app/components/home/booking.test.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "BookingRequest"
+    },
+    "app/components/home/booking.ts::__file_root__": {
+      "filePath": "app/components/home/booking.ts",
+      "importedBy": [
+        "app/components/home/BookingPanel.tsx::__file_root__",
+        "app/components/home/booking.test.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "__file_root__"
+    },
+    "app/components/home/booking.ts::buildBookingBody": {
+      "filePath": "app/components/home/booking.ts",
+      "importedBy": [
+        "app/components/home/booking.test.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "buildBookingBody"
+    },
+    "app/components/home/booking.ts::buildBookingMailto": {
+      "filePath": "app/components/home/booking.ts",
+      "importedBy": [
+        "app/components/home/BookingPanel.tsx::__file_root__",
+        "app/components/home/booking.test.ts::__file_root__"
+      ],
+      "imports": [],
+      "name": "buildBookingMailto"
     },
     "app/components/home/content.test.ts::__file_root__": {
       "filePath": "app/components/home/content.test.ts",
@@ -1013,7 +1062,8 @@
         "app/components/home/HeroSplit.tsx"
       ],
       "imports": [
-        "app/components/home/Icon.tsx"
+        "app/components/home/Icon.tsx",
+        "app/components/home/booking.ts"
       ]
     },
     "app/components/home/CtaBand.tsx": {
@@ -1176,6 +1226,19 @@
         "app/components/home/content.ts"
       ]
     },
+    "app/components/home/booking.test.ts": {
+      "importedBy": [],
+      "imports": [
+        "app/components/home/booking.ts"
+      ]
+    },
+    "app/components/home/booking.ts": {
+      "importedBy": [
+        "app/components/home/BookingPanel.tsx",
+        "app/components/home/booking.test.ts"
+      ],
+      "imports": []
+    },
     "app/components/home/content.test.ts": {
       "importedBy": [],
       "imports": [
@@ -1296,5 +1359,5 @@
       ]
     }
   },
-  "lastUpdated": "2026-11-09T17:45:33Z"
+  "lastUpdated": "2026-11-09T18:00:09Z"
 }

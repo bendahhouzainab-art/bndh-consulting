@@ -1,0 +1,45 @@
+{
+  "name": "BookingPanel - Filled Form",
+  "id": "5a98a1b5-c2bf-46c7-a51b-789fa7f7bd99",
+  "url": "/isolated-components/BookingPanel?s=Filled%20Form",
+  "dimensions": [
+    "Desktop"
+  ],
+  "mocks": {},
+  "clock": {
+    "now": "2026-11-09T18:01:37Z"
+  },
+  "componentName": "BookingPanel",
+  "scenarioType": "component",
+  "description": "Booking form after a visitor fills in name, email, phone and country and picks College and mentoring Yes, ready to open their email app.",
+  "interactions": [
+    {
+      "action": "fill",
+      "selector": "input[name=fullName]",
+      "value": "Amina Benali"
+    },
+    {
+      "action": "fill",
+      "selector": "input[name=email]",
+      "value": "amina@example.com"
+    },
+    {
+      "action": "fill",
+      "selector": "input[name=phone]",
+      "value": "+212 600 000 000"
+    },
+    {
+      "action": "fill",
+      "selector": "input[name=location]",
+      "value": "Morocco"
+    },
+    {
+      "action": "click",
+      "text": "College"
+    },
+    {
+      "action": "click",
+      "selector": "label.choice:has(input[value=Yes]) span"
+    }
+  ]
+}
