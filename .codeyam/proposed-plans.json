@@ -31,7 +31,7 @@
       "status": "pending",
       "proposedAt": "2026-11-06T15:46:20.131987339+00:00",
       "kind": "feature",
-      "sightings": 1
+      "sightings": 3
     }
   ],
   "rounds": [
@@ -46,6 +46,22 @@
       "notes": "Design-mockup-only cycle on 06-offcatalog-mockup.html; no app code changed. Booking panel cut to role pills + Talk-to select + one Choose-a-time button; language switcher kept in panel per user. Queued plans for the landing-page build and …",
       "proposedIds": [
         "book-a-consultation-virtual-option-with-the-sports-abroad-expert-booking-mechanism-decision-deferred-by-the-user",
+        "pre-meeting-questionnaire-so-the-expert-knows-about-the-athlete-before-the-meeting"
+      ]
+    },
+    {
+      "at": "2026-11-09T16:25:41.400011791+00:00",
+      "feature": "BNDH Consulting landing page",
+      "notes": "Landing page split into app/components/home (20 components, content.ts data, icons.tsx). Styles in app/home.css scoped under .bndh; isolation previews depend on .render.tsx sidecars in .codeyam/isolation-props. Booking is anchors only. Def…",
+      "proposedIds": [
+        "pre-meeting-questionnaire-so-the-expert-knows-about-the-athlete-before-the-meeting"
+      ]
+    },
+    {
+      "at": "2026-11-09T16:26:00.596241304+00:00",
+      "feature": "BNDH Consulting landing page",
+      "notes": "Landing page split into app/components/home (20 components, content.ts data, icons.tsx). Styles in app/home.css scoped under .bndh; isolation previews depend on .render.tsx sidecars in .codeyam/isolation-props. Booking is anchors only. Def…",
+      "proposedIds": [
         "pre-meeting-questionnaire-so-the-expert-knows-about-the-athlete-before-the-meeting"
       ]
     }
